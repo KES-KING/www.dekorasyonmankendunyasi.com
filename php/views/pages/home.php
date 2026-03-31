@@ -204,14 +204,15 @@
 </section>
 
 <!-- Banks Info Section -->
-<section class="bg-[#faf9f6]/50 py-24">
+<section class="bg-gradient-to-b from-slate-50 to-white py-24 border-y border-zinc-200/70">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="font-display text-3xl text-zinc-800 sm:text-4xl">Banka Hesaplarımız</h2>
-            <p class="mt-4 text-zinc-500">Ödemelerinizi güvenle aşağıdaki hesaplarımıza yapabilirsiniz.</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Ödeme Bilgileri</p>
+            <h2 class="mt-3 font-display text-3xl text-zinc-900 sm:text-4xl">Banka Hesaplarımız</h2>
+            <p class="mt-4 text-zinc-600">Havale ve EFT işlemleriniz için aşağıdaki hesap bilgilerimizi kullanabilirsiniz.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
             <?php
             $bankNames = [
                 1 => 'Finans Bankası',
@@ -219,19 +220,38 @@
                 3 => 'Akbank',
                 4 => 'Denizbank',
             ];
+            $bankThemes = [
+                1 => ['accent' => '#4f46e5', 'soft' => 'rgba(79, 70, 229, 0.10)'],
+                2 => ['accent' => '#0f766e', 'soft' => 'rgba(15, 118, 110, 0.10)'],
+                3 => ['accent' => '#dc2626', 'soft' => 'rgba(220, 38, 38, 0.10)'],
+                4 => ['accent' => '#0ea5e9', 'soft' => 'rgba(14, 165, 233, 0.10)'],
+            ];
+            $hasBankAccount = false;
             for($i=1; $i<=4; $i++):
                 $bankKey = "bank_account_$i";
-                if(empty($settings[$bankKey])) continue;
+                $bankRaw = trim((string) ($settings[$bankKey] ?? ''));
+                if($bankRaw === '') continue;
+                $hasBankAccount = true;
                 $bankName = $bankNames[$i] ?? ('Banka ' . $i);
+                $bankTheme = $bankThemes[$i] ?? ['accent' => '#52525b', 'soft' => 'rgba(82, 82, 91, 0.10)'];
             ?>
-            <div class="bank-card text-center">
-                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-50 text-yellow-600">
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+            <article
+                class="banking-card"
+                style="--bank-accent: <?= e($bankTheme['accent']); ?>; --bank-soft: <?= e($bankTheme['soft']); ?>;"
+            >
+                <div class="banking-card__head">
+                    <span class="banking-card__chip" aria-hidden="true"></span>
+                    <h3 class="banking-card__name"><?= e($bankName); ?></h3>
                 </div>
-                <h3 class="bank-card-title"><?= e($bankName); ?></h3>
-                <p class="bank-card-value text-sm sm:text-base"><?= e($settings[$bankKey]); ?></p>
-            </div>
+                <p class="banking-card__meta">IBAN / Hesap Bilgisi</p>
+                <p class="banking-card__value"><?= nl2br(e($bankRaw)); ?></p>
+            </article>
             <?php endfor; ?>
+            <?php if (!$hasBankAccount): ?>
+                <div class="col-span-full rounded-2xl border border-dashed border-zinc-300 bg-white px-6 py-10 text-center text-sm text-zinc-500">
+                    Henüz banka hesap bilgisi eklenmemiş.
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

@@ -74,22 +74,71 @@ body { background: #faf9f6; color: #1a1a1a; font-family: 'Inter', sans-serif; }
     color: #b8860b;
 }
 
-.bank-card {
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: #fff;
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+.banking-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    padding: 1.1rem 1.1rem 1.25rem;
 }
-.bank-card-title {
-    font-size: 0.75rem;
+.banking-card::before {
+    content: '';
+    display: block;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--bank-accent, #0f172a);
+    margin-bottom: 1rem;
+}
+.banking-card::after {
+    content: '';
+    position: absolute;
+    top: -38px;
+    right: -38px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--bank-soft, rgba(15, 23, 42, 0.08));
+}
+.banking-card__head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.banking-card__chip {
+    width: 1.9rem;
+    height: 1.35rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+    flex-shrink: 0;
+}
+.banking-card__name {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #888;
-    margin-bottom: 0.5rem;
+    color: #0f172a;
 }
-.bank-card-value {
-    font-family: monospace;
-    font-size: 1.1rem;
-    color: #1a1a1a;
+.banking-card__meta {
+    margin: 0.9rem 0 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+.banking-card__value {
+    margin: 0.55rem 0 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    font-weight: 600;
+    color: #0f172a;
+    word-break: break-word;
+    white-space: pre-line;
 }
