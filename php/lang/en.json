@@ -15,8 +15,10 @@
     "language": "Language"
   },
   "hero": {
-    "kicker": "Fashion | Design | Culture",
-    "description": "A bold visual atelier for statement looks, editorial design language, and high-impact digital storytelling.",
+    "kicker": "Aesthetics | Decoration | Design",
+    "description": "Decorative mannequins and aesthetic designs that bring your spaces to life.",
+    "cta_catalog": "Browse Catalog",
+    "cta_contact": "Get in Touch",
     "cta_shop": "Explore Collection",
     "cta_designs": "View Designs",
     "image_alt": "Hero background image"
@@ -26,7 +28,16 @@
     "contact_social_description": "You can reach us anytime.",
     "social_empty": "No social media links have been added yet.",
     "location_title": "Location",
-    "location_iframe_title": "Business Location"
+    "location_iframe_title": "Business Location",
+    "open_on_map": "Open on Map",
+    "bank_kicker": "Payment Information",
+    "bank_title": "Our Bank Accounts",
+    "bank_description": "You can use the following account details for your bank transfers.",
+    "bank_iban_label": "IBAN / Account Info",
+    "bank_copy_hint": "Click to copy",
+    "bank_copied": "Copied",
+    "bank_copy_aria": "copy account info",
+    "bank_empty": "No bank account information has been added yet."
   },
   "sections": {
     "designs_kicker": "Section 01",
@@ -107,14 +118,14 @@
     "flash_error": "Message could not be sent right now. Please try again later."
   },
   "footer": {
-    "tagline": "Crafted for Instagram Luxury",
+    "tagline": "Designed for You",
     "links_title": "Quick Links",
-    "manifesto_title": "Manifesto",
-    "manifesto_text": "We build refined visual narratives where fashion, identity, and digital craft move as one.",
+    "manifesto_title": "About Us",
+    "manifesto_text": "We offer the most exclusive mannequin and decoration products to add value to your spaces.",
     "social_title": "Instagram",
     "rights": "All rights reserved.",
     "link_home": "Home",
-    "link_designs": "Designs",
+    "link_designs": "Design Gallery",
     "link_shop": "Shop",
     "link_contact": "Contact",
     "social_instagram": "Instagram Main",

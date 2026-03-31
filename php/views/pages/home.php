@@ -5,7 +5,7 @@
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 text-center">
         <div class="mx-auto max-w-5xl rounded-3xl border border-white/30 bg-black/45 px-6 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm">
-                <?= e($heroKicker ?? t('hero.kicker', 'Moda | Tasarım | Kültür')); ?>
+                <?= e($heroKicker ?? t('hero.kicker', 'Estetik | Dekorasyon | Tasarım')); ?>
             </p>
 
             <h1 class="mx-auto max-w-4xl font-display text-4xl leading-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)] sm:text-6xl md:text-7xl">
@@ -13,15 +13,15 @@
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-base text-zinc-100 sm:text-lg">
-                <?= e($heroDescription ?? t('hero.description', 'İddialı görünümler, editoryal tasarım dili ve güçlü dijital hikaye anlatımı için cesur bir görsel atölye.')); ?>
+                <?= e($heroDescription ?? t('hero.description', 'Mekanlarınızı canlandıran dekoratif mankenler ve estetik tasarımlar.')); ?>
             </p>
 
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a href="<?= e($designsUrl); ?>" class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-amber-300 bg-amber-500 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-black transition hover:bg-amber-400 sm:flex-none">
-                    Kataloğu İncele
+                    <?= e(t('hero.cta_catalog', 'Kataloğu İncele')); ?>
                 </a>
                 <a href="<?= e($contactUrl); ?>" class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-white/70 bg-white/10 px-8 py-4 text-xs uppercase tracking-[0.16em] text-white transition hover:bg-white/20 sm:flex-none">
-                    İletişime Geç
+                    <?= e(t('hero.cta_contact', 'İletişime Geç')); ?>
                 </a>
             </div>
         </div>
@@ -186,7 +186,7 @@
                     <p class="text-xs uppercase tracking-[0.18em] text-zinc-500"><?= e(t('home.location_title', 'Konum')); ?></p>
                     <p class="mt-2 text-sm font-medium text-zinc-700"><?= e($businessLocation); ?></p>
                     <a href="<?= e($locationMapLink); ?>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.14em] text-yellow-700 transition hover:text-yellow-600">
-                        Haritada Aç
+                        <?= e(t('home.open_on_map', 'Haritada Aç')); ?>
                     </a>
                 </div>
                 <div class="h-[320px] w-full sm:h-[360px]">
@@ -207,9 +207,9 @@
 <section class="bg-gradient-to-b from-slate-50 to-white py-24 border-y border-zinc-200/70">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Ödeme Bilgileri</p>
-            <h2 class="mt-3 font-display text-3xl text-zinc-900 sm:text-4xl">Banka Hesaplarımız</h2>
-            <p class="mt-4 text-zinc-600">Havale ve EFT işlemleriniz için aşağıdaki hesap bilgilerimizi kullanabilirsiniz.</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500"><?= e(t('home.bank_kicker', 'Ödeme Bilgileri')); ?></p>
+            <h2 class="mt-3 font-display text-3xl text-zinc-900 sm:text-4xl"><?= e(t('home.bank_title', 'Banka Hesaplarımız')); ?></h2>
+            <p class="mt-4 text-zinc-600"><?= e(t('home.bank_description', 'Havale ve EFT işlemleriniz için aşağıdaki hesap bilgilerimizi kullanabilirsiniz.')); ?></p>
         </div>
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
@@ -240,21 +240,21 @@
                 style="--bank-accent: <?= e($bankTheme['accent']); ?>; --bank-soft: <?= e($bankTheme['soft']); ?>;"
                 role="button"
                 tabindex="0"
-                aria-label="<?= e($bankName); ?> hesap bilgisini kopyala"
+                aria-label="<?= e($bankName); ?> <?= e(t('home.bank_copy_aria', 'hesap bilgisini kopyala')); ?>"
             >
                 <div class="banking-card__head">
                     <span class="banking-card__chip" aria-hidden="true"></span>
                     <h3 class="banking-card__name"><?= e($bankName); ?></h3>
                 </div>
-                <p class="banking-card__meta">IBAN / Hesap Bilgisi</p>
+                <p class="banking-card__meta"><?= e(t('home.bank_iban_label', 'IBAN / Hesap Bilgisi')); ?></p>
                 <p class="banking-card__value"><?= nl2br(e($bankRaw)); ?></p>
-                <p class="banking-card__copy-hint">Kopyalamak için tıklayın</p>
-                <span class="banking-card__copy-badge" aria-hidden="true">Kopyalandı</span>
+                <p class="banking-card__copy-hint"><?= e(t('home.bank_copy_hint', 'Kopyalamak için tıklayın')); ?></p>
+                <span class="banking-card__copy-badge" aria-hidden="true"><?= e(t('home.bank_copied', 'Kopyalandı')); ?></span>
             </article>
             <?php endfor; ?>
             <?php if (!$hasBankAccount): ?>
                 <div class="col-span-full rounded-2xl border border-dashed border-zinc-300 bg-white px-6 py-10 text-center text-sm text-zinc-500">
-                    Henüz banka hesap bilgisi eklenmemiş.
+                    <?= e(t('home.bank_empty', 'Henüz banka hesap bilgisi eklenmemiş.')); ?>
                 </div>
             <?php endif; ?>
         </div>

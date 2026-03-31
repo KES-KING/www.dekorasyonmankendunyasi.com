@@ -15,18 +15,29 @@
     "language": "Sprache"
   },
   "hero": {
-    "kicker": "Mode | Design | Kultur",
-    "description": "Ein mutiges visuelles Atelier fur markante Looks, editoriale Designsprache und wirkungsstarkes digitales Storytelling.",
+    "kicker": "Ästhetik | Dekoration | Design",
+    "description": "Dekorative Schaufensterpuppen und ästhetische Designs, die Ihre Räume beleben.",
+    "cta_catalog": "Katalog Durchstöbern",
+    "cta_contact": "Kontakt Aufnehmen",
     "cta_shop": "Kollektion Entdecken",
     "cta_designs": "Designs Anzeigen",
     "image_alt": "Hero-Hintergrundbild"
   },
   "home": {
     "contact_social_title": "Kontakt & Soziale Medien",
-    "contact_social_description": "Sie konnen uns jederzeit erreichen.",
-    "social_empty": "Es wurden noch keine Social-Media-Links hinzugefugt.",
+    "contact_social_description": "Sie können uns jederzeit erreichen.",
+    "social_empty": "Es wurden noch keine Social-Media-Links hinzugefügt.",
     "location_title": "Standort",
-    "location_iframe_title": "Unternehmensstandort"
+    "location_iframe_title": "Unternehmensstandort",
+    "open_on_map": "Auf Karte Öffnen",
+    "bank_kicker": "Zahlungsinformationen",
+    "bank_title": "Unsere Bankkonten",
+    "bank_description": "Für Ihre Überweisungen und EFT-Transaktionen können Sie die folgenden Kontoinformationen verwenden.",
+    "bank_iban_label": "IBAN / Kontoinformation",
+    "bank_copy_hint": "Zum Kopieren klicken",
+    "bank_copied": "Kopiert",
+    "bank_copy_aria": "Kontoinformation kopieren",
+    "bank_empty": "Es wurden noch keine Bankdaten hinzugefügt."
   },
   "sections": {
     "designs_kicker": "Abschnitt 01",
@@ -107,20 +118,20 @@
     "flash_error": "Die Nachricht konnte derzeit nicht gesendet werden. Bitte versuchen Sie es spater erneut."
   },
   "footer": {
-    "tagline": "Fur Instagram Luxury Entwickelt",
+    "tagline": "Für Sie Gestaltet",
     "links_title": "Schnellzugriff",
-    "manifesto_title": "Manifest",
-    "manifesto_text": "Wir schaffen verfeinerte visuelle Narrative, in denen Mode, Identitat und digitale Handwerkskunst zusammenwirken.",
+    "manifesto_title": "Über Uns",
+    "manifesto_text": "Wir bieten die exklusivsten Schaufensterpuppen- und Dekorationsprodukte, um Ihren Räumen Mehrwert zu verleihen.",
     "social_title": "Instagram",
     "rights": "Alle Rechte vorbehalten.",
     "link_home": "Startseite",
-    "link_designs": "Designs",
+    "link_designs": "Design-Galerie",
     "link_shop": "Shop",
     "link_contact": "Kontakt",
     "social_instagram": "Instagram Hauptprofil",
     "social_reels": "Instagram Reels",
     "social_shop": "Instagram Shop",
-    "contact_title": "Alle Kontaktkanale"
+    "contact_title": "Alle Kontaktkanäle"
   },
   "errors": {
     "not_found_title": "404",

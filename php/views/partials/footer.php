@@ -9,9 +9,9 @@
         <div>
             <h3 class="footer-title text-xs uppercase tracking-[0.24em] font-semibold"><?= e(t('footer.links_title', 'Hızlı Linkler')); ?></h3>
             <ul class="mt-4 space-y-2 text-sm">
-                <li><a href="<?= e($localeHomeUrl); ?>" class="footer-link">Ana Sayfa</a></li>
-                <li><a href="<?= e($designsUrl); ?>" class="footer-link">Tasarım Galerisi</a></li>
-                <li><a href="<?= e($contactUrl); ?>" class="footer-link">İletişim</a></li>
+                <li><a href="<?= e($localeHomeUrl); ?>" class="footer-link"><?= e(t('footer.link_home', 'Ana Sayfa')); ?></a></li>
+                <li><a href="<?= e($designsUrl); ?>" class="footer-link"><?= e(t('footer.link_designs', 'Tasarım Galerisi')); ?></a></li>
+                <li><a href="<?= e($contactUrl); ?>" class="footer-link"><?= e(t('footer.link_contact', 'İletişim')); ?></a></li>
             </ul>
         </div>
 

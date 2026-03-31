@@ -15,8 +15,10 @@
     "language": "Jezik"
   },
   "hero": {
-    "kicker": "Moda | Dizajn | Kultura",
-    "description": "Snažan vizuelni atelje za upečatljive stilove, urednički dizajnerski jezik i moćno digitalno pripovedanje.",
+    "kicker": "Estetika | Dekoracija | Dizajn",
+    "description": "Dekorativni manekeni i estetski dizajni koji oživljavaju vaše prostore.",
+    "cta_catalog": "Pregledaj Katalog",
+    "cta_contact": "Kontaktirajte Nas",
     "cta_shop": "Istraži Kolekciju",
     "cta_designs": "Pogledaj Dizajne",
     "image_alt": "Hero pozadinska slika"
@@ -26,7 +28,16 @@
     "contact_social_description": "Možete nas kontaktirati u bilo kom trenutku.",
     "social_empty": "Još nisu dodati linkovi društvenih mreža.",
     "location_title": "Lokacija",
-    "location_iframe_title": "Lokacija Poslovanja"
+    "location_iframe_title": "Lokacija Poslovanja",
+    "open_on_map": "Otvori na Mapi",
+    "bank_kicker": "Informacije o Plaćanju",
+    "bank_title": "Naši Bankovni Računi",
+    "bank_description": "Za vaše bankarske transfere možete koristiti sledeće podatke o računu.",
+    "bank_iban_label": "IBAN / Podaci o Računu",
+    "bank_copy_hint": "Kliknite za kopiranje",
+    "bank_copied": "Kopirano",
+    "bank_copy_aria": "kopiraj podatke o računu",
+    "bank_empty": "Još nisu dodati bankovni podaci."
   },
   "sections": {
     "designs_kicker": "Sekcija 01",
@@ -107,20 +118,20 @@
     "flash_error": "Poruka trenutno ne može biti poslata. Pokušajte kasnije."
   },
   "footer": {
-    "tagline": "Kreirano za Instagram Luxury",
+    "tagline": "Dizajnirano za Vas",
     "links_title": "Brzi Linkovi",
-    "manifesto_title": "Manifest",
-    "manifesto_text": "Gradimo profinjene vizuelne narative gde moda, identitet i digitalna izrada funkcionišu kao jedno.",
+    "manifesto_title": "O Nama",
+    "manifesto_text": "Nudimo najekskluzivnije manekene i dekorativne proizvode kako bismo vašim prostorima dodali vrednost.",
     "social_title": "Instagram",
     "rights": "Sva prava zadržana.",
     "link_home": "Početna",
-    "link_designs": "Dizajni",
+    "link_designs": "Galerija Dizajna",
     "link_shop": "Prodavnica",
     "link_contact": "Kontakt",
     "social_instagram": "Instagram Glavni Profil",
     "social_reels": "Instagram Reels",
     "social_shop": "Instagram Shop",
-    "contact_title": "Svi Kontakti"
+    "contact_title": "Svi Kontakt Kanali"
   },
   "errors": {
     "not_found_title": "404",

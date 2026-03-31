@@ -15,8 +15,10 @@
     "language": "Limba"
   },
   "hero": {
-    "kicker": "Moda | Design | Cultura",
-    "description": "Un atelier vizual indraznet pentru look-uri memorabile, limbaj editorial de design si storytelling digital cu impact.",
+    "kicker": "Estetică | Decorațiune | Design",
+    "description": "Manechine decorative și design-uri estetice care dau viață spațiilor dumneavoastră.",
+    "cta_catalog": "Răsfoiește Catalogul",
+    "cta_contact": "Contactați-ne",
     "cta_shop": "Exploreaza Colectia",
     "cta_designs": "Vezi Designurile",
     "image_alt": "Imagine fundal hero"
@@ -26,7 +28,16 @@
     "contact_social_description": "Ne puteti contacta oricand.",
     "social_empty": "Nu au fost adaugate inca linkuri de social media.",
     "location_title": "Locatie",
-    "location_iframe_title": "Locatia Afacerii"
+    "location_iframe_title": "Locatia Afacerii",
+    "open_on_map": "Deschide pe Hartă",
+    "bank_kicker": "Informații de Plată",
+    "bank_title": "Conturile Noastre Bancare",
+    "bank_description": "Puteți folosi următoarele date de cont pentru transferurile bancare.",
+    "bank_iban_label": "IBAN / Informații Cont",
+    "bank_copy_hint": "Click pentru copiere",
+    "bank_copied": "Copiat",
+    "bank_copy_aria": "copiază informațiile contului",
+    "bank_empty": "Nu au fost adăugate încă informații bancare."
   },
   "sections": {
     "designs_kicker": "Sectiunea 01",
@@ -107,14 +118,14 @@
     "flash_error": "Mesajul nu poate fi trimis acum. Va rugam incercati mai tarziu."
   },
   "footer": {
-    "tagline": "Creat pentru Instagram Luxury",
+    "tagline": "Creat pentru Dumneavoastră",
     "links_title": "Linkuri Rapide",
-    "manifesto_title": "Manifest",
-    "manifesto_text": "Construim narative vizuale rafinate in care moda, identitatea si maiestria digitala functioneaza impreuna.",
+    "manifesto_title": "Despre Noi",
+    "manifesto_text": "Oferim cele mai exclusive manechine și produse decorative pentru a adăuga valoare spațiilor dumneavoastră.",
     "social_title": "Instagram",
     "rights": "Toate drepturile rezervate.",
     "link_home": "Acasa",
-    "link_designs": "Designuri",
+    "link_designs": "Galerie Designuri",
     "link_shop": "Magazin",
     "link_contact": "Contact",
     "social_instagram": "Instagram Principal",

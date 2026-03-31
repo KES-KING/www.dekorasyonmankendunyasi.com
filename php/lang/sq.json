@@ -15,8 +15,10 @@
     "language": "Gjuha"
   },
   "hero": {
-    "kicker": "Modë | Dizajn | Kulturë",
-    "description": "Një studio vizuale e guximshme për pamje të dallueshme, gjuhë editoriale dizajni dhe tregim dixhital me ndikim.",
+    "kicker": "Estetikë | Dekorim | Dizajn",
+    "description": "Manekinë dekorative dhe dizajne estetike që i japin jetë hapësirave tuaja.",
+    "cta_catalog": "Shfletoni Katalogun",
+    "cta_contact": "Na Kontaktoni",
     "cta_shop": "Shiko Koleksionin",
     "cta_designs": "Shiko Dizajnet",
     "image_alt": "Imazh sfondi hero"
@@ -26,7 +28,16 @@
     "contact_social_description": "Mund të na kontaktoni në çdo kohë.",
     "social_empty": "Ende nuk janë shtuar lidhje të rrjeteve sociale.",
     "location_title": "Vendndodhja",
-    "location_iframe_title": "Vendndodhja e Biznesit"
+    "location_iframe_title": "Vendndodhja e Biznesit",
+    "open_on_map": "Hap në Hartë",
+    "bank_kicker": "Informacione Pagesë",
+    "bank_title": "Llogaritë Tona Bankare",
+    "bank_description": "Për transfertat tuaja bankare mund të përdorni të dhënat e llogarive më poshtë.",
+    "bank_iban_label": "IBAN / Të Dhënat e Llogarise",
+    "bank_copy_hint": "Klikoni për kopjim",
+    "bank_copied": "Kopjuar",
+    "bank_copy_aria": "kopjo të dhënat e llogarise",
+    "bank_empty": "Ende nuk janë shtuar të dhëna bankare."
   },
   "sections": {
     "designs_kicker": "Seksioni 01",
@@ -107,20 +118,20 @@
     "flash_error": "Mesazhi nuk mund të dërgohet tani. Ju lutem provoni më vonë."
   },
   "footer": {
-    "tagline": "Krijuar për Instagram Luxury",
+    "tagline": "Dizajnuar për Ju",
     "links_title": "Lidhje të Shpejta",
-    "manifesto_title": "Manifest",
-    "manifesto_text": "Ne krijojmë narrativa vizuale të rafinuara ku moda, identiteti dhe mjeshtëria dixhitale ecin së bashku.",
+    "manifesto_title": "Rreth Nesh",
+    "manifesto_text": "Ne ofrojmë manekinat dhe produktet dekorative më ekskluzive për t'i dhënë vlerë hapësirave tuaja.",
     "social_title": "Instagram",
     "rights": "Të gjitha të drejtat e rezervuara.",
     "link_home": "Kryefaqja",
-    "link_designs": "Dizajne",
+    "link_designs": "Galeria e Dizajneve",
     "link_shop": "Dyqan",
     "link_contact": "Kontakt",
     "social_instagram": "Instagram Kryesor",
     "social_reels": "Instagram Reels",
     "social_shop": "Instagram Shop",
-    "contact_title": "Të Gjitha Kontaktet"
+    "contact_title": "Të Gjitha Kanalet e Kontaktit"
   },
   "errors": {
     "not_found_title": "404",

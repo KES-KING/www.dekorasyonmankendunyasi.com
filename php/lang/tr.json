@@ -15,8 +15,10 @@
     "language": "Dil"
   },
   "hero": {
-    "kicker": "Moda | Tasarım | Kültür",
-    "description": "İddialı görünümler, editoryal tasarım dili ve güçlü dijital hikaye anlatımı için cesur bir görsel atölye.",
+    "kicker": "Estetik | Dekorasyon | Tasarım",
+    "description": "Mekanlarınızı canlandıran dekoratif mankenler ve estetik tasarımlar.",
+    "cta_catalog": "Kataloğu İncele",
+    "cta_contact": "İletişime Geç",
     "cta_shop": "Koleksiyonu Keşfet",
     "cta_designs": "Tasarımları Gör",
     "image_alt": "Hero arka plan gorseli"
@@ -26,7 +28,16 @@
     "contact_social_description": "Bize her zaman ulaşabilirsiniz.",
     "social_empty": "Henüz sosyal medya bağlantısı eklenmemiş.",
     "location_title": "Konum",
-    "location_iframe_title": "İşletme Konumu"
+    "location_iframe_title": "İşletme Konumu",
+    "open_on_map": "Haritada Aç",
+    "bank_kicker": "Ödeme Bilgileri",
+    "bank_title": "Banka Hesaplarımız",
+    "bank_description": "Havale ve EFT işlemleriniz için aşağıdaki hesap bilgilerimizi kullanabilirsiniz.",
+    "bank_iban_label": "IBAN / Hesap Bilgisi",
+    "bank_copy_hint": "Kopyalamak için tıklayın",
+    "bank_copied": "Kopyalandı",
+    "bank_copy_aria": "hesap bilgisini kopyala",
+    "bank_empty": "Henüz banka hesap bilgisi eklenmemiş."
   },
   "sections": {
     "designs_kicker": "Bölüm 01",
@@ -107,20 +118,20 @@
     "flash_error": "Mesaj su an gonderilemedi. Lutfen daha sonra tekrar deneyin."
   },
   "footer": {
-    "tagline": "Instagram Luksu Icin Tasarlandi",
-    "links_title": "Hizli Baglantilar",
-    "manifesto_title": "Manifesto",
-    "manifesto_text": "Moda, kimlik ve dijital uretimin tek bir rafine anlatida birlestigi gorsel hikayeler uretiyoruz.",
+    "tagline": "Sizin İçin Tasarlandı",
+    "links_title": "Schnellzugriff",
+    "manifesto_title": "Hakkımızda",
+    "manifesto_text": "Mekanlarınıza değer katmak için en özel manken ve dekorasyon ürünlerini sunuyoruz.",
     "social_title": "Instagram",
-    "rights": "Tum haklari saklidir.",
+    "rights": "Tüm hakları saklıdır.",
     "link_home": "Ana Sayfa",
-    "link_designs": "Tasarımlar",
-    "link_shop": "Magaza",
-    "link_contact": "Iletisim",
+    "link_designs": "Tasarım Galerisi",
+    "link_shop": "Mağaza",
+    "link_contact": "İletişim",
     "social_instagram": "Instagram Ana Hesap",
     "social_reels": "Instagram Reels",
-    "social_shop": "Instagram Magaza",
-    "contact_title": "Tüm İletişim"
+    "social_shop": "Instagram Mağaza",
+    "contact_title": "Tüm İletişim Kanalları"
   },
   "errors": {
     "not_found_title": "404",
