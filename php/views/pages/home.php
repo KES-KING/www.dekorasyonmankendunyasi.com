@@ -76,9 +76,6 @@
 
             $contacts = [
                 ['icon' => 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', 'label' => 'Telefon', 'value' => $phone, 'link' => $phone === '' ? '' : 'tel:' . $phone, 'new_tab' => false],
-                ['icon' => 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z', 'label' => 'WhatsApp', 'value' => $whatsappRaw, 'link' => $whatsappDigits === '' ? '' : 'https://wa.me/' . $whatsappDigits, 'new_tab' => true],
-                ['icon' => 'M16 8l2-3.5L21 8h-5z M3 16l2 3.5 3-3.5H3z M12 2l4 7H8l4-7z M12 22l-4-7h8l-4 7z', 'label' => 'Viber', 'value' => $viberRaw, 'link' => $viberDigits === '' ? '' : 'viber://chat?number=' . $viberDigits, 'new_tab' => true],
-                ['icon' => 'M2 12l20-9-4 18-6-4-3 5v-6l10-8-12 9-5-2z', 'label' => 'Telegram', 'value' => $telegramRaw, 'link' => $telegramLink, 'new_tab' => true],
                 ['icon' => 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'label' => 'E-posta', 'value' => $emailAddress, 'link' => $emailAddress === '' ? '' : 'mailto:' . $emailAddress, 'new_tab' => false],
                 ['icon' => 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z', 'label' => 'Konum', 'value' => $businessLocation, 'link' => $locationMapLink, 'new_tab' => true],
             ];
@@ -101,30 +98,30 @@
             <?php endforeach; ?>
         </div>
 
-        <?php if ($locationEmbedUrl !== ''): ?>
-            <div class="mt-10 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-                <div class="border-b border-zinc-100 bg-zinc-50/70 px-6 py-5">
-                    <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">Konum</p>
-                    <p class="mt-2 text-sm font-medium text-zinc-700"><?= e($businessLocation); ?></p>
-                    <a href="<?= e($locationMapLink); ?>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.14em] text-yellow-700 transition hover:text-yellow-600">
-                        Haritada Aç
-                    </a>
-                </div>
-                <div class="h-[320px] w-full sm:h-[360px]">
-                    <iframe
-                        src="<?= e($locationEmbedUrl); ?>"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="h-full w-full border-0"
-                        title="İşletme Konumu"
-                    ></iframe>
-                </div>
-            </div>
-        <?php endif; ?>
-
-        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <?php
             $socials = [
+                [
+                    'name' => 'WhatsApp',
+                    'url' => $whatsappDigits === '' ? '' : 'https://wa.me/' . $whatsappDigits,
+                    'icon' => 'M12 2a10 10 0 0 0-8.66 15l-1.2 4.37 4.48-1.17A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.24l-.3-.18-2.62.69.7-2.55-.19-.31A8.2 8.2 0 0 1 12 3.8Zm-3.1 4.6c-.15 0-.39.06-.6.3-.2.24-.8.78-.8 1.9s.82 2.2.94 2.35c.12.15 1.6 2.56 3.94 3.5 1.93.78 2.32.62 2.74.58.42-.04 1.35-.55 1.54-1.08.2-.53.2-.98.14-1.08-.06-.1-.22-.16-.47-.29-.25-.12-1.47-.73-1.7-.82-.22-.08-.38-.12-.54.12-.16.24-.61.82-.75.98-.14.16-.28.18-.53.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.22-1.44-1.36-1.68-.14-.24-.01-.37.11-.49.11-.11.25-.29.37-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.53-1.28-.73-1.75-.19-.46-.39-.4-.54-.41h-.46Z',
+                    'cardClass' => 'hover:border-emerald-300 hover:bg-emerald-50/70',
+                    'iconClass' => 'group-hover:bg-emerald-100 group-hover:text-emerald-600',
+                ],
+                [
+                    'name' => 'Viber',
+                    'url' => $viberDigits === '' ? '' : 'viber://chat?number=' . $viberDigits,
+                    'icon' => 'M12 2C6.48 2 2 5.58 2 10c0 2.56 1.52 4.84 3.9 6.3V22l4.07-2.24c.66.13 1.34.2 2.03.2 5.52 0 10-3.58 10-8s-4.48-7.96-10-7.96Zm5.1 10.48c-.14.5-.82.96-1.37 1.02-.35.04-.8.07-2.6-.67-2.3-.95-3.78-3.29-3.9-3.45-.11-.15-.93-1.24-.93-2.37 0-1.12.59-1.67.8-1.9.2-.23.44-.29.58-.29h.42c.13 0 .31-.05.48.35.18.43.61 1.49.66 1.59.05.11.08.23.02.37-.07.15-.11.24-.22.37-.11.13-.23.28-.33.37-.11.11-.22.23-.09.45.13.22.58.96 1.24 1.56.85.76 1.57 1 1.79 1.12.22.11.35.1.48-.06.13-.16.55-.63.69-.84.15-.21.3-.18.5-.11.21.07 1.32.62 1.55.73.23.11.38.16.44.24.05.08.05.45-.09.95Z',
+                    'cardClass' => 'hover:border-violet-300 hover:bg-violet-50/70',
+                    'iconClass' => 'group-hover:bg-violet-100 group-hover:text-violet-600',
+                ],
+                [
+                    'name' => 'Telegram',
+                    'url' => $telegramLink,
+                    'icon' => 'M2.3 11.5 20.9 4c.86-.34 1.61.21 1.33 1.54l-3.17 14.95c-.24 1.06-.87 1.32-1.76.82l-4.87-3.59-2.35 2.27c-.26.26-.48.48-.98.48l.35-4.97 9.05-8.18c.39-.35-.08-.55-.61-.2l-11.2 7.05-4.82-1.5c-1.05-.33-1.07-1.05.22-1.56Z',
+                    'cardClass' => 'hover:border-sky-300 hover:bg-sky-50/70',
+                    'iconClass' => 'group-hover:bg-sky-100 group-hover:text-sky-600',
+                ],
                 [
                     'name' => 'Instagram',
                     'url' => $normalizeExternalUrl((string) ($settings['instagram_url'] ?? '')),
@@ -178,6 +175,27 @@
                 <p class="col-span-full text-center text-sm text-zinc-500">Henüz sosyal medya bağlantısı eklenmemiş.</p>
             <?php endif; ?>
         </div>
+
+        <?php if ($locationEmbedUrl !== ''): ?>
+            <div class="mt-10 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+                <div class="border-b border-zinc-100 bg-zinc-50/70 px-6 py-5">
+                    <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">Konum</p>
+                    <p class="mt-2 text-sm font-medium text-zinc-700"><?= e($businessLocation); ?></p>
+                    <a href="<?= e($locationMapLink); ?>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.14em] text-yellow-700 transition hover:text-yellow-600">
+                        Haritada Aç
+                    </a>
+                </div>
+                <div class="h-[320px] w-full sm:h-[360px]">
+                    <iframe
+                        src="<?= e($locationEmbedUrl); ?>"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="h-full w-full border-0"
+                        title="İşletme Konumu"
+                    ></iframe>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
 
