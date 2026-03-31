@@ -15,16 +15,20 @@
                 <a href="<?= e($contactUrl); ?>" class="transition <?= $activePage === 'contact' ? 'text-yellow-600' : 'hover:text-yellow-600'; ?>"><?= e(t('nav.contact', 'İletişim')); ?></a>
             </nav>
 
-            <div class="language-pill flex items-center gap-2 rounded-full px-3 py-1 border text-[11px] uppercase tracking-[0.18em]">
-                <?php foreach ($languageSwitcher as $language): ?>
-                    <a
-                        href="<?= e($language['url']); ?>"
-                        class="transition <?= $language['active'] ? 'text-yellow-600 font-bold' : 'hover:text-yellow-600'; ?>"
-                        hreflang="<?= e($language['code']); ?>"
-                    >
-                        <?= e(strtoupper($language['code'])); ?>
-                    </a>
-                <?php endforeach; ?>
+            <div class="language-pill rounded-full border px-2 py-1">
+                <label for="locale-switcher" class="sr-only"><?= e(t('nav.language', 'Dil')); ?></label>
+                <select
+                    id="locale-switcher"
+                    aria-label="<?= e(t('nav.language', 'Dil')); ?>"
+                    class="min-w-[10.5rem] bg-transparent px-2 py-1 text-[11px] font-semibold text-zinc-700 outline-none"
+                    onchange="if (this.value) { window.location.href = this.value; }"
+                >
+                    <?php foreach ($languageSwitcher as $language): ?>
+                        <option value="<?= e($language['url']); ?>" <?= $language['active'] ? 'selected' : ''; ?>>
+                            <?= e(localeFlagEmoji((string) $language['code']) . ' ' . (string) $language['name']); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
             </div>
         </div>
     </div>

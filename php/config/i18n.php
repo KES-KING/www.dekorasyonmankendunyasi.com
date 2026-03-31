@@ -3,24 +3,52 @@ declare(strict_types=1);
 
 function supportedLocales(): array
 {
-    return ['tr', 'en', 'de', 'ru'];
+    return ['tr', 'de', 'ru', 'mk', 'sq', 'bs', 'sr', 'hr', 'sl', 'bg', 'el', 'ro'];
 }
 
 function defaultLocale(): string
 {
-    return 'en';
+    return 'tr';
 }
 
 function localeNativeName(string $locale): string
 {
     $map = [
         'tr' => 'Turkce',
-        'en' => 'English',
         'de' => 'Deutsch',
         'ru' => 'Russkiy',
+        'mk' => 'Makedonski',
+        'sq' => 'Shqip',
+        'bs' => 'Bosanski',
+        'sr' => 'Srpski',
+        'hr' => 'Hrvatski',
+        'sl' => 'Slovenscina',
+        'bg' => 'Balgarski',
+        'el' => 'Ellinika',
+        'ro' => 'Romana',
     ];
 
     return $map[$locale] ?? strtoupper($locale);
+}
+
+function localeFlagEmoji(string $locale): string
+{
+    $map = [
+        'tr' => '🇹🇷',
+        'de' => '🇩🇪',
+        'ru' => '🇷🇺',
+        'mk' => '🇲🇰',
+        'sq' => '🇦🇱',
+        'bs' => '🇧🇦',
+        'sr' => '🇷🇸',
+        'hr' => '🇭🇷',
+        'sl' => '🇸🇮',
+        'bg' => '🇧🇬',
+        'el' => '🇬🇷',
+        'ro' => '🇷🇴',
+    ];
+
+    return $map[strtolower($locale)] ?? '🌐';
 }
 
 function isSupportedLocale(string $locale): bool
@@ -66,6 +94,16 @@ function stripLocaleFromPath(string $path): array
     $normalized = normalizePath($path);
     $segments = explode('/', trim($normalized, '/'));
     $firstSegment = strtolower($segments[0] ?? '');
+    $legacyLocaleMap = [
+        'en' => 'tr',
+    ];
+
+    if ($firstSegment !== '' && isset($legacyLocaleMap[$firstSegment])) {
+        $remaining = array_slice($segments, 1);
+        $remainingPath = '/' . implode('/', $remaining);
+
+        return [$legacyLocaleMap[$firstSegment], normalizeRoutePath($remainingPath)];
+    }
 
     if ($firstSegment !== '' && isSupportedLocale($firstSegment)) {
         $remaining = array_slice($segments, 1);
