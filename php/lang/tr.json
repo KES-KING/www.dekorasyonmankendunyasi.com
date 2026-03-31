@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "designs": "Tasarımlar",
+    "shop": "Mağaza",
+    "contact": "Iletisim",
+    "language": "Dil"
+  },
+  "hero": {
+    "kicker": "Moda | Tasarım | Kültür",
+    "description": "İddialı görünümler, editoryal tasarım dili ve güçlü dijital hikaye anlatımı için cesur bir görsel atölye.",
+    "cta_shop": "Koleksiyonu Keşfet",
+    "cta_designs": "Tasarımları Gör"
+  },
+  "sections": {
+    "designs_kicker": "Bölüm 01",
+    "designs_title": "Tasarım Galerisi",
+    "designs_description": "Bir tasarim kartini acarak detay sayfasina gidin ve tum foto/video icerigini gorun.",
+    "designs_home_description": "Gorsel katalogdan secili tasarimlar. Tam foto/video detaylari icin bir tasarimi acin.",
+    "shop_kicker": "Bölüm 02",
+    "shop_title": "Mağaza Koleksiyonu",
+    "shop_description": "Detay sayfalari ve coklu medya setleri ile urunleri kesfedin.",
+    "shop_home_description": "Bu sezonun secili urunleri. Tum gorselleri ve detaylari gormek icin bir urunu acin."
+  },
+  "gallery": {
+    "tap_preview": "Önizleme İçin Dokun",
+    "empty_title": "Henüz tasarım bulunamadı.",
+    "empty_text": "Bu galeriyi göstermek için designs tablosuna kayıt ekleyin."
+  },
+  "shop": {
+    "empty_title": "Henüz ürün bulunmuyor.",
+    "empty_text": "Mağazayı doldurmak için products tablosuna kayıt ekleyin."
+  },
+  "common": {
+    "db_error": "Veritabanı bağlantı sorunu",
+    "view_all_designs": "Tum Tasarimlar",
+    "view_all_products": "Tum Urunler",
+    "view_detail": "Detayi Gor",
+    "media_items": "Medya Ogesi",
+    "back_to_gallery": "Galeriye Don",
+    "back_to_shop": "Magazaya Don",
+    "buy_now": "Hemen Al"
+  },
+  "pages": {
+    "designs_kicker": "Katalog",
+    "designs_title": "Tasarim Galerisi",
+    "designs_description": "Her tasarim, birden fazla foto ve videonun oldugu detay sayfasina acilir.",
+    "shop_kicker": "Magaza",
+    "shop_title": "Magaza Koleksiyonu",
+    "shop_description": "Bir urunu acarak coklu foto/video ile tum detaylari inceleyin.",
+    "contact_kicker": "Baglanti",
+    "contact_title": "Iletisim",
+    "contact_description": "Is birligi, ozel siparis ve ortakliklar icin bize ulasin.",
+    "design_detail_title": "Tasarim Detayi",
+    "design_detail_label": "Tasarim",
+    "design_detail_text": "Bu tasarim secili foto ve videolardan olusan bir medya akisi icerir. Tum acilari gormek icin medya seciciyi kullanin.",
+    "product_detail_title": "Urun Detayi",
+    "product_detail_label": "Urun",
+    "product_detail_text": "Bu urun, satin alma oncesinde tum detaylarin incelenebilmesi icin birden fazla foto ve video destekler."
+  },
+  "contact": {
+    "kicker": "Bolum 03",
+    "title": "Iletisim",
+    "description": "Is birlikleri, ozel siparisler ve kurumsal talepler icin mesaj gonderin.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "submit": "Mesaj Gonder",
+    "info_title": "Dogrudan",
+    "info_text": "Genellikle 24-48 saat icinde donus yapiyoruz. Hizli donus icin proje detaylarini ekleyin.",
+    "flash_invalid_token": "Formun suresi doldu. Lutfen tekrar deneyin.",
+    "flash_required": "Lutfen zorunlu alanlari doldurun.",
+    "flash_email": "Lutfen gecerli bir e-posta adresi girin.",
+    "flash_success": "Mesajiniz basariyla gonderildi.",
+    "flash_error": "Mesaj su an gonderilemedi. Lutfen daha sonra tekrar deneyin."
+  },
+  "footer": {
+    "tagline": "Instagram Luksu Icin Tasarlandi",
+    "links_title": "Hizli Baglantilar",
+    "manifesto_title": "Manifesto",
+    "manifesto_text": "Moda, kimlik ve dijital uretimin tek bir rafine anlatida birlestigi gorsel hikayeler uretiyoruz.",
+    "social_title": "Instagram",
+    "rights": "Tum haklari saklidir.",
+    "link_home": "Ana Sayfa",
+    "link_designs": "Tasarımlar",
+    "link_shop": "Magaza",
+    "link_contact": "Iletisim",
+    "social_instagram": "Instagram Ana Hesap",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Magaza"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "İstediğiniz sayfa mevcut değil.",
+    "back_home": "Ana Sayfaya Dön"
+  }
+}

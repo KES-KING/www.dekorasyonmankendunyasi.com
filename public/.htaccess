@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Keep direct access to existing files/folders (assets)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route localized paths like /tr, /en, /de, /ru to index.php
+RewriteRule ^ index.php [L,QSA]

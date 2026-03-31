@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Start",
+    "designs": "Designs",
+    "shop": "Shop",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "hero": {
+    "kicker": "Mode | Design | Kultur",
+    "description": "Ein mutiges visuelles Atelier fur markante Looks, editoriale Designsprache und wirkungsstarkes digitales Storytelling.",
+    "cta_shop": "Kollektion Entdecken",
+    "cta_designs": "Designs Anzeigen"
+  },
+  "sections": {
+    "designs_kicker": "Abschnitt 01",
+    "designs_title": "Design-Galerie",
+    "designs_description": "Offne eine Design-Karte, um zur Detailseite zu gelangen und alle Fotos und Videos zu sehen.",
+    "designs_home_description": "Kurierte Highlights aus unserem visuellen Katalog. Offne ein Design fur alle Foto/Video-Details.",
+    "shop_kicker": "Abschnitt 02",
+    "shop_title": "Shop-Kollektion",
+    "shop_description": "Entdecke Produkte mit eigenen Detailseiten und vollstandigen Medien-Sets.",
+    "shop_home_description": "Signatur-Produkte dieser Saison. Offne ein Produkt fur alle Visuals und Details."
+  },
+  "gallery": {
+    "tap_preview": "Zum Vorschau Tippen",
+    "empty_title": "Noch keine Designs gefunden.",
+    "empty_text": "Fuge Datensatze in die Tabelle designs ein, um diese Galerie anzuzeigen."
+  },
+  "shop": {
+    "empty_title": "Noch keine Produkte verfugbar.",
+    "empty_text": "Fuge Datensatze in die Tabelle products ein, um den Shop zu fullen."
+  },
+  "common": {
+    "db_error": "Problem mit der Datenbankverbindung",
+    "view_all_designs": "Alle Designs",
+    "view_all_products": "Alle Produkte",
+    "view_detail": "Detail Ansehen",
+    "media_items": "Medien",
+    "back_to_gallery": "Zuruck Zur Galerie",
+    "back_to_shop": "Zuruck Zum Shop",
+    "buy_now": "Jetzt Kaufen"
+  },
+  "pages": {
+    "designs_kicker": "Katalog",
+    "designs_title": "Design-Galerie",
+    "designs_description": "Jedes Design offnet eine Detailseite mit mehreren Fotos und Videos.",
+    "shop_kicker": "Store",
+    "shop_title": "Shop-Kollektion",
+    "shop_description": "Offne ein Produkt, um alle Details mit mehreren Fotos und Videos zu sehen.",
+    "contact_kicker": "Kontakt",
+    "contact_title": "Kontakt",
+    "contact_description": "Kontaktiere uns fur Kooperationen, Sonderanfertigungen und Partnerschaften.",
+    "design_detail_title": "Design-Detail",
+    "design_detail_label": "Design",
+    "design_detail_text": "Dieses Design enthalt eine kuratierte Abfolge von Fotos und Videos. Nutze die Medienauswahl fur alle Perspektiven.",
+    "product_detail_title": "Produkt-Detail",
+    "product_detail_label": "Produkt",
+    "product_detail_text": "Dieses Produkt unterstutzt mehrere Fotos und Videos, damit Kundinnen und Kunden alle Details vor dem Kauf sehen konnen."
+  },
+  "contact": {
+    "kicker": "Abschnitt 03",
+    "title": "Kontakt",
+    "description": "Fur Kooperationen, Sonderauftrage und geschafltiche Anfragen senden Sie uns eine Nachricht.",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "submit": "Nachricht Senden",
+    "info_title": "Direkt",
+    "info_text": "Wir antworten in der Regel innerhalb von 24-48 Stunden. Bitte fugen Sie Projektdetails fur eine schnellere Antwort hinzu.",
+    "flash_invalid_token": "Das Formular ist abgelaufen. Bitte versuchen Sie es erneut.",
+    "flash_required": "Bitte fullen Sie alle Pflichtfelder aus.",
+    "flash_email": "Bitte geben Sie eine gultige E-Mail-Adresse ein.",
+    "flash_success": "Ihre Nachricht wurde erfolgreich gesendet.",
+    "flash_error": "Die Nachricht konnte derzeit nicht gesendet werden. Bitte versuchen Sie es spater erneut."
+  },
+  "footer": {
+    "tagline": "Fur Instagram Luxury Entwickelt",
+    "links_title": "Schnellzugriff",
+    "manifesto_title": "Manifest",
+    "manifesto_text": "Wir schaffen verfeinerte visuelle Narrative, in denen Mode, Identitat und digitale Handwerkskunst zusammenwirken.",
+    "social_title": "Instagram",
+    "rights": "Alle Rechte vorbehalten.",
+    "link_home": "Startseite",
+    "link_designs": "Designs",
+    "link_shop": "Shop",
+    "link_contact": "Kontakt",
+    "social_instagram": "Instagram Hauptprofil",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Shop"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "Die angeforderte Seite existiert nicht.",
+    "back_home": "Zur Startseite"
+  }
+}

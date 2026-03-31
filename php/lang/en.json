@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Home",
+    "designs": "Designs",
+    "shop": "Shop",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "kicker": "Fashion | Design | Culture",
+    "description": "A bold visual atelier for statement looks, editorial design language, and high-impact digital storytelling.",
+    "cta_shop": "Explore Collection",
+    "cta_designs": "View Designs"
+  },
+  "sections": {
+    "designs_kicker": "Section 01",
+    "designs_title": "Designs Gallery",
+    "designs_description": "Open any design card to visit its detail page and browse all photos and videos.",
+    "designs_home_description": "Curated highlights from our visual catalog. Open each design for full photo/video detail.",
+    "shop_kicker": "Section 02",
+    "shop_title": "Shop Collection",
+    "shop_description": "Discover products with dedicated detail pages and full media sets.",
+    "shop_home_description": "Signature products selected for this season. Open a product to see all visuals and details."
+  },
+  "gallery": {
+    "tap_preview": "Tap to Preview",
+    "empty_title": "No designs found yet.",
+    "empty_text": "Insert rows into the designs table to render this gallery."
+  },
+  "shop": {
+    "empty_title": "No products available yet.",
+    "empty_text": "Insert rows into the products table to populate your store."
+  },
+  "common": {
+    "db_error": "Database connection issue",
+    "view_all_designs": "View All Designs",
+    "view_all_products": "View All Products",
+    "view_detail": "View Detail",
+    "media_items": "Media Items",
+    "back_to_gallery": "Back To Gallery",
+    "back_to_shop": "Back To Shop",
+    "buy_now": "Buy Now"
+  },
+  "pages": {
+    "designs_kicker": "Catalog",
+    "designs_title": "Designs Gallery",
+    "designs_description": "Each design opens to a dedicated detail page where multiple photos and videos are available.",
+    "shop_kicker": "Store",
+    "shop_title": "Shop Collection",
+    "shop_description": "Open any product to view complete detail with multiple photos and videos.",
+    "contact_kicker": "Connect",
+    "contact_title": "Contact",
+    "contact_description": "Reach us for collaborations, custom work and partnerships.",
+    "design_detail_title": "Design Detail",
+    "design_detail_label": "Design",
+    "design_detail_text": "This design includes a curated sequence of photos and videos. Use the media selector to move through every visual angle.",
+    "product_detail_title": "Product Detail",
+    "product_detail_label": "Product",
+    "product_detail_text": "This product supports multiple photos and videos so customers can inspect every detail before purchase."
+  },
+  "contact": {
+    "kicker": "Section 03",
+    "title": "Contact",
+    "description": "For collaborations, custom orders and business inquiries, send us a message.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send Message",
+    "info_title": "Direct",
+    "info_text": "We usually answer within 24-48 hours. Please include your project details for a faster response.",
+    "flash_invalid_token": "Form expired. Please try again.",
+    "flash_required": "Please fill all required fields.",
+    "flash_email": "Please enter a valid email address.",
+    "flash_success": "Your message has been sent successfully.",
+    "flash_error": "Message could not be sent right now. Please try again later."
+  },
+  "footer": {
+    "tagline": "Crafted for Instagram Luxury",
+    "links_title": "Quick Links",
+    "manifesto_title": "Manifesto",
+    "manifesto_text": "We build refined visual narratives where fashion, identity, and digital craft move as one.",
+    "social_title": "Instagram",
+    "rights": "All rights reserved.",
+    "link_home": "Home",
+    "link_designs": "Designs",
+    "link_shop": "Shop",
+    "link_contact": "Contact",
+    "social_instagram": "Instagram Main",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Shop"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "The page you requested does not exist.",
+    "back_home": "Back Home"
+  }
+}

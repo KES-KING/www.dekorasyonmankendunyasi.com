@@ -1,0 +1,95 @@
+html { scroll-behavior: smooth; }
+body { background: #faf9f6; color: #1a1a1a; font-family: 'Inter', sans-serif; }
+
+.site-header { background: rgba(250, 249, 246, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+
+.language-pill { background: rgba(255, 255, 255, 0.8); border-color: rgba(0, 0, 0, 0.1); color: #4a4a4a; }
+
+.gold-button {
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    background: transparent;
+    color: #b8860b;
+    transition: all 0.3s ease;
+}
+.gold-button:hover {
+    background: #d4af37;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+}
+
+.luxury-panel {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    border-radius: 12px;
+}
+
+.site-footer {
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.footer-title { letter-spacing: 0.15em; color: #666; }
+.footer-link { color: #888; transition: color 0.2s ease; }
+.footer-link:hover { color: #d4af37; }
+
+.contact-input {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    color: #1a1a1a;
+}
+.contact-input:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(230,225,215,0.4) 0%, rgba(250,249,246,1) 100%);
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212,175,55,0.2);
+}
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(212,175,55,0.1);
+    color: #b8860b;
+}
+
+.bank-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+.bank-card-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+.bank-card-value {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
