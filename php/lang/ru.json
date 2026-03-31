@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Запрошенная страница не существует.",
     "back_home": "На Главную"
+  },
+  "design": {
+    "whatsapp_button": "Перейти в WhatsApp",
+    "whatsapp_message_intro": "Здравствуйте, хочу получить информацию об этом дизайне.",
+    "whatsapp_message_link": "Ссылка на дизайн",
+    "copy_link_button": "Скопировать Ссылку",
+    "copy_link_done": "Скопировано",
+    "copy_link_error": "Не удалось скопировать"
   }
 }

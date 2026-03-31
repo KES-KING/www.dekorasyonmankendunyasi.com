@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Die angeforderte Seite existiert nicht.",
     "back_home": "Zur Startseite"
+  },
+  "design": {
+    "whatsapp_button": "Zu WhatsApp",
+    "whatsapp_message_intro": "Hallo, ich mochte Informationen zu diesem Design.",
+    "whatsapp_message_link": "Design-Link",
+    "copy_link_button": "Link Kopieren",
+    "copy_link_done": "Kopiert",
+    "copy_link_error": "Kopieren fehlgeschlagen"
   }
 }

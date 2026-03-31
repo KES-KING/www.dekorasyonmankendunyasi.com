@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Stran, ki ste jo zahtevali, ne obstaja.",
     "back_home": "Nazaj Domov"
+  },
+  "design": {
+    "whatsapp_button": "Pojdi na WhatsApp",
+    "whatsapp_message_intro": "Pozdravljeni, zanima me vec informacij o tem dizajnu.",
+    "whatsapp_message_link": "Povezava dizajna",
+    "copy_link_button": "Kopiraj Povezavo",
+    "copy_link_done": "Kopirano",
+    "copy_link_error": "Kopiranje ni uspelo"
   }
 }

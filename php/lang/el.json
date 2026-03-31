@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Η σελίδα που ζητήσατε δεν υπάρχει.",
     "back_home": "Πίσω στην Αρχική"
+  },
+  "design": {
+    "whatsapp_button": "Μετάβαση στο WhatsApp",
+    "whatsapp_message_intro": "Γεια σας, θα ήθελα πληροφορίες για αυτό το σχέδιο.",
+    "whatsapp_message_link": "Σύνδεσμος σχεδίου",
+    "copy_link_button": "Αντιγραφή Συνδέσμου",
+    "copy_link_done": "Αντιγράφηκε",
+    "copy_link_error": "Η αντιγραφή απέτυχε"
   }
 }

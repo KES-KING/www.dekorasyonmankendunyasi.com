@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Faqja që kërkuat nuk ekziston.",
     "back_home": "Kthehu në Kryefaqe"
+  },
+  "design": {
+    "whatsapp_button": "Shko në WhatsApp",
+    "whatsapp_message_intro": "Pershendetje, dua informacion per kete dizajn.",
+    "whatsapp_message_link": "Linku i dizajnit",
+    "copy_link_button": "Kopjo Linkun",
+    "copy_link_done": "U Kopjua",
+    "copy_link_error": "Kopjimi deshtoi"
   }
 }

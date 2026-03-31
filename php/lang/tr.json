@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "İstediğiniz sayfa mevcut değil.",
     "back_home": "Ana Sayfaya Dön"
+  },
+  "design": {
+    "whatsapp_button": "WhatsApp'a Git",
+    "whatsapp_message_intro": "Merhaba, bu tasarım hakkında bilgi almak istiyorum.",
+    "whatsapp_message_link": "Tasarım linki",
+    "copy_link_button": "Linki Kopyala",
+    "copy_link_done": "Kopyalandı",
+    "copy_link_error": "Kopyalanamadı"
   }
 }

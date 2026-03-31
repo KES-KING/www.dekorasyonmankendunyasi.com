@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Бараната страница не постои.",
     "back_home": "Назад на Почетна"
+  },
+  "design": {
+    "whatsapp_button": "Оди на WhatsApp",
+    "whatsapp_message_intro": "Здраво, сакам информации за овој дизајн.",
+    "whatsapp_message_link": "Линк на дизајн",
+    "copy_link_button": "Копирај Линк",
+    "copy_link_done": "Копирано",
+    "copy_link_error": "Копирањето не успеа"
   }
 }

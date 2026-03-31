@@ -2,6 +2,32 @@
 $designTitle = (string) ($design['title'] ?? t('pages.design_detail_title', 'Design Detail'));
 $designMedia = is_array($design['media'] ?? null) ? $design['media'] : [];
 $designDetails = trim((string) ($design['details'] ?? ''));
+$designId = (int) ($design['id'] ?? 0);
+
+$designPath = $designId > 0
+    ? localizedPath(currentLocale(), '/designs/' . $designId)
+    : localizedPath(currentLocale(), '/designs');
+
+$requestScheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (string) ($_SERVER['SERVER_PORT'] ?? '') === '443'
+    ? 'https'
+    : 'http';
+$requestHost = trim((string) ($_SERVER['HTTP_HOST'] ?? ''));
+$designAbsoluteUrl = $requestHost !== ''
+    ? $requestScheme . '://' . $requestHost . $designPath
+    : $designPath;
+
+$whatsappRawNumber = (string) ($whatsappNumber ?? '');
+$whatsappDigits = (string) preg_replace('/\D+/', '', $whatsappRawNumber);
+$whatsappLink = '';
+
+if ($whatsappDigits !== '') {
+    $whatsappMessageLines = [
+        t('design.whatsapp_message_intro', 'Merhaba, bu tasarım hakkında bilgi almak istiyorum.'),
+        t('design.whatsapp_message_link', 'Tasarım linki') . ': ' . $designAbsoluteUrl,
+    ];
+    $whatsappLink = 'https://wa.me/' . $whatsappDigits . '?text=' . rawurlencode(implode("\n", $whatsappMessageLines));
+}
+
 if ($designMedia === []) {
     $designMedia = [
         ['type' => 'image', 'url' => asset('images/hero.jpg')],
@@ -85,7 +111,73 @@ if ($designMedia === []) {
                 <p class="mt-6 text-xs uppercase tracking-[0.2em] text-gold/80">
                     <?= e((string) max(1, count($designMedia))); ?> <?= e(t('common.media_items', 'Media Items')); ?>
                 </p>
+                <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <?php if ($whatsappLink !== ''): ?>
+                        <a
+                            href="<?= e($whatsappLink); ?>"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="gold-button inline-flex items-center justify-center rounded-full px-6 py-3 text-xs uppercase tracking-[0.16em]"
+                        >
+                            <?= e(t('design.whatsapp_button', 'WhatsApp\'a Git')); ?>
+                        </a>
+                    <?php else: ?>
+                        <p class="text-xs uppercase tracking-[0.16em] text-zinc-500"><?= e(t('shop.whatsapp_missing', 'WhatsApp number is not configured yet.')); ?></p>
+                    <?php endif; ?>
+
+                    <button
+                        type="button"
+                        class="js-copy-design-link inline-flex items-center justify-center rounded-full border border-zinc-600 px-6 py-3 text-xs uppercase tracking-[0.16em] text-zinc-200 transition hover:border-gold/70 hover:text-gold"
+                        data-copy-link="<?= e($designAbsoluteUrl); ?>"
+                        data-default-label="<?= e(t('design.copy_link_button', 'Linki Kopyala')); ?>"
+                        data-copied-label="<?= e(t('design.copy_link_done', 'Kopyalandı')); ?>"
+                        data-error-label="<?= e(t('design.copy_link_error', 'Kopyalanamadı')); ?>"
+                    >
+                        <?= e(t('design.copy_link_button', 'Linki Kopyala')); ?>
+                    </button>
+                </div>
+                <p class="mt-4 text-xs text-zinc-500 break-all"><?= e($designAbsoluteUrl); ?></p>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    (function () {
+        const copyButton = document.querySelector('.js-copy-design-link');
+        if (!copyButton) {
+            return;
+        }
+
+        const defaultLabel = copyButton.getAttribute('data-default-label') || 'Linki Kopyala';
+        const copiedLabel = copyButton.getAttribute('data-copied-label') || 'Kopyalandı';
+        const errorLabel = copyButton.getAttribute('data-error-label') || 'Kopyalanamadı';
+        const copyLink = copyButton.getAttribute('data-copy-link') || '';
+        let resetTimeoutId = null;
+
+        copyButton.addEventListener('click', async () => {
+            if (copyLink === '') {
+                return;
+            }
+
+            let label = copiedLabel;
+            try {
+                await navigator.clipboard.writeText(copyLink);
+            } catch (error) {
+                label = errorLabel;
+            }
+
+            copyButton.textContent = label;
+            copyButton.classList.add('animate-pulse');
+
+            if (resetTimeoutId !== null) {
+                window.clearTimeout(resetTimeoutId);
+            }
+
+            resetTimeoutId = window.setTimeout(() => {
+                copyButton.textContent = defaultLabel;
+                copyButton.classList.remove('animate-pulse');
+            }, 1600);
+        });
+    })();
+</script>

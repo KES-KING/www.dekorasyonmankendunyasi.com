@@ -26,15 +26,16 @@
             
             <?php if(!empty($designs)): ?>
                 <?php foreach($designs as $design): ?>
+                    <?php $detailUrl = (string) ($design['detail_url'] ?? localizedPath(currentLocale(), '/designs')); ?>
                     <?php if(!empty($design['img_url'])): ?>
-                    <div class="luxury-panel break-inside-avoid relative overflow-hidden flex items-center justify-center p-2 bg-zinc-50 rounded-lg shadow-sm group">
+                    <a href="<?= e($detailUrl); ?>" class="luxury-panel break-inside-avoid relative overflow-hidden flex items-center justify-center p-2 bg-zinc-50 rounded-lg shadow-sm group block">
                         <img src="<?= e((string) $design['img_url']); ?>" alt="<?= e(t('gallery.image_alt', 'Tasarım')); ?>" loading="lazy" class="w-full h-auto object-cover rounded-md transition-transform duration-700 ease-out group-hover:scale-105" />
-                    </div>
+                    </a>
                     <?php endif; ?>
                     <?php if(!empty($design['video_url'])): ?>
-                    <div class="luxury-panel break-inside-avoid relative overflow-hidden p-2 bg-zinc-50 rounded-lg shadow-sm">
-                        <video src="<?= e((string) $design['video_url']); ?>" controls playsinline preload="metadata" class="w-full h-auto object-cover rounded-md"></video>
-                    </div>
+                    <a href="<?= e($detailUrl); ?>" class="luxury-panel break-inside-avoid relative overflow-hidden p-2 bg-zinc-50 rounded-lg shadow-sm block group">
+                        <video src="<?= e((string) $design['video_url']); ?>" muted loop autoplay playsinline preload="metadata" class="w-full h-auto object-cover rounded-md transition-transform duration-700 ease-out group-hover:scale-105"></video>
+                    </a>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php else: ?>

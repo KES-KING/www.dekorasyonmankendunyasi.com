@@ -138,5 +138,13 @@
     "not_found_title": "404",
     "not_found_message": "Pagina solicitata nu exista.",
     "back_home": "Inapoi Acasa"
+  },
+  "design": {
+    "whatsapp_button": "Mergi la WhatsApp",
+    "whatsapp_message_intro": "Salut, doresc informatii despre acest design.",
+    "whatsapp_message_link": "Link design",
+    "copy_link_button": "Copiaza Linkul",
+    "copy_link_done": "Copiat",
+    "copy_link_error": "Copierea a esuat"
   }
 }

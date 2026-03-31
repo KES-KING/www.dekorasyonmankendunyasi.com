@@ -43,15 +43,19 @@ final class HomeController
                 $data['totalPages'] = (int) ceil($total / $limit);
                 $data['currentPage'] = $page;
 
-                $stmt = $pdo->prepare("SELECT img_url, video_url FROM designs WHERE $whereSQL ORDER BY id DESC LIMIT :limit OFFSET :offset");
+                $stmt = $pdo->prepare("SELECT id, img_url, video_url FROM designs WHERE $whereSQL ORDER BY id DESC LIMIT :limit OFFSET :offset");
                 $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
                 $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
                 $stmt->execute();
                 $designRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 $data['designs'] = array_map(
-                    static function (array $row): array {
+                    function (array $row): array {
+                        $designId = (int) ($row['id'] ?? 0);
                         $row['img_url'] = mediaUrl($row['img_url'] ?? '');
                         $row['video_url'] = mediaUrl($row['video_url'] ?? '');
+                        $row['detail_url'] = $designId > 0
+                            ? localizedPath(currentLocale(), '/designs/' . $designId)
+                            : localizedPath(currentLocale(), '/designs');
 
                         return $row;
                     },
@@ -69,6 +73,76 @@ final class HomeController
         return [
             'title' => t('pages.designs_title', 'Tasarım Galerisi') . ' | Dekorasyon Manken Dünyası',
             'view' => 'designs',
+            'data' => $data,
+        ];
+    }
+
+    public function designDetail(array $params): array
+    {
+        $designId = (int) ($params['id'] ?? 0);
+        if ($designId < 1) {
+            return ['status' => 404];
+        }
+
+        $data = $this->loadBasePayload();
+        $data['activePage'] = 'designs';
+
+        try {
+            $pdo = databaseConnection();
+            if (!$this->tableExists($pdo, 'designs')) {
+                return ['status' => 404];
+            }
+
+            try {
+                $stmt = $pdo->prepare('SELECT id, title, details, img_url, video_url FROM designs WHERE id = :id LIMIT 1');
+                $stmt->execute(['id' => $designId]);
+            } catch (Throwable) {
+                $stmt = $pdo->prepare('SELECT id, img_url, video_url FROM designs WHERE id = :id LIMIT 1');
+                $stmt->execute(['id' => $designId]);
+            }
+
+            $designRow = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!is_array($designRow)) {
+                return ['status' => 404];
+            }
+
+            $designTitle = trim((string) ($designRow['title'] ?? ''));
+            if ($designTitle === '') {
+                $designTitle = t('gallery.default_title', 'İsimsiz Tasarım') . ' #' . $designId;
+            }
+
+            $designDetails = trim((string) ($designRow['details'] ?? ''));
+            $designMedia = [];
+
+            $imageUrl = mediaUrl((string) ($designRow['img_url'] ?? ''));
+            if ($imageUrl !== '') {
+                $designMedia[] = [
+                    'type' => 'image',
+                    'url' => $imageUrl,
+                ];
+            }
+
+            $videoUrl = mediaUrl((string) ($designRow['video_url'] ?? ''));
+            if ($videoUrl !== '') {
+                $designMedia[] = [
+                    'type' => 'video',
+                    'url' => $videoUrl,
+                ];
+            }
+
+            $data['design'] = [
+                'id' => $designId,
+                'title' => $designTitle,
+                'details' => $designDetails,
+                'media' => $designMedia,
+            ];
+        } catch (Throwable) {
+            return ['status' => 404];
+        }
+
+        return [
+            'title' => (string) ($data['design']['title'] ?? t('pages.design_detail_title', 'Tasarım Detayı')) . ' | Dekorasyon Manken Dünyası',
+            'view' => 'design-detail',
             'data' => $data,
         ];
     }
