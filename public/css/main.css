@@ -83,6 +83,28 @@ body { background: #faf9f6; color: #1a1a1a; font-family: 'Inter', sans-serif; }
     box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
     padding: 1.1rem 1.1rem 1.25rem;
 }
+.banking-card--copyable {
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.banking-card--copyable:hover {
+    transform: translateY(-3px);
+    border-color: var(--bank-accent, #0f172a);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+}
+.banking-card--copyable:focus-visible {
+    outline: 2px solid var(--bank-accent, #0f172a);
+    outline-offset: 2px;
+}
+.banking-card.is-copied {
+    border-color: var(--bank-accent, #0f172a);
+    box-shadow: 0 0 0 2px var(--bank-soft, rgba(15, 23, 42, 0.16)), 0 16px 40px rgba(15, 23, 42, 0.16);
+}
+.banking-card.is-copy-failed {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.14), 0 14px 30px rgba(239, 68, 68, 0.12);
+}
 .banking-card::before {
     content: '';
     display: block;
@@ -141,4 +163,41 @@ body { background: #faf9f6; color: #1a1a1a; font-family: 'Inter', sans-serif; }
     color: #0f172a;
     word-break: break-word;
     white-space: pre-line;
+}
+.banking-card__copy-hint {
+    margin: 0.75rem 0 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+.banking-card__copy-badge {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 1;
+    border-radius: 999px;
+    background: #14532d;
+    color: #dcfce7;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.32rem 0.58rem;
+    opacity: 0;
+    transform: translateY(-5px) scale(0.94);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+.banking-card.is-copy-failed .banking-card__copy-badge {
+    background: #b91c1c;
+    color: #fee2e2;
+}
+.banking-card.is-copied .banking-card__copy-badge,
+.banking-card.is-copy-failed .banking-card__copy-badge {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }

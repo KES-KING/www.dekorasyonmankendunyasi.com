@@ -236,8 +236,11 @@
                 $bankTheme = $bankThemes[$i] ?? ['accent' => '#52525b', 'soft' => 'rgba(82, 82, 91, 0.10)'];
             ?>
             <article
-                class="banking-card"
+                class="banking-card banking-card--copyable"
                 style="--bank-accent: <?= e($bankTheme['accent']); ?>; --bank-soft: <?= e($bankTheme['soft']); ?>;"
+                role="button"
+                tabindex="0"
+                aria-label="<?= e($bankName); ?> hesap bilgisini kopyala"
             >
                 <div class="banking-card__head">
                     <span class="banking-card__chip" aria-hidden="true"></span>
@@ -245,6 +248,8 @@
                 </div>
                 <p class="banking-card__meta">IBAN / Hesap Bilgisi</p>
                 <p class="banking-card__value"><?= nl2br(e($bankRaw)); ?></p>
+                <p class="banking-card__copy-hint">Kopyalamak için tıklayın</p>
+                <span class="banking-card__copy-badge" aria-hidden="true">Kopyalandı</span>
             </article>
             <?php endfor; ?>
             <?php if (!$hasBankAccount): ?>

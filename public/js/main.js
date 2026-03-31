@@ -202,5 +202,102 @@ document.addEventListener('DOMContentLoaded', function () {
         showItem(0);
     };
 
+    const copyTextToClipboard = async (text) => {
+        const value = String(text || '').trim();
+        if (value === '') {
+            return false;
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+            try {
+                await navigator.clipboard.writeText(value);
+                return true;
+            } catch (error) {
+                // Fallback below.
+            }
+        }
+
+        const textarea = document.createElement('textarea');
+        textarea.value = value;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+
+        let copied = false;
+        try {
+            copied = document.execCommand('copy');
+        } catch (error) {
+            copied = false;
+        }
+
+        document.body.removeChild(textarea);
+        return copied;
+    };
+
+    const setupBankingCardsCopy = () => {
+        const cards = Array.from(document.querySelectorAll('.banking-card--copyable'));
+        if (!cards.length) {
+            return;
+        }
+
+        const feedbackTimers = new WeakMap();
+        const showFeedback = (card, success) => {
+            const badge = card.querySelector('.banking-card__copy-badge');
+            if (badge) {
+                badge.textContent = success ? 'Kopyalandı' : 'Kopyalanamadı';
+            }
+
+            card.classList.remove('is-copied', 'is-copy-failed');
+            void card.offsetWidth;
+            card.classList.add(success ? 'is-copied' : 'is-copy-failed');
+
+            const existingTimer = feedbackTimers.get(card);
+            if (existingTimer) {
+                window.clearTimeout(existingTimer);
+            }
+
+            const timer = window.setTimeout(function () {
+                card.classList.remove('is-copied', 'is-copy-failed');
+                if (badge) {
+                    badge.textContent = 'Kopyalandı';
+                }
+                feedbackTimers.delete(card);
+            }, 1700);
+
+            feedbackTimers.set(card, timer);
+        };
+
+        const triggerCopy = async (card) => {
+            const valueElement = card.querySelector('.banking-card__value');
+            const textToCopy = valueElement ? (valueElement.innerText || valueElement.textContent || '').trim() : '';
+            if (textToCopy === '') {
+                showFeedback(card, false);
+                return;
+            }
+
+            const copied = await copyTextToClipboard(textToCopy);
+            showFeedback(card, copied);
+        };
+
+        cards.forEach((card) => {
+            card.addEventListener('click', function () {
+                triggerCopy(card);
+            });
+
+            card.addEventListener('keydown', function (event) {
+                if (event.key !== 'Enter' && event.key !== ' ') {
+                    return;
+                }
+                event.preventDefault();
+                triggerCopy(card);
+            });
+        });
+    };
+
     document.querySelectorAll('.detail-gallery').forEach(setupDetailGallery);
+    setupBankingCardsCopy();
 });
