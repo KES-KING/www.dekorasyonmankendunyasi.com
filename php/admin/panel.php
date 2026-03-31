@@ -199,8 +199,8 @@ if ($tabFromPath === '') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = trim((string) ($_POST['action'] ?? ''));
     $actionTabMap = [
-        'save_settings'          => 'settings',
-        'update_contact_status'  => 'messages',
+        'save_settings' => 'settings',
+        'update_contact_status' => 'messages',
         'delete_contact_message' => 'messages',
     ];
     $postedCsrf = (string) ($_POST['_csrf'] ?? '');
@@ -444,34 +444,44 @@ if (!$adminAuthenticated) {
     ?>
     <!DOCTYPE html>
     <html lang="tr">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Admin Girişi · NYSCC</title>
+        <title>Admin Girişi · DMD</title>
         <script src="<?= e(asset('js/tailwind-config.js')); ?>"></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="<?= e(asset('css/admin.css')); ?>" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet" />
     </head>
+
     <body class="admin-login-bg min-h-screen flex items-center justify-center" style="font-family:'Inter',sans-serif;">
         <div class="admin-login-card w-full max-w-md mx-4">
             <div class="admin-login-logo">
                 <div class="admin-login-icon">
-                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#D4AF37"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <div>
-                    <h1 class="admin-brand-name">NYSCC Admin</h1>
+                    <h1 class="admin-brand-name">DMD Admin</h1>
                     <p class="admin-brand-sub">NewYork Society Creation Club</p>
                 </div>
             </div>
 
             <?php if (is_array($flash)): ?>
-                <div class="admin-flash <?= ($flash['type'] ?? '') === 'error' ? 'admin-flash-error' : 'admin-flash-success'; ?>">
+                <div
+                    class="admin-flash <?= ($flash['type'] ?? '') === 'error' ? 'admin-flash-error' : 'admin-flash-success'; ?>">
                     <svg width="16" height="16" fill="none" viewBox="0 0 24 24" class="flex-shrink-0">
                         <?php if (($flash['type'] ?? '') === 'error'): ?>
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
                         <?php else: ?>
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         <?php endif; ?>
                     </svg>
                     <?= e((string) ($flash['message'] ?? '')); ?>
@@ -485,7 +495,11 @@ if (!$adminAuthenticated) {
                 <div class="admin-field">
                     <label class="admin-label">Kullanıcı Adı / E-posta</label>
                     <div class="admin-input-wrap">
-                        <svg class="admin-input-icon" width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/></svg>
+                        <svg class="admin-input-icon" width="16" height="16" fill="none" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" />
+                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.8" />
+                        </svg>
                         <input type="text" name="login" required class="admin-input" placeholder="kullanici@email.com" />
                     </div>
                 </div>
@@ -493,18 +507,26 @@ if (!$adminAuthenticated) {
                 <div class="admin-field">
                     <label class="admin-label">Şifre</label>
                     <div class="admin-input-wrap">
-                        <svg class="admin-input-icon" width="16" height="16" fill="none" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        <svg class="admin-input-icon" width="16" height="16" fill="none" viewBox="0 0 24 24">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" />
+                        </svg>
                         <input type="password" name="password" required class="admin-input" placeholder="••••••••" />
                     </div>
                 </div>
 
                 <button type="submit" class="admin-login-btn">
                     Giriş Yap
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </button>
             </form>
         </div>
     </body>
+
     </html>
     <?php
     return;
@@ -579,43 +601,49 @@ try {
 $adminNav = [
     'dashboard' => [
         'label' => 'Dashboard',
-        'icon'  => '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+        'icon' => '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
     ],
     'messages' => [
         'label' => 'İletişim Mesajları',
-        'icon'  => '<path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+        'icon' => '<path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
     ],
     'settings' => [
         'label' => 'Site Ayarları',
-        'icon'  => '<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M19.07 4.93a10 10 0 0 0-14.14 0M4.93 19.07a10 10 0 0 0 14.14 0M12 2v2m0 16v2m10-10h-2M4 12H2m15.66-7.66L16.24 5.76m-8.48 12.48L6.34 19.66m12.32 0L16.24 18.24M7.76 5.76L6.34 4.34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+        'icon' => '<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M19.07 4.93a10 10 0 0 0-14.14 0M4.93 19.07a10 10 0 0 0 14.14 0M12 2v2m0 16v2m10-10h-2M4 12H2m15.66-7.66L16.24 5.76m-8.48 12.48L6.34 19.66m12.32 0L16.24 18.24M7.76 5.76L6.34 4.34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
     ],
     'designs' => [
         'label' => 'Tasarım Galerisi',
-        'icon'  => '<rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.8"/><polyline points="21 15 16 10 5 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+        'icon' => '<rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.8"/><polyline points="21 15 16 10 5 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
     ],
 ];
 ?>
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />DMD
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Panel · NYSCC</title>
+    <title>Admin Panel · DMD</title>
     <script src="<?= e(asset('js/tailwind-config.js')); ?>"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="<?= e(asset('css/admin.css')); ?>" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 </head>
+
 <body class="admin-panel-body">
 
     <!-- ═══════ SIDEBAR ═══════ -->
     <aside class="admin-sidebar" id="adminSidebar">
         <div class="admin-sidebar-header">
             <div class="admin-sidebar-logo">
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#D4AF37"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </div>
             <div>
-                <p class="admin-sidebar-brand">NYSCC</p>
+                <p class="admin-sidebar-brand">DMD</p>
                 <p class="admin-sidebar-subbrand">Admin Panel</p>
             </div>
         </div>
@@ -623,16 +651,16 @@ $adminNav = [
         <nav class="admin-sidebar-nav">
             <p class="admin-nav-group-label">Ana Menü</p>
             <?php foreach ($adminNav as $tabKey => $tabInfo): ?>
-                <a href="<?= e($adminBaseUrl . '/' . $tabKey); ?>"
-                   class="admin-nav-item <?= $activeTab === $tabKey ? 'admin-nav-item-active' : ''; ?>">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-                        <?= $tabInfo['icon']; ?>
-                    </svg>
-                    <span><?= e($tabInfo['label']); ?></span>
-                    <?php if ($activeTab === $tabKey): ?>
-                        <span class="admin-nav-indicator"></span>
-                    <?php endif; ?>
-                </a>
+                                <a href="<?= e($adminBaseUrl . '/' . $tabKey); ?>"
+                                   class="admin-nav-item <?= $activeTab === $tabKey ? 'admin-nav-item-active' : ''; ?>">
+                                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                                        <?= $tabInfo['icon']; ?>
+                                    </svg>
+                                    <span><?= e($tabInfo['label']); ?></span>
+                                    <?php if ($activeTab === $tabKey): ?>
+                                                        <span class="admin-nav-indicator"></span>
+                                    <?php endif; ?>
+                                </a>
             <?php endforeach; ?>
         </nav>
 
@@ -700,446 +728,446 @@ $adminNav = [
         <main class="admin-content">
 
             <?php if (is_array($flash)): ?>
-                <div class="admin-flash-bar <?= ($flash['type'] ?? '') === 'error' ? 'admin-flash-bar-error' : 'admin-flash-bar-success'; ?>">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" class="flex-shrink-0">
-                        <?php if (($flash['type'] ?? '') === 'error'): ?>
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                        <?php else: ?>
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        <?php endif; ?>
-                    </svg>
-                    <span><?= e((string) ($flash['message'] ?? '')); ?></span>
-                    <button class="admin-flash-close" onclick="this.parentElement.remove()">
-                        <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                    </button>
-                </div>
+                                <div class="admin-flash-bar <?= ($flash['type'] ?? '') === 'error' ? 'admin-flash-bar-error' : 'admin-flash-bar-success'; ?>">
+                                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" class="flex-shrink-0">
+                                        <?php if (($flash['type'] ?? '') === 'error'): ?>
+                                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                        <?php else: ?>
+                                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <?php endif; ?>
+                                    </svg>
+                                    <span><?= e((string) ($flash['message'] ?? '')); ?></span>
+                                    <button class="admin-flash-close" onclick="this.parentElement.remove()">
+                                        <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                    </button>
+                                </div>
             <?php endif; ?>
 
             <!-- ════ DASHBOARD ════ -->
             <?php if ($activeTab === 'dashboard'): ?>
-                <div class="admin-page-header">
-                    <h2 class="admin-page-title">Dashboard</h2>
-                    <p class="admin-page-desc">Sitenizin genel durumuna hızlı bir bakış.</p>
-                </div>
+                                <div class="admin-page-header">
+                                    <h2 class="admin-page-title">Dashboard</h2>
+                                    <p class="admin-page-desc">Sitenizin genel durumuna hızlı bir bakış.</p>
+                                </div>
 
-                <div class="admin-stats-grid">
-                    <div class="admin-stat-card">
-                        <div class="admin-stat-card-icon admin-stat-card-icon--gold">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <div class="admin-stat-card-body">
-                            <p class="admin-stat-card-label">Toplam Ürün</p>
-                            <p class="admin-stat-card-value"><?= e((string) count($products)); ?></p>
-                        </div>
-                        <a href="<?= e($adminBaseUrl . '/products'); ?>" class="admin-stat-card-link">Yönet →</a>
-                    </div>
+                                <div class="admin-stats-grid">
+                                    <div class="admin-stat-card">
+                                        <div class="admin-stat-card-icon admin-stat-card-icon--gold">
+                                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                        <div class="admin-stat-card-body">
+                                            <p class="admin-stat-card-label">Toplam Ürün</p>
+                                            <p class="admin-stat-card-value"><?= e((string) count($products)); ?></p>
+                                        </div>
+                                        <a href="<?= e($adminBaseUrl . '/products'); ?>" class="admin-stat-card-link">Yönet →</a>
+                                    </div>
 
-                    <div class="admin-stat-card">
-                        <div class="admin-stat-card-icon admin-stat-card-icon--blue">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                        </div>
-                        <div class="admin-stat-card-body">
-                            <p class="admin-stat-card-label">Toplam Tasarım</p>
-                            <p class="admin-stat-card-value"><?= e((string) count($designs)); ?></p>
-                        </div>
-                        <a href="<?= e($adminBaseUrl . '/designs'); ?>" class="admin-stat-card-link">Yönet →</a>
-                    </div>
+                                    <div class="admin-stat-card">
+                                        <div class="admin-stat-card-icon admin-stat-card-icon--blue">
+                                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                        </div>
+                                        <div class="admin-stat-card-body">
+                                            <p class="admin-stat-card-label">Toplam Tasarım</p>
+                                            <p class="admin-stat-card-value"><?= e((string) count($designs)); ?></p>
+                                        </div>
+                                        <a href="<?= e($adminBaseUrl . '/designs'); ?>" class="admin-stat-card-link">Yönet →</a>
+                                    </div>
 
-                    <div class="admin-stat-card">
-                        <div class="admin-stat-card-icon admin-stat-card-icon--green">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/></svg>
-                        </div>
-                        <div class="admin-stat-card-body">
-                            <p class="admin-stat-card-label">Aktif Kullanıcı</p>
-                            <p class="admin-stat-card-value"><?= e((string) $adminUser['username']); ?></p>
-                        </div>
-                        <span class="admin-stat-card-link" style="color:var(--admin-green);">Çevrimiçi</span>
-                    </div>
+                                    <div class="admin-stat-card">
+                                        <div class="admin-stat-card-icon admin-stat-card-icon--green">
+                                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/></svg>
+                                        </div>
+                                        <div class="admin-stat-card-body">
+                                            <p class="admin-stat-card-label">Aktif Kullanıcı</p>
+                                            <p class="admin-stat-card-value"><?= e((string) $adminUser['username']); ?></p>
+                                        </div>
+                                        <span class="admin-stat-card-link" style="color:var(--admin-green);">Çevrimiçi</span>
+                                    </div>
 
-                    <div class="admin-stat-card">
-                        <div class="admin-stat-card-icon admin-stat-card-icon--gold">
-                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <div class="admin-stat-card-body">
-                            <p class="admin-stat-card-label">Yeni Mesaj</p>
-                            <p class="admin-stat-card-value"><?= e((string) $contactStatusCounts['new']); ?></p>
-                        </div>
-                        <a href="<?= e($adminBaseUrl . '/messages'); ?>" class="admin-stat-card-link">Mesajlar →</a>
-                    </div>
-                </div>
+                                    <div class="admin-stat-card">
+                                        <div class="admin-stat-card-icon admin-stat-card-icon--gold">
+                                            <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                        <div class="admin-stat-card-body">
+                                            <p class="admin-stat-card-label">Yeni Mesaj</p>
+                                            <p class="admin-stat-card-value"><?= e((string) $contactStatusCounts['new']); ?></p>
+                                        </div>
+                                        <a href="<?= e($adminBaseUrl . '/messages'); ?>" class="admin-stat-card-link">Mesajlar →</a>
+                                    </div>
+                                </div>
 
-                <div class="admin-dashboard-grid">
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3 class="admin-card-title">Son Ürünler</h3>
-                            <a href="<?= e($adminBaseUrl . '/products'); ?>" class="admin-card-action">Tümünü Gör</a>
-                        </div>
-                        <div class="admin-card-body">
-                            <?php if (empty($products)): ?>
-                                <p class="admin-empty-msg">Henüz ürün eklenmedi.</p>
-                            <?php else: ?>
-                                <table class="admin-table">
-                                    <thead><tr><th>Ürün Adı</th><th>Fiyat</th><th>İşlem</th></tr></thead>
-                                    <tbody>
-                                    <?php foreach (array_slice($products, 0, 5) as $p): ?>
-                                        <tr>
-                                            <td><?= e((string) ($p['name'] ?? '')); ?></td>
-                                            <td class="admin-table-price">$<?= e(number_format((float) ($p['price'] ?? 0), 2)); ?></td>
-                                            <td><a href="<?= e($adminBaseUrl . '/products'); ?>" class="admin-table-link">Düzenle</a></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            <?php endif; ?>
-                        </div>
-                    </div>
+                                <div class="admin-dashboard-grid">
+                                    <div class="admin-card">
+                                        <div class="admin-card-header">
+                                            <h3 class="admin-card-title">Son Ürünler</h3>
+                                            <a href="<?= e($adminBaseUrl . '/products'); ?>" class="admin-card-action">Tümünü Gör</a>
+                                        </div>
+                                        <div class="admin-card-body">
+                                            <?php if (empty($products)): ?>
+                                                                <p class="admin-empty-msg">Henüz ürün eklenmedi.</p>
+                                            <?php else: ?>
+                                                                <table class="admin-table">
+                                                                    <thead><tr><th>Ürün Adı</th><th>Fiyat</th><th>İşlem</th></tr></thead>
+                                                                    <tbody>
+                                                                    <?php foreach (array_slice($products, 0, 5) as $p): ?>
+                                                                                        <tr>
+                                                                                            <td><?= e((string) ($p['name'] ?? '')); ?></td>
+                                                                                            <td class="admin-table-price">$<?= e(number_format((float) ($p['price'] ?? 0), 2)); ?></td>
+                                                                                            <td><a href="<?= e($adminBaseUrl . '/products'); ?>" class="admin-table-link">Düzenle</a></td>
+                                                                                        </tr>
+                                                                    <?php endforeach; ?>
+                                                                    </tbody>
+                                                                </table>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
 
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3 class="admin-card-title">Son Tasarımlar</h3>
-                            <a href="<?= e($adminBaseUrl . '/designs'); ?>" class="admin-card-action">Tümünü Gör</a>
-                        </div>
-                        <div class="admin-card-body">
-                            <?php if (empty($designs)): ?>
-                                <p class="admin-empty-msg">Henüz tasarım eklenmedi.</p>
-                            <?php else: ?>
-                                <table class="admin-table">
-                                    <thead><tr><th>Başlık</th><th>İşlem</th></tr></thead>
-                                    <tbody>
-                                    <?php foreach (array_slice($designs, 0, 5) as $d): ?>
-                                        <tr>
-                                            <td><?= e((string) ($d['title'] ?? '')); ?></td>
-                                            <td><a href="<?= e($adminBaseUrl . '/designs'); ?>" class="admin-table-link">Düzenle</a></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            <?php endif; ?>
-                        </div>
-                    </div>
+                                    <div class="admin-card">
+                                        <div class="admin-card-header">
+                                            <h3 class="admin-card-title">Son Tasarımlar</h3>
+                                            <a href="<?= e($adminBaseUrl . '/designs'); ?>" class="admin-card-action">Tümünü Gör</a>
+                                        </div>
+                                        <div class="admin-card-body">
+                                            <?php if (empty($designs)): ?>
+                                                                <p class="admin-empty-msg">Henüz tasarım eklenmedi.</p>
+                                            <?php else: ?>
+                                                                <table class="admin-table">
+                                                                    <thead><tr><th>Başlık</th><th>İşlem</th></tr></thead>
+                                                                    <tbody>
+                                                                    <?php foreach (array_slice($designs, 0, 5) as $d): ?>
+                                                                                        <tr>
+                                                                                            <td><?= e((string) ($d['title'] ?? '')); ?></td>
+                                                                                            <td><a href="<?= e($adminBaseUrl . '/designs'); ?>" class="admin-table-link">Düzenle</a></td>
+                                                                                        </tr>
+                                                                    <?php endforeach; ?>
+                                                                    </tbody>
+                                                                </table>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
 
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3 class="admin-card-title">Son Iletisim Mesajları</h3>
-                            <a href="<?= e($adminBaseUrl . '/messages'); ?>" class="admin-card-action">Mesajları Gör</a>
-                        </div>
-                        <div class="admin-card-body">
-                            <?php if (!$contactTableAvailable): ?>
-                                <p class="admin-empty-msg">`contact_messages` tablosu bulunamadi.</p>
-                            <?php elseif (empty($contactMessages)): ?>
-                                <p class="admin-empty-msg">Henüz iletişim mesajı yok.</p>
-                            <?php else: ?>
-                                <table class="admin-table">
-                                    <thead><tr><th>Gönderen</th><th>Konu</th><th>Durum</th></tr></thead>
-                                    <tbody>
-                                    <?php foreach (array_slice($contactMessages, 0, 5) as $message): ?>
-                                        <?php
-                                        $status = (string) ($message['status'] ?? 'new');
-                                        $statusLabel = $contactStatusLabels[$status] ?? 'Yeni';
-                                        ?>
-                                        <tr>
-                                            <td><?= e((string) ($message['name'] ?? '')); ?></td>
-                                            <td><?= e((string) ($message['subject'] ?? '')); ?></td>
-                                            <td>
-                                                <span class="admin-status-badge admin-status-badge--<?= e($status); ?>">
-                                                    <?= e($statusLabel); ?>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
+                                    <div class="admin-card">
+                                        <div class="admin-card-header">
+                                            <h3 class="admin-card-title">Son Iletisim Mesajları</h3>
+                                            <a href="<?= e($adminBaseUrl . '/messages'); ?>" class="admin-card-action">Mesajları Gör</a>
+                                        </div>
+                                        <div class="admin-card-body">
+                                            <?php if (!$contactTableAvailable): ?>
+                                                                <p class="admin-empty-msg">`contact_messages` tablosu bulunamadi.</p>
+                                            <?php elseif (empty($contactMessages)): ?>
+                                                                <p class="admin-empty-msg">Henüz iletişim mesajı yok.</p>
+                                            <?php else: ?>
+                                                                <table class="admin-table">
+                                                                    <thead><tr><th>Gönderen</th><th>Konu</th><th>Durum</th></tr></thead>
+                                                                    <tbody>
+                                                                    <?php foreach (array_slice($contactMessages, 0, 5) as $message): ?>
+                                                                                        <?php
+                                                                                        $status = (string) ($message['status'] ?? 'new');
+                                                                                        $statusLabel = $contactStatusLabels[$status] ?? 'Yeni';
+                                                                                        ?>
+                                                                                        <tr>
+                                                                                            <td><?= e((string) ($message['name'] ?? '')); ?></td>
+                                                                                            <td><?= e((string) ($message['subject'] ?? '')); ?></td>
+                                                                                            <td>
+                                                                                                <span class="admin-status-badge admin-status-badge--<?= e($status); ?>">
+                                                                                                    <?= e($statusLabel); ?>
+                                                                                                </span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                    <?php endforeach; ?>
+                                                                    </tbody>
+                                                                </table>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
 
             <?php endif; ?>
 
             <!-- ════ DESIGNS ════ -->
             <?php if ($activeTab === 'designs'): ?>
-                <div class="admin-page-header">
-                    <h2 class="admin-page-title">Tasarım Galerisi Yönetimi</h2>
-                    <p class="admin-page-desc">Galeride görünecek resim ve videoları buradan yönetebilirsiniz.</p>
-                </div>
+                                <div class="admin-page-header">
+                                    <h2 class="admin-page-title">Tasarım Galerisi Yönetimi</h2>
+                                    <p class="admin-page-desc">Galeride görünecek resim ve videoları buradan yönetebilirsiniz.</p>
+                                </div>
 
-                <!-- Add Design Form -->
-                <div class="admin-card admin-card--add">
-                    <div class="admin-card-header">
-                        <h3 class="admin-card-title">Yeni Tasarım Ekle</h3>
-                    </div>
-                    <div class="admin-card-body">
-                        <form method="post" action="<?= e($adminBaseUrl); ?>" class="admin-add-form" enctype="multipart/form-data">
-                            <input type="hidden" name="action" value="create_design" />
-                            <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
-                            <div class="admin-form-grid admin-form-grid--3">
-                                <div class="admin-field">
-                                    <label class="admin-label">Resim Yükle (*isteğe bağlı)</label>
-                                    <input type="file" name="img_file" accept=".jpg,.jpeg,.png,.webp,.gif,.heic" class="admin-input" style="padding-top:6px;" />
-                                </div>
-                                <div class="admin-field">
-                                    <label class="admin-label">Video Yükle (*isteğe bağlı)</label>
-                                    <input type="file" name="video_file" accept=".mp4,.mov,.webm" class="admin-input" style="padding-top:6px;" />
-                                </div>
-                                <div class="admin-field admin-field--action">
-                                    <label class="admin-label">&nbsp;</label>
-                                    <button type="submit" class="admin-btn admin-btn--gold admin-btn--full">Yükle</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Designs Grid -->
-                <div class="admin-card">
-                    <div class="admin-card-header">
-                        <h3 class="admin-card-title">Tüm Tasarımlar <span class="admin-count-badge"><?= count($designs); ?></span></h3>
-                    </div>
-                    <div class="admin-card-body">
-                        <div class="admin-item-cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;">
-                            <?php foreach ($designs as $design): ?>
-                                <div class="admin-item-card" style="margin-bottom:0;">
-                                    <div style="height: 200px;
-; overflow: hidden; background:#f4f4f5; display:flex; align-items:center; justify-content:center;">
-                                        <?php if(!empty($design['img_url'])): ?>
-                                            <img src="<?= e(mediaUrl($design['img_url'] ?? '')); ?>" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
-                                        <?php elseif(!empty($design['video_url'])): ?>
-                                            <video src="<?= e(mediaUrl($design['video_url'] ?? '')); ?>" style="width:100%; height:100%; object-fit:cover;" controls></video>
-                                        <?php endif; ?>
+                                <!-- Add Design Form -->
+                                <div class="admin-card admin-card--add">
+                                    <div class="admin-card-header">
+                                        <h3 class="admin-card-title">Yeni Tasarım Ekle</h3>
                                     </div>
-                                    <div class="admin-item-card-header" style="padding: 12px; border-top: 1px solid #e4e4e7;">
-                                        <span class="admin-item-card-id">#<?= e((string)$design['id']); ?></span>
-                                        <form method="post" action="<?= e($adminBaseUrl); ?>" style="margin:0;">
-                                            <input type="hidden" name="action" value="delete_design" />
-                                            <input type="hidden" name="id" value="<?= e((string)$design['id']); ?>" />
+                                    <div class="admin-card-body">
+                                        <form method="post" action="<?= e($adminBaseUrl); ?>" class="admin-add-form" enctype="multipart/form-data">
+                                            <input type="hidden" name="action" value="create_design" />
                                             <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
-                                            <button type="submit" class="admin-btn admin-btn--sm admin-btn--red" onclick="return confirm('Silinsin mi?')">Sil</button>
+                                            <div class="admin-form-grid admin-form-grid--3">
+                                                <div class="admin-field">
+                                                    <label class="admin-label">Resim Yükle (*isteğe bağlı)</label>
+                                                    <input type="file" name="img_file" accept=".jpg,.jpeg,.png,.webp,.gif,.heic" class="admin-input" style="padding-top:6px;" />
+                                                </div>
+                                                <div class="admin-field">
+                                                    <label class="admin-label">Video Yükle (*isteğe bağlı)</label>
+                                                    <input type="file" name="video_file" accept=".mp4,.mov,.webm" class="admin-input" style="padding-top:6px;" />
+                                                </div>
+                                                <div class="admin-field admin-field--action">
+                                                    <label class="admin-label">&nbsp;</label>
+                                                    <button type="submit" class="admin-btn admin-btn--gold admin-btn--full">Yükle</button>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
+
+                                <!-- Designs Grid -->
+                                <div class="admin-card">
+                                    <div class="admin-card-header">
+                                        <h3 class="admin-card-title">Tüm Tasarımlar <span class="admin-count-badge"><?= count($designs); ?></span></h3>
+                                    </div>
+                                    <div class="admin-card-body">
+                                        <div class="admin-item-cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;">
+                                            <?php foreach ($designs as $design): ?>
+                                                                <div class="admin-item-card" style="margin-bottom:0;">
+                                                                    <div style="height: 200px;
+; overflow: hidden; background:#f4f4f5; display:flex; align-items:center; justify-content:center;">
+                                                                        <?php if (!empty($design['img_url'])): ?>
+                                                                                            <img src="<?= e(mediaUrl($design['img_url'] ?? '')); ?>" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
+                                                                        <?php elseif (!empty($design['video_url'])): ?>
+                                                                                            <video src="<?= e(mediaUrl($design['video_url'] ?? '')); ?>" style="width:100%; height:100%; object-fit:cover;" controls></video>
+                                                                        <?php endif; ?>
+                                                                    </div>
+                                                                    <div class="admin-item-card-header" style="padding: 12px; border-top: 1px solid #e4e4e7;">
+                                                                        <span class="admin-item-card-id">#<?= e((string) $design['id']); ?></span>
+                                                                        <form method="post" action="<?= e($adminBaseUrl); ?>" style="margin:0;">
+                                                                            <input type="hidden" name="action" value="delete_design" />
+                                                                            <input type="hidden" name="id" value="<?= e((string) $design['id']); ?>" />
+                                                                            <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
+                                                                            <button type="submit" class="admin-btn admin-btn--sm admin-btn--red" onclick="return confirm('Silinsin mi?')">Sil</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                </div>
             <?php endif; ?>
             <!-- ════ MESSAGES ════ -->
             <?php if ($activeTab === 'messages'): ?>
-                <div class="admin-page-header">
-                    <h2 class="admin-page-title">Iletisim Mesajları</h2>
-                    <p class="admin-page-desc">Ziyaretçilerden gelen iletişim taleplerini yönetin.</p>
-                </div>
-
-                <?php if (!$contactTableAvailable): ?>
-                    <div class="admin-card">
-                        <div class="admin-card-body">
-                            <p class="admin-empty-msg">`contact_messages` tablosu bulunamadi. Lutfen `schema.sql` dosyasını tekrar çalıştırın.</p>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <div class="admin-stats-grid admin-stats-grid--messages">
-                        <div class="admin-stat-card">
-                            <div class="admin-stat-card-icon admin-stat-card-icon--gold">
-                                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </div>
-                            <div class="admin-stat-card-body">
-                                <p class="admin-stat-card-label">Toplam Mesaj</p>
-                                <p class="admin-stat-card-value"><?= e((string) $contactStatusCounts['total']); ?></p>
-                            </div>
-                        </div>
-                        <div class="admin-stat-card">
-                            <div class="admin-stat-card-icon admin-stat-card-icon--gold">
-                                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                            </div>
-                            <div class="admin-stat-card-body">
-                                <p class="admin-stat-card-label">Yeni</p>
-                                <p class="admin-stat-card-value"><?= e((string) $contactStatusCounts['new']); ?></p>
-                            </div>
-                        </div>
-                        <div class="admin-stat-card">
-                            <div class="admin-stat-card-icon admin-stat-card-icon--blue">
-                                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </div>
-                            <div class="admin-stat-card-body">
-                                <p class="admin-stat-card-label">Okundu / Yanitlandi</p>
-                                <p class="admin-stat-card-value"><?= e((string) ($contactStatusCounts['read'] + $contactStatusCounts['replied'])); ?></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3 class="admin-card-title">Tüm Mesajlar <span class="admin-count-badge"><?= count($contactMessages); ?></span></h3>
-                            <div class="admin-card-actions">
-                                <input type="text" class="admin-search-input" placeholder="Mesaj ara..." oninput="filterTable(this,'messageTable')" />
-                            </div>
-                        </div>
-                        <div class="admin-card-body admin-card-body--table">
-                            <?php if (empty($contactMessages)): ?>
-                                <div class="admin-empty-state">
-                                    <svg width="40" height="40" fill="none" viewBox="0 0 24 24" opacity=".3"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                    <p>Henüz iletişim mesajı gelmedi.</p>
+                                <div class="admin-page-header">
+                                    <h2 class="admin-page-title">Iletisim Mesajları</h2>
+                                    <p class="admin-page-desc">Ziyaretçilerden gelen iletişim taleplerini yönetin.</p>
                                 </div>
-                            <?php else: ?>
-                                <table class="admin-table admin-table--full" id="messageTable">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Gönderen</th>
-                                            <th>Konu / Mesaj</th>
-                                            <th>Dil</th>
-                                            <th>Durum</th>
-                                            <th>Tarih</th>
-                                            <th>İşlemler</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php foreach ($contactMessages as $message): ?>
-                                        <?php
-                                        $status = (string) ($message['status'] ?? 'new');
-                                        if (!array_key_exists($status, $contactStatusLabels)) {
-                                            $status = 'new';
-                                        }
-                                        $statusLabel = $contactStatusLabels[$status];
-                                        $createdAtRaw = (string) ($message['created_at'] ?? '');
-                                        $createdAtTimestamp = $createdAtRaw !== '' ? strtotime($createdAtRaw) : false;
-                                        $createdAtLabel = $createdAtTimestamp !== false ? date('d.m.Y H:i', $createdAtTimestamp) : '-';
-                                        $messagePreview = trim((string) preg_replace('/\s+/', ' ', (string) ($message['message'] ?? '')));
-                                        if (function_exists('mb_strlen') && function_exists('mb_substr')) {
-                                            if (mb_strlen($messagePreview) > 180) {
-                                                $messagePreview = mb_substr($messagePreview, 0, 177) . '...';
-                                            }
-                                        } elseif (strlen($messagePreview) > 180) {
-                                            $messagePreview = substr($messagePreview, 0, 177) . '...';
-                                        }
-                                        ?>
-                                        <tr class="admin-table-row">
-                                            <td class="admin-table-id"><?= e((string) ($message['id'] ?? '')); ?></td>
-                                            <td>
-                                                <p class="admin-message-sender"><?= e((string) ($message['name'] ?? '')); ?></p>
-                                                <a href="mailto:<?= e((string) ($message['email'] ?? '')); ?>" class="admin-table-link"><?= e((string) ($message['email'] ?? '')); ?></a>
-                                                <?php if (trim((string) ($message['phone'] ?? '')) !== ''): ?>
-                                                    <p class="admin-message-meta"><?= e((string) ($message['phone'] ?? '')); ?></p>
-                                                <?php endif; ?>
-                                            </td>
-                                            <td>
-                                                <p class="admin-message-subject"><?= e((string) ($message['subject'] ?? '')); ?></p>
-                                                <p class="admin-message-preview"><?= e($messagePreview); ?></p>
-                                            </td>
-                                            <td>
-                                                <span class="admin-message-meta"><?= e(strtoupper((string) ($message['locale'] ?? ''))); ?></span>
-                                            </td>
-                                            <td>
-                                                <form method="post" action="<?= e($adminBaseUrl); ?>" class="admin-message-status-form">
-                                                    <input type="hidden" name="id" value="<?= e((string) ($message['id'] ?? '')); ?>" />
-                                                    <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
-                                                    <div class="admin-row-actions">
-                                                        <select name="status" class="admin-input admin-input--inline admin-select" aria-label="Mesaj durumu">
-                                                            <?php foreach ($contactStatusLabels as $statusValue => $statusText): ?>
-                                                                <option value="<?= e($statusValue); ?>" <?= $status === $statusValue ? 'selected' : ''; ?>>
-                                                                    <?= e($statusText); ?>
-                                                                </option>
-                                                            <?php endforeach; ?>
-                                                        </select>
-                                                        <button name="action" value="update_contact_status" class="admin-btn admin-btn--sm admin-btn--green">
-                                                            Kaydet
-                                                        </button>
+
+                                <?php if (!$contactTableAvailable): ?>
+                                                    <div class="admin-card">
+                                                        <div class="admin-card-body">
+                                                            <p class="admin-empty-msg">`contact_messages` tablosu bulunamadi. Lutfen `schema.sql` dosyasını tekrar çalıştırın.</p>
+                                                        </div>
                                                     </div>
-                                                </form>
-                                            </td>
-                                            <td><span class="admin-message-meta"><?= e($createdAtLabel); ?></span></td>
-                                            <td>
-                                                <form method="post" action="<?= e($adminBaseUrl); ?>" onsubmit="return confirm('Bu mesajı silmek istediğinize emin misiniz?')">
-                                                    <input type="hidden" name="id" value="<?= e((string) ($message['id'] ?? '')); ?>" />
-                                                    <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
-                                                    <button name="action" value="delete_contact_message" class="admin-btn admin-btn--sm admin-btn--red">
-                                                        Sil
-                                                    </button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                                <?php else: ?>
+                                                    <div class="admin-stats-grid admin-stats-grid--messages">
+                                                        <div class="admin-stat-card">
+                                                            <div class="admin-stat-card-icon admin-stat-card-icon--gold">
+                                                                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                            </div>
+                                                            <div class="admin-stat-card-body">
+                                                                <p class="admin-stat-card-label">Toplam Mesaj</p>
+                                                                <p class="admin-stat-card-value"><?= e((string) $contactStatusCounts['total']); ?></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="admin-stat-card">
+                                                            <div class="admin-stat-card-icon admin-stat-card-icon--gold">
+                                                                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            </div>
+                                                            <div class="admin-stat-card-body">
+                                                                <p class="admin-stat-card-label">Yeni</p>
+                                                                <p class="admin-stat-card-value"><?= e((string) $contactStatusCounts['new']); ?></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="admin-stat-card">
+                                                            <div class="admin-stat-card-icon admin-stat-card-icon--blue">
+                                                                <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                            </div>
+                                                            <div class="admin-stat-card-body">
+                                                                <p class="admin-stat-card-label">Okundu / Yanitlandi</p>
+                                                                <p class="admin-stat-card-value"><?= e((string) ($contactStatusCounts['read'] + $contactStatusCounts['replied'])); ?></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="admin-card">
+                                                        <div class="admin-card-header">
+                                                            <h3 class="admin-card-title">Tüm Mesajlar <span class="admin-count-badge"><?= count($contactMessages); ?></span></h3>
+                                                            <div class="admin-card-actions">
+                                                                <input type="text" class="admin-search-input" placeholder="Mesaj ara..." oninput="filterTable(this,'messageTable')" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="admin-card-body admin-card-body--table">
+                                                            <?php if (empty($contactMessages)): ?>
+                                                                                <div class="admin-empty-state">
+                                                                                    <svg width="40" height="40" fill="none" viewBox="0 0 24 24" opacity=".3"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,7 12,13 2,7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                                                    <p>Henüz iletişim mesajı gelmedi.</p>
+                                                                                </div>
+                                                            <?php else: ?>
+                                                                                <table class="admin-table admin-table--full" id="messageTable">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>#</th>
+                                                                                            <th>Gönderen</th>
+                                                                                            <th>Konu / Mesaj</th>
+                                                                                            <th>Dil</th>
+                                                                                            <th>Durum</th>
+                                                                                            <th>Tarih</th>
+                                                                                            <th>İşlemler</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                    <?php foreach ($contactMessages as $message): ?>
+                                                                                                        <?php
+                                                                                                        $status = (string) ($message['status'] ?? 'new');
+                                                                                                        if (!array_key_exists($status, $contactStatusLabels)) {
+                                                                                                            $status = 'new';
+                                                                                                        }
+                                                                                                        $statusLabel = $contactStatusLabels[$status];
+                                                                                                        $createdAtRaw = (string) ($message['created_at'] ?? '');
+                                                                                                        $createdAtTimestamp = $createdAtRaw !== '' ? strtotime($createdAtRaw) : false;
+                                                                                                        $createdAtLabel = $createdAtTimestamp !== false ? date('d.m.Y H:i', $createdAtTimestamp) : '-';
+                                                                                                        $messagePreview = trim((string) preg_replace('/\s+/', ' ', (string) ($message['message'] ?? '')));
+                                                                                                        if (function_exists('mb_strlen') && function_exists('mb_substr')) {
+                                                                                                            if (mb_strlen($messagePreview) > 180) {
+                                                                                                                $messagePreview = mb_substr($messagePreview, 0, 177) . '...';
+                                                                                                            }
+                                                                                                        } elseif (strlen($messagePreview) > 180) {
+                                                                                                            $messagePreview = substr($messagePreview, 0, 177) . '...';
+                                                                                                        }
+                                                                                                        ?>
+                                                                                                        <tr class="admin-table-row">
+                                                                                                            <td class="admin-table-id"><?= e((string) ($message['id'] ?? '')); ?></td>
+                                                                                                            <td>
+                                                                                                                <p class="admin-message-sender"><?= e((string) ($message['name'] ?? '')); ?></p>
+                                                                                                                <a href="mailto:<?= e((string) ($message['email'] ?? '')); ?>" class="admin-table-link"><?= e((string) ($message['email'] ?? '')); ?></a>
+                                                                                                                <?php if (trim((string) ($message['phone'] ?? '')) !== ''): ?>
+                                                                                                                                    <p class="admin-message-meta"><?= e((string) ($message['phone'] ?? '')); ?></p>
+                                                                                                                <?php endif; ?>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                <p class="admin-message-subject"><?= e((string) ($message['subject'] ?? '')); ?></p>
+                                                                                                                <p class="admin-message-preview"><?= e($messagePreview); ?></p>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                <span class="admin-message-meta"><?= e(strtoupper((string) ($message['locale'] ?? ''))); ?></span>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                <form method="post" action="<?= e($adminBaseUrl); ?>" class="admin-message-status-form">
+                                                                                                                    <input type="hidden" name="id" value="<?= e((string) ($message['id'] ?? '')); ?>" />
+                                                                                                                    <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
+                                                                                                                    <div class="admin-row-actions">
+                                                                                                                        <select name="status" class="admin-input admin-input--inline admin-select" aria-label="Mesaj durumu">
+                                                                                                                            <?php foreach ($contactStatusLabels as $statusValue => $statusText): ?>
+                                                                                                                                                <option value="<?= e($statusValue); ?>" <?= $status === $statusValue ? 'selected' : ''; ?>>
+                                                                                                                                                    <?= e($statusText); ?>
+                                                                                                                                                </option>
+                                                                                                                            <?php endforeach; ?>
+                                                                                                                        </select>
+                                                                                                                        <button name="action" value="update_contact_status" class="admin-btn admin-btn--sm admin-btn--green">
+                                                                                                                            Kaydet
+                                                                                                                        </button>
+                                                                                                                    </div>
+                                                                                                                </form>
+                                                                                                            </td>
+                                                                                                            <td><span class="admin-message-meta"><?= e($createdAtLabel); ?></span></td>
+                                                                                                            <td>
+                                                                                                                <form method="post" action="<?= e($adminBaseUrl); ?>" onsubmit="return confirm('Bu mesajı silmek istediğinize emin misiniz?')">
+                                                                                                                    <input type="hidden" name="id" value="<?= e((string) ($message['id'] ?? '')); ?>" />
+                                                                                                                    <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
+                                                                                                                    <button name="action" value="delete_contact_message" class="admin-btn admin-btn--sm admin-btn--red">
+                                                                                                                        Sil
+                                                                                                                    </button>
+                                                                                                                </form>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                    <?php endforeach; ?>
+                                                                                    </tbody>
+                                                                                </table>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                    </div>
+                                <?php endif; ?>
             <?php endif; ?>
 
             <!-- ════ SETTINGS ════ -->
             <?php if ($activeTab === 'settings'): ?>
-                <div class="admin-page-header">
-                    <h2 class="admin-page-title">Site Ayarları</h2>
-                    <p class="admin-page-desc">Ana sayfa ve marka içeriklerini buradan yönetin.</p>
-                </div>
-
-                <form method="post" action="<?= e($adminBaseUrl); ?>">
-                    <input type="hidden" name="action" value="save_settings" />
-                    <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
-
-                    <?php
-                    $settingGroups = [
-                        'Marka Bilgileri' => [
-                            'brand_name'  => 'Marka Adı',
-                            'brand_short' => 'Kısa Ad',
-                            'brand_subline' => 'Marka Alt Başlığı',
-                        ],
-                        'Footer' => [
-                            'footer_tagline'          => 'Footer Slogan',
-                            'footer_manifesto_title'  => 'Manifesto Başlığı',
-                            'footer_manifesto_text'   => 'Manifesto Metni',
-                        ],
-                        'İletişim & Sosyal Medya' => [
-                            'phone'               => 'Telefon',
-                            'viber'               => 'Viber',
-                            'telegram'            => 'Telegram',
-                            'whatsapp_number'     => 'WhatsApp Numarası',
-                            'email_address'       => 'E-posta Adresi',
-                            'business_location'   => 'İşletme Konumu',
-                            'instagram_url'       => 'Instagram URL',
-                            'facebook_url'        => 'Facebook URL',
-                            'youtube_url'         => 'YouTube URL',
-                            'tiktok_url'          => 'TikTok URL',
-                        ],
-                        'Banka Bilgileri' => [
-                            'bank_account_1' => 'Banka 1',
-                            'bank_account_2' => 'Banka 2',
-                            'bank_account_3' => 'Banka 3',
-                            'bank_account_4' => 'Banka 4',
-                        ],
-                    ];
-                    $textareaFields = ['footer_manifesto_text', 'business_location'];
-                    ?>
-
-                    <?php foreach ($settingGroups as $groupLabel => $fields): ?>
-                        <div class="admin-card admin-settings-card">
-                            <div class="admin-card-header">
-                                <h3 class="admin-card-title"><?= e($groupLabel); ?></h3>
-                            </div>
-                            <div class="admin-card-body">
-                                <div class="admin-form-grid admin-form-grid--2">
-                                    <?php foreach ($fields as $fieldKey => $fieldLabel): ?>
-                                        <div class="admin-field <?= in_array($fieldKey, $textareaFields, true) ? 'admin-field--full' : ''; ?>">
-                                            <label class="admin-label"><?= e($fieldLabel); ?></label>
-                                            <?php if (in_array($fieldKey, $textareaFields, true)): ?>
-                                                <textarea name="<?= e($fieldKey); ?>" rows="3" class="admin-input admin-input--textarea"><?= e((string) ($settings[$fieldKey] ?? '')); ?></textarea>
-                                            <?php else: ?>
-                                                <input type="text" name="<?= e($fieldKey); ?>" value="<?= e((string) ($settings[$fieldKey] ?? '')); ?>" class="admin-input" />
-                                            <?php endif; ?>
-                                        </div>
-                                    <?php endforeach; ?>
+                                <div class="admin-page-header">
+                                    <h2 class="admin-page-title">Site Ayarları</h2>
+                                    <p class="admin-page-desc">Ana sayfa ve marka içeriklerini buradan yönetin.</p>
                                 </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
 
-                    <div class="admin-settings-footer">
-                        <button type="submit" class="admin-btn admin-btn--gold admin-btn--lg">
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 21 17 13 7 13 7 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="7 3 7 8 15 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Tüm Ayarları Kaydet
-                        </button>
-                    </div>
-                </form>
+                                <form method="post" action="<?= e($adminBaseUrl); ?>">
+                                    <input type="hidden" name="action" value="save_settings" />
+                                    <input type="hidden" name="_csrf" value="<?= e($csrf); ?>" />
+
+                                    <?php
+                                    $settingGroups = [
+                                        'Marka Bilgileri' => [
+                                            'brand_name' => 'Marka Adı',
+                                            'brand_short' => 'Kısa Ad',
+                                            'brand_subline' => 'Marka Alt Başlığı',
+                                        ],
+                                        'Footer' => [
+                                            'footer_tagline' => 'Footer Slogan',
+                                            'footer_manifesto_title' => 'Manifesto Başlığı',
+                                            'footer_manifesto_text' => 'Manifesto Metni',
+                                        ],
+                                        'İletişim & Sosyal Medya' => [
+                                            'phone' => 'Telefon',
+                                            'viber' => 'Viber',
+                                            'telegram' => 'Telegram',
+                                            'whatsapp_number' => 'WhatsApp Numarası',
+                                            'email_address' => 'E-posta Adresi',
+                                            'business_location' => 'İşletme Konumu',
+                                            'instagram_url' => 'Instagram URL',
+                                            'facebook_url' => 'Facebook URL',
+                                            'youtube_url' => 'YouTube URL',
+                                            'tiktok_url' => 'TikTok URL',
+                                        ],
+                                        'Banka Bilgileri' => [
+                                            'bank_account_1' => 'Banka 1',
+                                            'bank_account_2' => 'Banka 2',
+                                            'bank_account_3' => 'Banka 3',
+                                            'bank_account_4' => 'Banka 4',
+                                        ],
+                                    ];
+                                    $textareaFields = ['footer_manifesto_text', 'business_location'];
+                                    ?>
+
+                                    <?php foreach ($settingGroups as $groupLabel => $fields): ?>
+                                                        <div class="admin-card admin-settings-card">
+                                                            <div class="admin-card-header">
+                                                                <h3 class="admin-card-title"><?= e($groupLabel); ?></h3>
+                                                            </div>
+                                                            <div class="admin-card-body">
+                                                                <div class="admin-form-grid admin-form-grid--2">
+                                                                    <?php foreach ($fields as $fieldKey => $fieldLabel): ?>
+                                                                                        <div class="admin-field <?= in_array($fieldKey, $textareaFields, true) ? 'admin-field--full' : ''; ?>">
+                                                                                            <label class="admin-label"><?= e($fieldLabel); ?></label>
+                                                                                            <?php if (in_array($fieldKey, $textareaFields, true)): ?>
+                                                                                                                <textarea name="<?= e($fieldKey); ?>" rows="3" class="admin-input admin-input--textarea"><?= e((string) ($settings[$fieldKey] ?? '')); ?></textarea>
+                                                                                            <?php else: ?>
+                                                                                                                <input type="text" name="<?= e($fieldKey); ?>" value="<?= e((string) ($settings[$fieldKey] ?? '')); ?>" class="admin-input" />
+                                                                                            <?php endif; ?>
+                                                                                        </div>
+                                                                    <?php endforeach; ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                    <?php endforeach; ?>
+
+                                    <div class="admin-settings-footer">
+                                        <button type="submit" class="admin-btn admin-btn--gold admin-btn--lg">
+                                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 21 17 13 7 13 7 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="7 3 7 8 15 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            Tüm Ayarları Kaydet
+                                        </button>
+                                    </div>
+                                </form>
             <?php endif; ?>
 
         </main>

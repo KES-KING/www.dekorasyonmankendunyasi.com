@@ -19,18 +19,18 @@ final class HomeController
     {
         $data = $this->loadBasePayload();
         $data['activePage'] = 'designs';
-        
+
         $page = max(1, (int) ($_GET['page'] ?? 1));
         $limit = 30;
         $offset = ($page - 1) * $limit;
-        
+
         $filter = strtolower(trim((string) ($_GET['filter'] ?? 'all')));
         $data['currentFilter'] = $filter;
 
         try {
             $pdo = databaseConnection();
             if ($this->tableExists($pdo, 'designs')) {
-                
+
                 $whereSQL = '1=1';
                 if ($filter === 'image') {
                     $whereSQL = "img_url IS NOT NULL AND img_url != ''";
@@ -244,7 +244,7 @@ final class HomeController
         $data = [
             'brandName' => 'Dekorasyon Manken Dünyası',
             'brandShort' => 'DMD',
-            'brandLogo' => asset('nyscc_logo_transparan.png'),
+            'brandLogo' => asset('DMD_logo_transparan.png'),
             'siteSettings' => [],
             'dbError' => null,
             'activePage' => 'home',
