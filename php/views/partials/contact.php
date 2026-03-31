@@ -65,9 +65,9 @@ $contactOld = is_array($contactFlash['old'] ?? null) ? $contactFlash['old'] : []
                     <?= e(t('contact.info_text', 'We usually answer within 24-48 hours. Please include your project details for a faster response.')); ?>
                 </p>
                 <ul class="mt-5 space-y-3 text-sm text-zinc-300">
-                    <li>Email: <a href="mailto:info@newyorksocietycc.com" class="text-gold hover:underline">info@newyorksocietycc.com</a></li>
-                    <li>Email: <a href="mailto:sales@newyorksocietycc.com" class="text-gold hover:underline">sales@newyorksocietycc.com</a></li>
-                    <li>Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">@newyorksocietycc</a></li>
+                    <li><?= e(t('contact.email', 'E-posta')); ?>: <a href="mailto:info@newyorksocietycc.com" class="text-gold hover:underline">info@newyorksocietycc.com</a></li>
+                    <li><?= e(t('contact.email', 'E-posta')); ?>: <a href="mailto:sales@newyorksocietycc.com" class="text-gold hover:underline">sales@newyorksocietycc.com</a></li>
+                    <li><?= e(t('contact.instagram', 'Instagram')); ?>: <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">@newyorksocietycc</a></li>
                 </ul>
             </div>
         </aside>

@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Acasa",
+    "designs": "Designuri",
+    "shop": "Magazin",
+    "contact": "Contact",
+    "language": "Limba"
+  },
+  "hero": {
+    "kicker": "Moda | Design | Cultura",
+    "description": "Un atelier vizual indraznet pentru look-uri memorabile, limbaj editorial de design si storytelling digital cu impact.",
+    "cta_shop": "Exploreaza Colectia",
+    "cta_designs": "Vezi Designurile",
+    "image_alt": "Imagine fundal hero"
+  },
+  "home": {
+    "contact_social_title": "Contact & Social Media",
+    "contact_social_description": "Ne puteti contacta oricand.",
+    "social_empty": "Nu au fost adaugate inca linkuri de social media.",
+    "location_title": "Locatie",
+    "location_iframe_title": "Locatia Afacerii"
+  },
+  "sections": {
+    "designs_kicker": "Sectiunea 01",
+    "designs_title": "Galerie Designuri",
+    "designs_description": "Deschideti un card de design pentru a vedea pagina de detalii cu toate fotografiile si videoclipurile.",
+    "designs_home_description": "Selectie curata din catalogul nostru vizual. Deschideti un design pentru detalii complete foto/video.",
+    "shop_kicker": "Sectiunea 02",
+    "shop_title": "Colectia Magazinului",
+    "shop_description": "Descoperiti produse cu pagini dedicate de detalii si seturi media complete.",
+    "shop_home_description": "Produse selectate pentru acest sezon. Deschideti un produs pentru toate vizualurile si detaliile."
+  },
+  "gallery": {
+    "tap_preview": "Apasa pentru Previziualizare",
+    "empty_title": "Nu exista inca designuri.",
+    "empty_text": "Adaugati inregistrari in tabela designs pentru a afisa aceasta galerie.",
+    "image_alt": "Design",
+    "empty_media": "Nu a fost incarcat inca continut in galerie.",
+    "default_title": "Design Fara Nume"
+  },
+  "shop": {
+    "empty_title": "Nu exista inca produse.",
+    "empty_text": "Adaugati inregistrari in tabela products pentru a popula magazinul.",
+    "default_name": "Produs Fara Nume",
+    "whatsapp_missing": "Numarul WhatsApp nu este configurat inca."
+  },
+  "common": {
+    "db_error": "Problema de conectare la baza de date",
+    "view_all_designs": "Toate Designurile",
+    "view_all_products": "Toate Produsele",
+    "view_detail": "Vezi Detalii",
+    "media_items": "Media",
+    "back_to_gallery": "Inapoi la Galerie",
+    "back_to_shop": "Inapoi la Magazin",
+    "buy_now": "Cumpara Acum",
+    "page": "Pagina",
+    "thumbnail_alt": "Previzualizare mica"
+  },
+  "pages": {
+    "designs_kicker": "Catalog",
+    "designs_title": "Galerie Designuri",
+    "designs_intro": "Mai jos puteti vedea cele mai speciale produse ale noastre si toate detaliile de utilizare.",
+    "designs_description": "Fiecare design deschide o pagina dedicata cu mai multe fotografii si videoclipuri.",
+    "shop_kicker": "Magazin",
+    "shop_title": "Colectia Magazinului",
+    "shop_description": "Deschideti un produs pentru a vedea toate detaliile cu mai multe fotografii si videoclipuri.",
+    "contact_kicker": "Contact",
+    "contact_title": "Contact",
+    "contact_description": "Contactati-ne pentru colaborari, comenzi speciale si parteneriate.",
+    "design_detail_title": "Detaliu Design",
+    "design_detail_label": "Design",
+    "design_detail_text": "Acest design include o secventa curatoriata de fotografii si videoclipuri. Folositi selectorul media pentru a vedea fiecare unghi.",
+    "product_detail_title": "Detaliu Produs",
+    "product_detail_label": "Produs",
+    "product_detail_text": "Acest produs suporta mai multe fotografii si videoclipuri, astfel incat clientii sa poata analiza fiecare detaliu inainte de achizitie."
+  },
+  "contact": {
+    "kicker": "Sectiunea 03",
+    "title": "Contact",
+    "description": "Pentru colaborari, comenzi speciale si solicitari de business, trimiteti-ne un mesaj.",
+    "name": "Nume si Prenume",
+    "email": "Email",
+    "instagram": "Instagram",
+    "phone": "Telefon",
+    "subject": "Subiect",
+    "message": "Mesaj",
+    "placeholder_name": "Numele dumneavoastra complet",
+    "placeholder_phone": "+40 XXX XXX XXX",
+    "placeholder_email": "exemplu@email.com",
+    "placeholder_subject": "Subiectul mesajului",
+    "placeholder_message": "Puteti scrie aici mesajul dumneavoastra detaliat...",
+    "submit": "Trimite Mesaj",
+    "info_title": "Direct",
+    "info_text": "De obicei raspundem in 24-48 de ore. Va rugam sa includeti detalii despre proiect pentru un raspuns mai rapid.",
+    "flash_invalid_token": "Formularul a expirat. Va rugam incercati din nou.",
+    "flash_required": "Va rugam completati toate campurile obligatorii.",
+    "flash_email": "Va rugam introduceti o adresa de email valida.",
+    "flash_success": "Mesajul dumneavoastra a fost trimis cu succes.",
+    "flash_error": "Mesajul nu poate fi trimis acum. Va rugam incercati mai tarziu."
+  },
+  "footer": {
+    "tagline": "Creat pentru Instagram Luxury",
+    "links_title": "Linkuri Rapide",
+    "manifesto_title": "Manifest",
+    "manifesto_text": "Construim narative vizuale rafinate in care moda, identitatea si maiestria digitala functioneaza impreuna.",
+    "social_title": "Instagram",
+    "rights": "Toate drepturile rezervate.",
+    "link_home": "Acasa",
+    "link_designs": "Designuri",
+    "link_shop": "Magazin",
+    "link_contact": "Contact",
+    "social_instagram": "Instagram Principal",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Shop",
+    "contact_title": "Toate Canalele de Contact"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "Pagina solicitata nu exista.",
+    "back_home": "Inapoi Acasa"
+  }
+}

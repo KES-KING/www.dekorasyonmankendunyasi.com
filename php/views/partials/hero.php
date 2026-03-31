@@ -1,7 +1,7 @@
 <section id="home" class="hero-section relative grain-overlay flex min-h-screen items-center justify-center overflow-hidden pt-20">
     <img
         src="<?= e($heroImage); ?>"
-        alt="Luxury fashion hero"
+        alt="<?= e(t('hero.image_alt', 'Hero arka plan gorseli')); ?>"
         class="absolute inset-0 h-full w-full object-cover opacity-40"
     />
     <div class="hero-vignette absolute inset-0"></div>

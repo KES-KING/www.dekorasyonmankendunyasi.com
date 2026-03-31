@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Почетна",
+    "designs": "Дизајни",
+    "shop": "Продавница",
+    "contact": "Контакт",
+    "language": "Јазик"
+  },
+  "hero": {
+    "kicker": "Мода | Дизајн | Култура",
+    "description": "Смело визуелно ателје за впечатливи изгледи, уредувачки дизајнерски јазик и моќно дигитално раскажување.",
+    "cta_shop": "Разгледај Колекција",
+    "cta_designs": "Види Дизајни",
+    "image_alt": "Hero позадинска слика"
+  },
+  "home": {
+    "contact_social_title": "Контакт и Социјални Мрежи",
+    "contact_social_description": "Можете да не контактирате во секое време.",
+    "social_empty": "Се уште нема додадени линкови до социјални мрежи.",
+    "location_title": "Локација",
+    "location_iframe_title": "Локација на Бизнисот"
+  },
+  "sections": {
+    "designs_kicker": "Секција 01",
+    "designs_title": "Галерија на Дизајни",
+    "designs_description": "Отворете картичка со дизајн за да ја видите страната со детали и сите фотографии и видеа.",
+    "designs_home_description": "Курирани издвоени дизајни од нашиот визуелен каталог. Отворете дизајн за целосни фото/видео детали.",
+    "shop_kicker": "Секција 02",
+    "shop_title": "Колекција на Продавница",
+    "shop_description": "Откријте производи со посебни страници за детали и целосни медиумски сетови.",
+    "shop_home_description": "Избрани производи за оваа сезона. Отворете производ за да ги видите сите визуели и детали."
+  },
+  "gallery": {
+    "tap_preview": "Допрете за Преглед",
+    "empty_title": "Се уште нема дизајни.",
+    "empty_text": "Додадете записи во табелата designs за да се прикаже оваа галерија.",
+    "image_alt": "Дизајн",
+    "empty_media": "Се уште нема вчитана содржина за галеријата.",
+    "default_title": "Дизајн Без Име"
+  },
+  "shop": {
+    "empty_title": "Се уште нема производи.",
+    "empty_text": "Додадете записи во табелата products за да ја пополните продавницата.",
+    "default_name": "Производ Без Име",
+    "whatsapp_missing": "WhatsApp бројот се уште не е поставен."
+  },
+  "common": {
+    "db_error": "Проблем со поврзување со базата",
+    "view_all_designs": "Сите Дизајни",
+    "view_all_products": "Сите Производи",
+    "view_detail": "Види Детали",
+    "media_items": "Медиуми",
+    "back_to_gallery": "Назад во Галерија",
+    "back_to_shop": "Назад во Продавница",
+    "buy_now": "Купи Сега",
+    "page": "Страница",
+    "thumbnail_alt": "Мини преглед"
+  },
+  "pages": {
+    "designs_kicker": "Каталог",
+    "designs_title": "Галерија на Дизајни",
+    "designs_intro": "Подолу можете да ги прегледате нашите најспецијални производи и сите детали за нивната употреба.",
+    "designs_description": "Секој дизајн се отвора на посебна страна со повеќе фотографии и видеа.",
+    "shop_kicker": "Продавница",
+    "shop_title": "Колекција на Продавница",
+    "shop_description": "Отворете производ за да ги видите сите детали со повеќе фотографии и видеа.",
+    "contact_kicker": "Контакт",
+    "contact_title": "Контакт",
+    "contact_description": "Контактирајте не за соработки, индивидуални нарачки и партнерства.",
+    "design_detail_title": "Детали за Дизајн",
+    "design_detail_label": "Дизајн",
+    "design_detail_text": "Овој дизајн вклучува курирана низа од фотографии и видеа. Користете го избирачот за медиуми за да ги видите сите агли.",
+    "product_detail_title": "Детали за Производ",
+    "product_detail_label": "Производ",
+    "product_detail_text": "Овој производ поддржува повеќе фотографии и видеа за купувачите да ги прегледаат сите детали пред купување."
+  },
+  "contact": {
+    "kicker": "Секција 03",
+    "title": "Контакт",
+    "description": "За соработки, специјални нарачки и деловни прашања, испратете ни порака.",
+    "name": "Име и Презиме",
+    "email": "Е-пошта",
+    "instagram": "Instagram",
+    "phone": "Телефон",
+    "subject": "Наслов",
+    "message": "Порака",
+    "placeholder_name": "Вашето име и презиме",
+    "placeholder_phone": "+389 XX XXX XXX",
+    "placeholder_email": "primer@email.com",
+    "placeholder_subject": "Наслов на пораката",
+    "placeholder_message": "Овде можете да ја напишете вашата детална порака...",
+    "submit": "Испрати Порака",
+    "info_title": "Директно",
+    "info_text": "Обично одговараме во рок од 24-48 часа. Додадете детали за проектот за побрз одговор.",
+    "flash_invalid_token": "Формата истече. Обидете се повторно.",
+    "flash_required": "Пополнете ги сите задолжителни полиња.",
+    "flash_email": "Внесете валидна е-пошта.",
+    "flash_success": "Вашата порака е успешно испратена.",
+    "flash_error": "Пораката не може да се испрати во моментов. Обидете се подоцна."
+  },
+  "footer": {
+    "tagline": "Создадено за Instagram Луксуз",
+    "links_title": "Брзи Линкови",
+    "manifesto_title": "Манифест",
+    "manifesto_text": "Креираме префинети визуелни приказни каде модата, идентитетот и дигиталната изработка функционираат заедно.",
+    "social_title": "Instagram",
+    "rights": "Сите права се задржани.",
+    "link_home": "Почетна",
+    "link_designs": "Дизајни",
+    "link_shop": "Продавница",
+    "link_contact": "Контакт",
+    "social_instagram": "Instagram Главен Профил",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Shop",
+    "contact_title": "Сите Контакти"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "Бараната страница не постои.",
+    "back_home": "Назад на Почетна"
+  }
+}

@@ -18,7 +18,15 @@
     "kicker": "Мода | Дизайн | Культура",
     "description": "Смелая визуальная студия для выразительных образов, редакционного языка дизайна и сильного цифрового сторителлинга.",
     "cta_shop": "Открыть Коллекцию",
-    "cta_designs": "Смотреть Дизайны"
+    "cta_designs": "Смотреть Дизайны",
+    "image_alt": "Фоновое изображение hero"
+  },
+  "home": {
+    "contact_social_title": "Контакты и Соцсети",
+    "contact_social_description": "Вы можете связаться с нами в любое время.",
+    "social_empty": "Ссылки на соцсети пока не добавлены.",
+    "location_title": "Локация",
+    "location_iframe_title": "Локация Компании"
   },
   "sections": {
     "designs_kicker": "Раздел 01",
@@ -33,11 +41,16 @@
   "gallery": {
     "tap_preview": "Нажмите для Просмотра",
     "empty_title": "Дизайны пока не найдены.",
-    "empty_text": "Добавьте записи в таблицу designs, чтобы заполнить эту галерею."
+    "empty_text": "Добавьте записи в таблицу designs, чтобы заполнить эту галерею.",
+    "image_alt": "Дизайн",
+    "empty_media": "Контент для галереи еще не загружен.",
+    "default_title": "Дизайн Без Названия"
   },
   "shop": {
     "empty_title": "Товары пока недоступны.",
-    "empty_text": "Добавьте записи в таблицу products, чтобы заполнить магазин."
+    "empty_text": "Добавьте записи в таблицу products, чтобы заполнить магазин.",
+    "default_name": "Товар Без Названия",
+    "whatsapp_missing": "Номер WhatsApp еще не настроен."
   },
   "common": {
     "db_error": "Ошибка подключения к базе данных",
@@ -47,11 +60,14 @@
     "media_items": "Медиа",
     "back_to_gallery": "Назад В Галерею",
     "back_to_shop": "Назад В Магазин",
-    "buy_now": "Купить Сейчас"
+    "buy_now": "Купить Сейчас",
+    "page": "Страница",
+    "thumbnail_alt": "Миниатюра"
   },
   "pages": {
     "designs_kicker": "Каталог",
     "designs_title": "Галерея Дизайнов",
+    "designs_intro": "Ниже вы можете посмотреть наши лучшие продукты и все детали их использования.",
     "designs_description": "Каждый дизайн открывает страницу деталей с несколькими фото и видео.",
     "shop_kicker": "Store",
     "shop_title": "Коллекция Магазина",
@@ -72,9 +88,15 @@
     "description": "Для сотрудничества, индивидуальных заказов и бизнес-запросов отправьте нам сообщение.",
     "name": "Имя",
     "email": "Email",
+    "instagram": "Instagram",
     "phone": "Телефон",
     "subject": "Тема",
     "message": "Сообщение",
+    "placeholder_name": "Ваше имя и фамилия",
+    "placeholder_phone": "+7 XXX XXX XX XX",
+    "placeholder_email": "primer@email.com",
+    "placeholder_subject": "Тема вашего сообщения",
+    "placeholder_message": "Вы можете написать подробное сообщение здесь...",
     "submit": "Отправить Сообщение",
     "info_title": "Напрямую",
     "info_text": "Обычно мы отвечаем в течение 24-48 часов. Добавьте детали проекта для более быстрого ответа.",
@@ -97,7 +119,8 @@
     "link_contact": "Контакты",
     "social_instagram": "Instagram Профиль",
     "social_reels": "Instagram Reels",
-    "social_shop": "Instagram Shop"
+    "social_shop": "Instagram Shop",
+    "contact_title": "Все Контакты"
   },
   "errors": {
     "not_found_title": "404",

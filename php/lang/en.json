@@ -18,7 +18,15 @@
     "kicker": "Fashion | Design | Culture",
     "description": "A bold visual atelier for statement looks, editorial design language, and high-impact digital storytelling.",
     "cta_shop": "Explore Collection",
-    "cta_designs": "View Designs"
+    "cta_designs": "View Designs",
+    "image_alt": "Hero background image"
+  },
+  "home": {
+    "contact_social_title": "Contact & Social Media",
+    "contact_social_description": "You can reach us anytime.",
+    "social_empty": "No social media links have been added yet.",
+    "location_title": "Location",
+    "location_iframe_title": "Business Location"
   },
   "sections": {
     "designs_kicker": "Section 01",
@@ -33,11 +41,16 @@
   "gallery": {
     "tap_preview": "Tap to Preview",
     "empty_title": "No designs found yet.",
-    "empty_text": "Insert rows into the designs table to render this gallery."
+    "empty_text": "Insert rows into the designs table to render this gallery.",
+    "image_alt": "Design",
+    "empty_media": "No gallery content has been uploaded yet.",
+    "default_title": "Untitled Design"
   },
   "shop": {
     "empty_title": "No products available yet.",
-    "empty_text": "Insert rows into the products table to populate your store."
+    "empty_text": "Insert rows into the products table to populate your store.",
+    "default_name": "Unnamed Product",
+    "whatsapp_missing": "WhatsApp number is not configured yet."
   },
   "common": {
     "db_error": "Database connection issue",
@@ -47,11 +60,14 @@
     "media_items": "Media Items",
     "back_to_gallery": "Back To Gallery",
     "back_to_shop": "Back To Shop",
-    "buy_now": "Buy Now"
+    "buy_now": "Buy Now",
+    "page": "Page",
+    "thumbnail_alt": "Thumbnail preview"
   },
   "pages": {
     "designs_kicker": "Catalog",
     "designs_title": "Designs Gallery",
+    "designs_intro": "You can browse our most special products below and see all usage details.",
     "designs_description": "Each design opens to a dedicated detail page where multiple photos and videos are available.",
     "shop_kicker": "Store",
     "shop_title": "Shop Collection",
@@ -72,9 +88,15 @@
     "description": "For collaborations, custom orders and business inquiries, send us a message.",
     "name": "Name",
     "email": "Email",
+    "instagram": "Instagram",
     "phone": "Phone",
     "subject": "Subject",
     "message": "Message",
+    "placeholder_name": "Your Full Name",
+    "placeholder_phone": "+90 5XX XXX XX XX",
+    "placeholder_email": "example@email.com",
+    "placeholder_subject": "Message subject",
+    "placeholder_message": "You can write your detailed message here...",
     "submit": "Send Message",
     "info_title": "Direct",
     "info_text": "We usually answer within 24-48 hours. Please include your project details for a faster response.",
@@ -97,7 +119,8 @@
     "link_contact": "Contact",
     "social_instagram": "Instagram Main",
     "social_reels": "Instagram Reels",
-    "social_shop": "Instagram Shop"
+    "social_shop": "Instagram Shop",
+    "contact_title": "All Contact Channels"
   },
   "errors": {
     "not_found_title": "404",

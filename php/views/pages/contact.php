@@ -2,11 +2,11 @@
     <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between text-center sm:text-left">
             <div>
-                <p class="text-xs uppercase tracking-[0.4em] font-bold text-yellow-600">İletişim</p>
-                <h1 class="mt-4 font-display text-4xl text-zinc-800 sm:text-5xl md:text-6xl">Bize Ulaşın</h1>
+                <p class="text-xs uppercase tracking-[0.4em] font-bold text-yellow-600"><?= e(t('pages.contact_kicker', 'İletişim')); ?></p>
+                <h1 class="mt-4 font-display text-4xl text-zinc-800 sm:text-5xl md:text-6xl"><?= e(t('contact.title', 'Bize Ulaşın')); ?></h1>
             </div>
             <p class="mt-4 max-w-xl text-sm leading-relaxed text-zinc-500 sm:mt-0">
-                Sipariş, detaylı bilgi ve her türlü sorunuz için iletişim formunu doldurarak bizimle irtibata geçebilirsiniz.
+                <?= e(t('contact.description', 'Sipariş, detaylı bilgi ve her türlü sorunuz için iletişim formunu doldurarak bizimle irtibata geçebilirsiniz.')); ?>
             </p>
         </div>
     </div>
@@ -28,28 +28,28 @@
             
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">Ad Soyad</label>
-                    <input type="text" name="name" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="Adınız Soyadınız">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2"><?= e(t('contact.name', 'Ad Soyad')); ?></label>
+                    <input type="text" name="name" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="<?= e(t('contact.placeholder_name', 'Adınız Soyadınız')); ?>">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">Telefon</label>
-                    <input type="tel" name="phone" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="05XX XXX XX XX">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2"><?= e(t('contact.phone', 'Telefon')); ?></label>
+                    <input type="tel" name="phone" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="<?= e(t('contact.placeholder_phone', '05XX XXX XX XX')); ?>">
                 </div>
                 <div class="sm:col-span-2">
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">E-posta</label>
-                    <input type="email" name="email" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="ornek@email.com">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2"><?= e(t('contact.email', 'E-posta')); ?></label>
+                    <input type="email" name="email" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="<?= e(t('contact.placeholder_email', 'ornek@email.com')); ?>">
                 </div>
                 <div class="sm:col-span-2">
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">Konu</label>
-                    <input type="text" name="subject" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="Mesajınızın konusu">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2"><?= e(t('contact.subject', 'Konu')); ?></label>
+                    <input type="text" name="subject" required class="contact-input w-full rounded-md px-4 py-3 text-sm transition" placeholder="<?= e(t('contact.placeholder_subject', 'Mesajınızın konusu')); ?>">
                 </div>
                 <div class="sm:col-span-2">
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2">Mesajınız</label>
-                    <textarea name="message" required rows="5" class="contact-input w-full rounded-md px-4 py-3 text-sm transition resize-none" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-2"><?= e(t('contact.message', 'Mesajınız')); ?></label>
+                    <textarea name="message" required rows="5" class="contact-input w-full rounded-md px-4 py-3 text-sm transition resize-none" placeholder="<?= e(t('contact.placeholder_message', 'Detaylı mesajınızı buraya yazabilirsiniz...')); ?>"></textarea>
                 </div>
                 <div class="sm:col-span-2 mt-4 text-center">
                     <button type="submit" class="gold-button inline-flex items-center justify-center px-10 py-4 text-sm font-bold uppercase tracking-widest rounded-md w-full sm:w-auto">
-                        Mesaj Gönder
+                        <?= e(t('contact.submit', 'Mesaj Gönder')); ?>
                     </button>
                 </div>
             </div>

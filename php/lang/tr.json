@@ -18,7 +18,15 @@
     "kicker": "Moda | Tasarım | Kültür",
     "description": "İddialı görünümler, editoryal tasarım dili ve güçlü dijital hikaye anlatımı için cesur bir görsel atölye.",
     "cta_shop": "Koleksiyonu Keşfet",
-    "cta_designs": "Tasarımları Gör"
+    "cta_designs": "Tasarımları Gör",
+    "image_alt": "Hero arka plan gorseli"
+  },
+  "home": {
+    "contact_social_title": "İletişim & Sosyal Medya",
+    "contact_social_description": "Bize her zaman ulaşabilirsiniz.",
+    "social_empty": "Henüz sosyal medya bağlantısı eklenmemiş.",
+    "location_title": "Konum",
+    "location_iframe_title": "İşletme Konumu"
   },
   "sections": {
     "designs_kicker": "Bölüm 01",
@@ -33,11 +41,16 @@
   "gallery": {
     "tap_preview": "Önizleme İçin Dokun",
     "empty_title": "Henüz tasarım bulunamadı.",
-    "empty_text": "Bu galeriyi göstermek için designs tablosuna kayıt ekleyin."
+    "empty_text": "Bu galeriyi göstermek için designs tablosuna kayıt ekleyin.",
+    "image_alt": "Tasarım",
+    "empty_media": "Henüz galeri içeriği yüklenmedi.",
+    "default_title": "Isimsiz Tasarım"
   },
   "shop": {
     "empty_title": "Henüz ürün bulunmuyor.",
-    "empty_text": "Mağazayı doldurmak için products tablosuna kayıt ekleyin."
+    "empty_text": "Mağazayı doldurmak için products tablosuna kayıt ekleyin.",
+    "default_name": "Isimsiz Urun",
+    "whatsapp_missing": "WhatsApp numarasi henuz tanimlanmadi."
   },
   "common": {
     "db_error": "Veritabanı bağlantı sorunu",
@@ -47,11 +60,14 @@
     "media_items": "Medya Ogesi",
     "back_to_gallery": "Galeriye Don",
     "back_to_shop": "Magazaya Don",
-    "buy_now": "Hemen Al"
+    "buy_now": "Hemen Al",
+    "page": "Sayfa",
+    "thumbnail_alt": "Kucuk onizleme"
   },
   "pages": {
     "designs_kicker": "Katalog",
     "designs_title": "Tasarim Galerisi",
+    "designs_intro": "En özel ürünlerimizi aşağıdan inceleyebilirsiniz. Ürünlere ait tüm detayları ve kullanım alanlarını görebilirsiniz.",
     "designs_description": "Her tasarim, birden fazla foto ve videonun oldugu detay sayfasina acilir.",
     "shop_kicker": "Magaza",
     "shop_title": "Magaza Koleksiyonu",
@@ -72,9 +88,15 @@
     "description": "Is birlikleri, ozel siparisler ve kurumsal talepler icin mesaj gonderin.",
     "name": "Ad Soyad",
     "email": "E-posta",
+    "instagram": "Instagram",
     "phone": "Telefon",
     "subject": "Konu",
     "message": "Mesaj",
+    "placeholder_name": "Adınız Soyadınız",
+    "placeholder_phone": "05XX XXX XX XX",
+    "placeholder_email": "ornek@email.com",
+    "placeholder_subject": "Mesajınızın konusu",
+    "placeholder_message": "Detaylı mesajınızı buraya yazabilirsiniz...",
     "submit": "Mesaj Gonder",
     "info_title": "Dogrudan",
     "info_text": "Genellikle 24-48 saat icinde donus yapiyoruz. Hizli donus icin proje detaylarini ekleyin.",
@@ -97,7 +119,8 @@
     "link_contact": "Iletisim",
     "social_instagram": "Instagram Ana Hesap",
     "social_reels": "Instagram Reels",
-    "social_shop": "Instagram Magaza"
+    "social_shop": "Instagram Magaza",
+    "contact_title": "Tüm İletişim"
   },
   "errors": {
     "not_found_title": "404",

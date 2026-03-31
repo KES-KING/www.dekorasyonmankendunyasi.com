@@ -5,7 +5,7 @@
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 text-center">
         <div class="mx-auto max-w-5xl rounded-3xl border border-white/30 bg-black/45 px-6 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm">
-                <?= e($settings['hero_kicker'] ?? 'Estetik | Dekorasyon | Tasarım'); ?>
+                <?= e($heroKicker ?? t('hero.kicker', 'Moda | Tasarım | Kültür')); ?>
             </p>
 
             <h1 class="mx-auto max-w-4xl font-display text-4xl leading-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)] sm:text-6xl md:text-7xl">
@@ -13,7 +13,7 @@
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-base text-zinc-100 sm:text-lg">
-                <?= e($settings['hero_description'] ?? 'Mekanlarınızı canlandıran dekoratif mankenler ve estetik tasarımlar.'); ?>
+                <?= e($heroDescription ?? t('hero.description', 'İddialı görünümler, editoryal tasarım dili ve güçlü dijital hikaye anlatımı için cesur bir görsel atölye.')); ?>
             </p>
 
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -32,8 +32,8 @@
 <section class="bg-white py-24 border-y border-zinc-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="font-display text-3xl text-zinc-800 sm:text-4xl">İletişim & Sosyal Medya</h2>
-            <p class="mt-4 text-zinc-500">Bize her zaman ulaşabilirsiniz.</p>
+            <h2 class="font-display text-3xl text-zinc-800 sm:text-4xl"><?= e(t('home.contact_social_title', 'İletişim & Sosyal Medya')); ?></h2>
+            <p class="mt-4 text-zinc-500"><?= e(t('home.contact_social_description', 'Bize her zaman ulaşabilirsiniz.')); ?></p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,8 +80,8 @@
             }
 
             $contacts = [
-                ['icon' => 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', 'label' => 'Telefon', 'value' => $phone, 'link' => $phone === '' ? '' : 'tel:' . $phone, 'new_tab' => false],
-                ['icon' => 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'label' => 'E-posta', 'value' => $emailAddress, 'link' => $emailAddress === '' ? '' : 'mailto:' . $emailAddress, 'new_tab' => false],
+                ['icon' => 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', 'label' => t('contact.phone', 'Telefon'), 'value' => $phone, 'link' => $phone === '' ? '' : 'tel:' . $phone, 'new_tab' => false],
+                ['icon' => 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'label' => t('contact.email', 'E-posta'), 'value' => $emailAddress, 'link' => $emailAddress === '' ? '' : 'mailto:' . $emailAddress, 'new_tab' => false],
             ];
             foreach ($contacts as $contact):
                 if (empty($contact['value']) || empty($contact['link'])) continue;
@@ -176,14 +176,14 @@
             </a>
             <?php endforeach; ?>
             <?php if (!$hasSocial): ?>
-                <p class="col-span-full text-center text-sm text-zinc-500">Henüz sosyal medya bağlantısı eklenmemiş.</p>
+                <p class="col-span-full text-center text-sm text-zinc-500"><?= e(t('home.social_empty', 'Henüz sosyal medya bağlantısı eklenmemiş.')); ?></p>
             <?php endif; ?>
         </div>
 
         <?php if ($locationEmbedUrl !== ''): ?>
             <div class="mt-10 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
                 <div class="border-b border-zinc-100 bg-zinc-50/70 px-6 py-5">
-                    <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">Konum</p>
+                    <p class="text-xs uppercase tracking-[0.18em] text-zinc-500"><?= e(t('home.location_title', 'Konum')); ?></p>
                     <p class="mt-2 text-sm font-medium text-zinc-700"><?= e($businessLocation); ?></p>
                     <a href="<?= e($locationMapLink); ?>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.14em] text-yellow-700 transition hover:text-yellow-600">
                         Haritada Aç
@@ -195,7 +195,7 @@
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                         class="h-full w-full border-0"
-                        title="İşletme Konumu"
+                        title="<?= e(t('home.location_iframe_title', 'İşletme Konumu')); ?>"
                     ></iframe>
                 </div>
             </div>

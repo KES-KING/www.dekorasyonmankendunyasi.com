@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Kryefaqja",
+    "designs": "Dizajne",
+    "shop": "Dyqan",
+    "contact": "Kontakt",
+    "language": "Gjuha"
+  },
+  "hero": {
+    "kicker": "Modë | Dizajn | Kulturë",
+    "description": "Një studio vizuale e guximshme për pamje të dallueshme, gjuhë editoriale dizajni dhe tregim dixhital me ndikim.",
+    "cta_shop": "Shiko Koleksionin",
+    "cta_designs": "Shiko Dizajnet",
+    "image_alt": "Imazh sfondi hero"
+  },
+  "home": {
+    "contact_social_title": "Kontakt & Rrjete Sociale",
+    "contact_social_description": "Mund të na kontaktoni në çdo kohë.",
+    "social_empty": "Ende nuk janë shtuar lidhje të rrjeteve sociale.",
+    "location_title": "Vendndodhja",
+    "location_iframe_title": "Vendndodhja e Biznesit"
+  },
+  "sections": {
+    "designs_kicker": "Seksioni 01",
+    "designs_title": "Galeria e Dizajneve",
+    "designs_description": "Hapni një kartë dizajni për të parë faqen e detajeve me të gjitha fotot dhe videot.",
+    "designs_home_description": "Përzgjedhje e kuruar nga katalogu ynë vizual. Hapni një dizajn për detaje të plota foto/video.",
+    "shop_kicker": "Seksioni 02",
+    "shop_title": "Koleksioni i Dyqanit",
+    "shop_description": "Zbuloni produkte me faqe të dedikuara detajesh dhe sete të plota mediatike.",
+    "shop_home_description": "Produkte të përzgjedhura të sezonit. Hapni një produkt për të parë të gjitha pamjet dhe detajet."
+  },
+  "gallery": {
+    "tap_preview": "Prek për Parapamje",
+    "empty_title": "Nuk ka ende dizajne.",
+    "empty_text": "Shtoni rreshta në tabelën designs për të shfaqur këtë galeri.",
+    "image_alt": "Dizajn",
+    "empty_media": "Nuk është ngarkuar ende përmbajtje galerie.",
+    "default_title": "Dizajn Pa Emër"
+  },
+  "shop": {
+    "empty_title": "Nuk ka ende produkte.",
+    "empty_text": "Shtoni rreshta në tabelën products për të mbushur dyqanin.",
+    "default_name": "Produkt Pa Emër",
+    "whatsapp_missing": "Numri WhatsApp nuk është konfiguruar ende."
+  },
+  "common": {
+    "db_error": "Problem me lidhjen e databazës",
+    "view_all_designs": "Shiko Të Gjitha Dizajnet",
+    "view_all_products": "Shiko Të Gjitha Produktet",
+    "view_detail": "Shiko Detajet",
+    "media_items": "Media",
+    "back_to_gallery": "Kthehu te Galeria",
+    "back_to_shop": "Kthehu te Dyqani",
+    "buy_now": "Bli Tani",
+    "page": "Faqja",
+    "thumbnail_alt": "Parapamje e vogël"
+  },
+  "pages": {
+    "designs_kicker": "Katalog",
+    "designs_title": "Galeria e Dizajneve",
+    "designs_intro": "Më poshtë mund të shikoni produktet tona më të veçanta dhe të gjitha detajet e përdorimit.",
+    "designs_description": "Çdo dizajn hapet në një faqe të dedikuar me shumë foto dhe video.",
+    "shop_kicker": "Dyqan",
+    "shop_title": "Koleksioni i Dyqanit",
+    "shop_description": "Hapni një produkt për të parë detajet e plota me shumë foto dhe video.",
+    "contact_kicker": "Kontakt",
+    "contact_title": "Kontakt",
+    "contact_description": "Na kontaktoni për bashkëpunime, punë të personalizuara dhe partneritete.",
+    "design_detail_title": "Detajet e Dizajnit",
+    "design_detail_label": "Dizajn",
+    "design_detail_text": "Ky dizajn përfshin një rrjedhë të kuruar fotosh dhe videosh. Përdorni përzgjedhësin e medias për të parë çdo kënd.",
+    "product_detail_title": "Detajet e Produktit",
+    "product_detail_label": "Produkt",
+    "product_detail_text": "Ky produkt mbështet shumë foto dhe video që klientët të mund të shqyrtojnë çdo detaj para blerjes."
+  },
+  "contact": {
+    "kicker": "Seksioni 03",
+    "title": "Kontakt",
+    "description": "Për bashkëpunime, porosi të veçanta dhe kërkesa biznesi, na dërgoni një mesazh.",
+    "name": "Emër Mbiemër",
+    "email": "Email",
+    "instagram": "Instagram",
+    "phone": "Telefon",
+    "subject": "Subjekti",
+    "message": "Mesazhi",
+    "placeholder_name": "Emri dhe mbiemri juaj",
+    "placeholder_phone": "+355 XX XXX XXXX",
+    "placeholder_email": "shembull@email.com",
+    "placeholder_subject": "Subjekti i mesazhit",
+    "placeholder_message": "Mund të shkruani këtu mesazhin tuaj të detajuar...",
+    "submit": "Dërgo Mesazh",
+    "info_title": "Direkt",
+    "info_text": "Zakonisht përgjigjemi brenda 24-48 orësh. Ju lutem shtoni detajet e projektit për një përgjigje më të shpejtë.",
+    "flash_invalid_token": "Formulari ka skaduar. Ju lutem provoni përsëri.",
+    "flash_required": "Ju lutem plotësoni të gjitha fushat e detyrueshme.",
+    "flash_email": "Ju lutem vendosni një email të vlefshëm.",
+    "flash_success": "Mesazhi juaj u dërgua me sukses.",
+    "flash_error": "Mesazhi nuk mund të dërgohet tani. Ju lutem provoni më vonë."
+  },
+  "footer": {
+    "tagline": "Krijuar për Instagram Luxury",
+    "links_title": "Lidhje të Shpejta",
+    "manifesto_title": "Manifest",
+    "manifesto_text": "Ne krijojmë narrativa vizuale të rafinuara ku moda, identiteti dhe mjeshtëria dixhitale ecin së bashku.",
+    "social_title": "Instagram",
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "link_home": "Kryefaqja",
+    "link_designs": "Dizajne",
+    "link_shop": "Dyqan",
+    "link_contact": "Kontakt",
+    "social_instagram": "Instagram Kryesor",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Shop",
+    "contact_title": "Të Gjitha Kontaktet"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "Faqja që kërkuat nuk ekziston.",
+    "back_home": "Kthehu në Kryefaqe"
+  }
+}

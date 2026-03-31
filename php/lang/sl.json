@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "NewYork Society Creation Club"
+  },
+  "brand": {
+    "name": "NewYork Society Creation Club",
+    "short": "NYSCC",
+    "subline": "Creation Club"
+  },
+  "nav": {
+    "home": "Domov",
+    "designs": "Dizajni",
+    "shop": "Trgovina",
+    "contact": "Kontakt",
+    "language": "Jezik"
+  },
+  "hero": {
+    "kicker": "Moda | Oblikovanje | Kultura",
+    "description": "Drzen vizualni atelje za izstopajoce podobe, uredniski oblikovalski jezik in mocno digitalno pripovedovanje.",
+    "cta_shop": "Razišči Kolekcijo",
+    "cta_designs": "Poglej Dizajne",
+    "image_alt": "Hero slika ozadja"
+  },
+  "home": {
+    "contact_social_title": "Kontakt in Družbena Omrežja",
+    "contact_social_description": "Lahko nas kontaktirate kadar koli.",
+    "social_empty": "Povezave do družbenih omrežij še niso dodane.",
+    "location_title": "Lokacija",
+    "location_iframe_title": "Lokacija Podjetja"
+  },
+  "sections": {
+    "designs_kicker": "Sekcija 01",
+    "designs_title": "Galerija Dizajnov",
+    "designs_description": "Odprite kartico dizajna za podrobno stran z vsemi fotografijami in videi.",
+    "designs_home_description": "Kuratirani poudarki iz nasega vizualnega kataloga. Odprite dizajn za popolne foto/video podrobnosti.",
+    "shop_kicker": "Sekcija 02",
+    "shop_title": "Kolekcija Trgovine",
+    "shop_description": "Raziščite izdelke z namenskimi podrobnimi stranmi in celotnimi medijskimi sklopi.",
+    "shop_home_description": "Izbrani izdelki te sezone. Odprite izdelek, da vidite vse vizuale in podrobnosti."
+  },
+  "gallery": {
+    "tap_preview": "Tapni za Predogled",
+    "empty_title": "Dizajni še niso na voljo.",
+    "empty_text": "Dodajte vrstice v tabelo designs, da napolnite to galerijo.",
+    "image_alt": "Dizajn",
+    "empty_media": "Vsebina galerije še ni naložena.",
+    "default_title": "Neimenovan Dizajn"
+  },
+  "shop": {
+    "empty_title": "Izdelki še niso na voljo.",
+    "empty_text": "Dodajte vrstice v tabelo products, da napolnite trgovino.",
+    "default_name": "Neimenovan Izdelek",
+    "whatsapp_missing": "Številka WhatsApp še ni nastavljena."
+  },
+  "common": {
+    "db_error": "Težava s povezavo do baze",
+    "view_all_designs": "Vsi Dizajni",
+    "view_all_products": "Vsi Izdelki",
+    "view_detail": "Poglej Podrobnosti",
+    "media_items": "Mediji",
+    "back_to_gallery": "Nazaj v Galerijo",
+    "back_to_shop": "Nazaj v Trgovino",
+    "buy_now": "Kupi Zdaj",
+    "page": "Stran",
+    "thumbnail_alt": "Mali predogled"
+  },
+  "pages": {
+    "designs_kicker": "Katalog",
+    "designs_title": "Galerija Dizajnov",
+    "designs_intro": "Spodaj si lahko ogledate nase najbolj posebne izdelke in vse podrobnosti uporabe.",
+    "designs_description": "Vsak dizajn odpre namensko podrobno stran z vec fotografijami in videi.",
+    "shop_kicker": "Trgovina",
+    "shop_title": "Kolekcija Trgovine",
+    "shop_description": "Odprite izdelek za popolne podrobnosti z vec fotografijami in videi.",
+    "contact_kicker": "Kontakt",
+    "contact_title": "Kontakt",
+    "contact_description": "Kontaktirajte nas za sodelovanja, posebna narocila in partnerstva.",
+    "design_detail_title": "Podrobnost Dizajna",
+    "design_detail_label": "Dizajn",
+    "design_detail_text": "Ta dizajn vsebuje kurirano zaporedje fotografij in videov. Uporabite izbirnik medijev za vse kote.",
+    "product_detail_title": "Podrobnost Izdelka",
+    "product_detail_label": "Izdelek",
+    "product_detail_text": "Ta izdelek podpira vec fotografij in videov, da lahko kupci pred nakupom pregledajo vse podrobnosti."
+  },
+  "contact": {
+    "kicker": "Sekcija 03",
+    "title": "Kontakt",
+    "description": "Za sodelovanja, posebna narocila in poslovna povprasevanja nam posljite sporocilo.",
+    "name": "Ime in Priimek",
+    "email": "E-posta",
+    "instagram": "Instagram",
+    "phone": "Telefon",
+    "subject": "Zadeva",
+    "message": "Sporocilo",
+    "placeholder_name": "Vase ime in priimek",
+    "placeholder_phone": "+386 XX XXX XXX",
+    "placeholder_email": "primer@email.com",
+    "placeholder_subject": "Zadeva sporocila",
+    "placeholder_message": "Sem lahko napisete podrobno sporocilo...",
+    "submit": "Poslji Sporocilo",
+    "info_title": "Neposredno",
+    "info_text": "Obicajno odgovorimo v 24-48 urah. Dodajte podrobnosti projekta za hitrejsi odgovor.",
+    "flash_invalid_token": "Obrazec je potekel. Poskusite znova.",
+    "flash_required": "Izpolnite vsa obvezna polja.",
+    "flash_email": "Vnesite veljaven e-postni naslov.",
+    "flash_success": "Vase sporocilo je bilo uspesno poslano.",
+    "flash_error": "Sporocila trenutno ni mogoce poslati. Poskusite kasneje."
+  },
+  "footer": {
+    "tagline": "Ustvarjeno za Instagram Luxury",
+    "links_title": "Hitre Povezave",
+    "manifesto_title": "Manifest",
+    "manifesto_text": "Gradimo prefinjene vizualne zgodbe, kjer moda, identiteta in digitalna izdelava delujejo kot celota.",
+    "social_title": "Instagram",
+    "rights": "Vse pravice pridrzane.",
+    "link_home": "Domov",
+    "link_designs": "Dizajni",
+    "link_shop": "Trgovina",
+    "link_contact": "Kontakt",
+    "social_instagram": "Instagram Glavni Profil",
+    "social_reels": "Instagram Reels",
+    "social_shop": "Instagram Shop",
+    "contact_title": "Vsi Kontakti"
+  },
+  "errors": {
+    "not_found_title": "404",
+    "not_found_message": "Stran, ki ste jo zahtevali, ne obstaja.",
+    "back_home": "Nazaj Domov"
+  }
+}

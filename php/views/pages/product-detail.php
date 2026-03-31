@@ -88,7 +88,7 @@ if ($productMedia === []) {
                                 <?php if ($thumbType === 'video'): ?>
                                     <video src="<?= e($thumbUrl); ?>" muted playsinline class="h-full w-full object-cover"></video>
                                 <?php else: ?>
-                                    <img src="<?= e($thumbUrl); ?>" alt="thumb" class="h-full w-full object-cover" loading="lazy" />
+                                    <img src="<?= e($thumbUrl); ?>" alt="<?= e(t('common.thumbnail_alt', 'Kucuk onizleme')); ?>" class="h-full w-full object-cover" loading="lazy" />
                                 <?php endif; ?>
                             </button>
                         <?php endforeach; ?>

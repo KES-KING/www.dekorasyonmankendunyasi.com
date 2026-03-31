@@ -18,7 +18,15 @@
     "kicker": "Mode | Design | Kultur",
     "description": "Ein mutiges visuelles Atelier fur markante Looks, editoriale Designsprache und wirkungsstarkes digitales Storytelling.",
     "cta_shop": "Kollektion Entdecken",
-    "cta_designs": "Designs Anzeigen"
+    "cta_designs": "Designs Anzeigen",
+    "image_alt": "Hero-Hintergrundbild"
+  },
+  "home": {
+    "contact_social_title": "Kontakt & Soziale Medien",
+    "contact_social_description": "Sie konnen uns jederzeit erreichen.",
+    "social_empty": "Es wurden noch keine Social-Media-Links hinzugefugt.",
+    "location_title": "Standort",
+    "location_iframe_title": "Unternehmensstandort"
   },
   "sections": {
     "designs_kicker": "Abschnitt 01",
@@ -33,11 +41,16 @@
   "gallery": {
     "tap_preview": "Zum Vorschau Tippen",
     "empty_title": "Noch keine Designs gefunden.",
-    "empty_text": "Fuge Datensatze in die Tabelle designs ein, um diese Galerie anzuzeigen."
+    "empty_text": "Fuge Datensatze in die Tabelle designs ein, um diese Galerie anzuzeigen.",
+    "image_alt": "Design",
+    "empty_media": "Es wurden noch keine Galerieinhalte hochgeladen.",
+    "default_title": "Unbenanntes Design"
   },
   "shop": {
     "empty_title": "Noch keine Produkte verfugbar.",
-    "empty_text": "Fuge Datensatze in die Tabelle products ein, um den Shop zu fullen."
+    "empty_text": "Fuge Datensatze in die Tabelle products ein, um den Shop zu fullen.",
+    "default_name": "Unbenanntes Produkt",
+    "whatsapp_missing": "WhatsApp-Nummer ist noch nicht konfiguriert."
   },
   "common": {
     "db_error": "Problem mit der Datenbankverbindung",
@@ -47,11 +60,14 @@
     "media_items": "Medien",
     "back_to_gallery": "Zuruck Zur Galerie",
     "back_to_shop": "Zuruck Zum Shop",
-    "buy_now": "Jetzt Kaufen"
+    "buy_now": "Jetzt Kaufen",
+    "page": "Seite",
+    "thumbnail_alt": "Vorschaubild"
   },
   "pages": {
     "designs_kicker": "Katalog",
     "designs_title": "Design-Galerie",
+    "designs_intro": "Entdecken Sie unten unsere besonderen Produkte und alle Einsatzbereiche im Detail.",
     "designs_description": "Jedes Design offnet eine Detailseite mit mehreren Fotos und Videos.",
     "shop_kicker": "Store",
     "shop_title": "Shop-Kollektion",
@@ -72,9 +88,15 @@
     "description": "Fur Kooperationen, Sonderauftrage und geschafltiche Anfragen senden Sie uns eine Nachricht.",
     "name": "Name",
     "email": "E-Mail",
+    "instagram": "Instagram",
     "phone": "Telefon",
     "subject": "Betreff",
     "message": "Nachricht",
+    "placeholder_name": "Ihr Vor- und Nachname",
+    "placeholder_phone": "+49 XXX XXX XXXX",
+    "placeholder_email": "beispiel@email.com",
+    "placeholder_subject": "Betreff Ihrer Nachricht",
+    "placeholder_message": "Sie konnen hier Ihre ausfuhrliche Nachricht schreiben...",
     "submit": "Nachricht Senden",
     "info_title": "Direkt",
     "info_text": "Wir antworten in der Regel innerhalb von 24-48 Stunden. Bitte fugen Sie Projektdetails fur eine schnellere Antwort hinzu.",
@@ -97,7 +119,8 @@
     "link_contact": "Kontakt",
     "social_instagram": "Instagram Hauptprofil",
     "social_reels": "Instagram Reels",
-    "social_shop": "Instagram Shop"
+    "social_shop": "Instagram Shop",
+    "contact_title": "Alle Kontaktkanale"
   },
   "errors": {
     "not_found_title": "404",

@@ -4,7 +4,7 @@
             <svg width="32" height="32" fill="none" viewBox="0 0 24 24" class="text-yellow-600"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <div>
                 <p class="font-display text-xl uppercase tracking-[0.16em] text-zinc-800 sm:text-2xl"><?= e($settings['brand_short'] ?? 'DMD'); ?></p>
-                <p class="hidden text-[10px] uppercase tracking-[0.25em] text-zinc-500 sm:block"><?= e($settings['brand_subline'] ?? 'Dekorasyon ve Manken'); ?></p>
+                <p class="hidden text-[10px] uppercase tracking-[0.25em] text-zinc-500 sm:block"><?= e($settings['brand_subline'] ?? t('brand.subline', 'Dekorasyon ve Manken')); ?></p>
             </div>
         </a>
 
