@@ -1,14 +1,15 @@
 <section
     class="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat py-32"
-    style="background-image: url('<?= e(asset('heroimage.jpeg')); ?>');"
->
+    style="background-image: url('<?= e(asset('heroimage.png')); ?>');">
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 text-center">
-        <div class="mx-auto max-w-5xl rounded-3xl border border-white/30 bg-black/45 px-6 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
+        <div
+            class="mx-auto max-w-5xl rounded-3xl border border-white/30 bg-black/45 px-6 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm">
                 <?= e(t('hero.kicker', 'Estetik | Dekorasyon | Tasarım')); ?>
             </p>
 
-            <h1 class="mx-auto max-w-4xl font-display text-4xl leading-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)] sm:text-6xl md:text-7xl">
+            <h1
+                class="mx-auto max-w-4xl font-display text-4xl leading-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)] sm:text-6xl md:text-7xl">
                 <?= e(t('hero.title', 'Dekorasyon Manken Dünyası')); ?>
             </h1>
 
@@ -17,10 +18,12 @@
             </p>
 
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <a href="<?= e($designsUrl); ?>" class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-amber-300 bg-amber-500 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-black transition hover:bg-amber-400 sm:flex-none">
+                <a href="<?= e($designsUrl); ?>"
+                    class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-amber-300 bg-amber-500 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-black transition hover:bg-amber-400 sm:flex-none">
                     <?= e(t('hero.cta_designs', 'Kataloğu İncele')); ?>
                 </a>
-                <a href="<?= e($contactUrl); ?>" class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-white/70 bg-white/10 px-8 py-4 text-xs uppercase tracking-[0.16em] text-white transition hover:bg-white/20 sm:flex-none">
+                <a href="<?= e($contactUrl); ?>"
+                    class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-white/70 bg-white/10 px-8 py-4 text-xs uppercase tracking-[0.16em] text-white transition hover:bg-white/20 sm:flex-none">
                     <?= e(t('hero.cta_contact', 'İletişime Geç')); ?>
                 </a>
             </div>
@@ -32,8 +35,10 @@
 <section class="bg-white py-24 border-y border-zinc-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="font-display text-3xl text-zinc-800 sm:text-4xl"><?= e(t('home.contact_social_title', 'İletişim & Sosyal Medya')); ?></h2>
-            <p class="mt-4 text-zinc-500"><?= e(t('home.contact_social_description', 'Bize her zaman ulaşabilirsiniz.')); ?></p>
+            <h2 class="font-display text-3xl text-zinc-800 sm:text-4xl">
+                <?= e(t('home.contact_social_title', 'İletişim & Sosyal Medya')); ?></h2>
+            <p class="mt-4 text-zinc-500">
+                <?= e(t('home.contact_social_description', 'Bize her zaman ulaşabilirsiniz.')); ?></p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,21 +89,21 @@
                 ['icon' => 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'label' => t('contact.email', 'E-posta'), 'value' => $emailAddress, 'link' => $emailAddress === '' ? '' : 'mailto:' . $emailAddress, 'new_tab' => false],
             ];
             foreach ($contacts as $contact):
-                if (empty($contact['value']) || empty($contact['link'])) continue;
-            ?>
-            <a
-                href="<?= e((string) $contact['link']); ?>"
-                class="contact-card group"
-                <?= !empty($contact['new_tab']) ? 'target="_blank" rel="noopener noreferrer"' : ''; ?>
-            >
-                <div class="contact-icon">
-                    <svg width="20" height="20" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="<?= e($contact['icon']); ?>" /></svg>
-                </div>
-                <div>
-                    <h3 class="text-xs uppercase tracking-wider text-zinc-500 mb-1"><?= e($contact['label']); ?></h3>
-                    <p class="text-zinc-800 font-medium whitespace-pre-wrap"><?= e($contact['value']); ?></p>
-                </div>
-            </a>
+                if (empty($contact['value']) || empty($contact['link']))
+                    continue;
+                ?>
+                <a href="<?= e((string) $contact['link']); ?>" class="contact-card group" <?= !empty($contact['new_tab']) ? 'target="_blank" rel="noopener noreferrer"' : ''; ?>>
+                    <div class="contact-icon">
+                        <svg width="20" height="20" fill="currentColor" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="<?= e($contact['icon']); ?>" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xs uppercase tracking-wider text-zinc-500 mb-1"><?= e($contact['label']); ?></h3>
+                        <p class="text-zinc-800 font-medium whitespace-pre-wrap"><?= e($contact['value']); ?></p>
+                    </div>
+                </a>
             <?php endforeach; ?>
         </div>
 
@@ -157,46 +162,43 @@
             ];
             $hasSocial = false;
             foreach ($socials as $social):
-                if (empty($social['url'])) continue;
+                if (empty($social['url']))
+                    continue;
                 $hasSocial = true;
-            ?>
-            <a
-                href="<?= e((string) $social['url']); ?>"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group flex items-center gap-3 rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md <?= $social['cardClass']; ?>"
-                aria-label="<?= e($social['name']); ?>"
-            >
-                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 text-zinc-600 transition <?= $social['iconClass']; ?>">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="<?= e($social['icon']); ?>"></path>
-                    </svg>
-                </span>
-                <span class="text-sm font-semibold"><?= e($social['name']); ?></span>
-            </a>
+                ?>
+                <a href="<?= e((string) $social['url']); ?>" target="_blank" rel="noopener noreferrer"
+                    class="group flex items-center gap-3 rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md <?= $social['cardClass']; ?>"
+                    aria-label="<?= e($social['name']); ?>">
+                    <span
+                        class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 text-zinc-600 transition <?= $social['iconClass']; ?>">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="<?= e($social['icon']); ?>"></path>
+                        </svg>
+                    </span>
+                    <span class="text-sm font-semibold"><?= e($social['name']); ?></span>
+                </a>
             <?php endforeach; ?>
             <?php if (!$hasSocial): ?>
-                <p class="col-span-full text-center text-sm text-zinc-500"><?= e(t('home.social_empty', 'Henüz sosyal medya bağlantısı eklenmemiş.')); ?></p>
+                <p class="col-span-full text-center text-sm text-zinc-500">
+                    <?= e(t('home.social_empty', 'Henüz sosyal medya bağlantısı eklenmemiş.')); ?></p>
             <?php endif; ?>
         </div>
 
         <?php if ($locationEmbedUrl !== ''): ?>
             <div class="mt-10 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
                 <div class="border-b border-zinc-100 bg-zinc-50/70 px-6 py-5">
-                    <p class="text-xs uppercase tracking-[0.18em] text-zinc-500"><?= e(t('home.location_title', 'Konum')); ?></p>
+                    <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">
+                        <?= e(t('home.location_title', 'Konum')); ?></p>
                     <p class="mt-2 text-sm font-medium text-zinc-700"><?= e($businessLocation); ?></p>
-                    <a href="<?= e($locationMapLink); ?>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.14em] text-yellow-700 transition hover:text-yellow-600">
+                    <a href="<?= e($locationMapLink); ?>" target="_blank" rel="noopener noreferrer"
+                        class="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.14em] text-yellow-700 transition hover:text-yellow-600">
                         <?= e(t('home.open_on_map', 'Haritada Aç')); ?>
                     </a>
                 </div>
                 <div class="h-[320px] w-full sm:h-[360px]">
-                    <iframe
-                        src="<?= e($locationEmbedUrl); ?>"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
+                    <iframe src="<?= e($locationEmbedUrl); ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         class="h-full w-full border-0"
-                        title="<?= e(t('home.location_iframe_title', 'İşletme Konumu')); ?>"
-                    ></iframe>
+                        title="<?= e(t('home.location_iframe_title', 'İşletme Konumu')); ?>"></iframe>
                 </div>
             </div>
         <?php endif; ?>
@@ -207,9 +209,13 @@
 <section class="bg-gradient-to-b from-slate-50 to-white py-24 border-y border-zinc-200/70">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500"><?= e(t('home.bank_kicker', 'Ödeme Bilgileri')); ?></p>
-            <h2 class="mt-3 font-display text-3xl text-zinc-900 sm:text-4xl"><?= e(t('home.bank_title', 'Banka Hesaplarımız')); ?></h2>
-            <p class="mt-4 text-zinc-600"><?= e(t('home.bank_description', 'Havale ve EFT işlemleriniz için aşağıdaki hesap bilgilerimizi kullanabilirsiniz.')); ?></p>
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
+                <?= e(t('home.bank_kicker', 'Ödeme Bilgileri')); ?></p>
+            <h2 class="mt-3 font-display text-3xl text-zinc-900 sm:text-4xl">
+                <?= e(t('home.bank_title', 'Banka Hesaplarımız')); ?></h2>
+            <p class="mt-4 text-zinc-600">
+                <?= e(t('home.bank_description', 'Havale ve EFT işlemleriniz için aşağıdaki hesap bilgilerimizi kullanabilirsiniz.')); ?>
+            </p>
         </div>
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
@@ -227,33 +233,33 @@
                 4 => ['accent' => '#0ea5e9', 'soft' => 'rgba(14, 165, 233, 0.10)'],
             ];
             $hasBankAccount = false;
-            for($i=1; $i<=4; $i++):
+            for ($i = 1; $i <= 4; $i++):
                 $bankKey = "bank_account_$i";
                 $bankRaw = trim((string) ($settings[$bankKey] ?? ''));
-                if($bankRaw === '') continue;
+                if ($bankRaw === '')
+                    continue;
                 $hasBankAccount = true;
                 $bankName = $bankNames[$i] ?? ('Banka ' . $i);
                 $bankTheme = $bankThemes[$i] ?? ['accent' => '#52525b', 'soft' => 'rgba(82, 82, 91, 0.10)'];
-            ?>
-            <article
-                class="banking-card banking-card--copyable"
-                style="--bank-accent: <?= e($bankTheme['accent']); ?>; --bank-soft: <?= e($bankTheme['soft']); ?>;"
-                role="button"
-                tabindex="0"
-                aria-label="<?= e($bankName); ?> <?= e(t('home.bank_copy_aria', 'hesap bilgisini kopyala')); ?>"
-            >
-                <div class="banking-card__head">
-                    <span class="banking-card__chip" aria-hidden="true"></span>
-                    <h3 class="banking-card__name"><?= e($bankName); ?></h3>
-                </div>
-                <p class="banking-card__meta"><?= e(t('home.bank_iban_label', 'IBAN / Hesap Bilgisi')); ?></p>
-                <p class="banking-card__value"><?= nl2br(e($bankRaw)); ?></p>
-                <p class="banking-card__copy-hint"><?= e(t('home.bank_copy_hint', 'Kopyalamak için tıklayın')); ?></p>
-                <span class="banking-card__copy-badge" aria-hidden="true"><?= e(t('home.bank_copied', 'Kopyalandı')); ?></span>
-            </article>
+                ?>
+                <article class="banking-card banking-card--copyable"
+                    style="--bank-accent: <?= e($bankTheme['accent']); ?>; --bank-soft: <?= e($bankTheme['soft']); ?>;"
+                    role="button" tabindex="0"
+                    aria-label="<?= e($bankName); ?> <?= e(t('home.bank_copy_aria', 'hesap bilgisini kopyala')); ?>">
+                    <div class="banking-card__head">
+                        <span class="banking-card__chip" aria-hidden="true"></span>
+                        <h3 class="banking-card__name"><?= e($bankName); ?></h3>
+                    </div>
+                    <p class="banking-card__meta"><?= e(t('home.bank_iban_label', 'IBAN / Hesap Bilgisi')); ?></p>
+                    <p class="banking-card__value"><?= nl2br(e($bankRaw)); ?></p>
+                    <p class="banking-card__copy-hint"><?= e(t('home.bank_copy_hint', 'Kopyalamak için tıklayın')); ?></p>
+                    <span class="banking-card__copy-badge"
+                        aria-hidden="true"><?= e(t('home.bank_copied', 'Kopyalandı')); ?></span>
+                </article>
             <?php endfor; ?>
             <?php if (!$hasBankAccount): ?>
-                <div class="col-span-full rounded-2xl border border-dashed border-zinc-300 bg-white px-6 py-10 text-center text-sm text-zinc-500">
+                <div
+                    class="col-span-full rounded-2xl border border-dashed border-zinc-300 bg-white px-6 py-10 text-center text-sm text-zinc-500">
                     <?= e(t('home.bank_empty', 'Henüz banka hesap bilgisi eklenmemiş.')); ?>
                 </div>
             <?php endif; ?>
