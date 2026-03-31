@@ -2,8 +2,6 @@
     class="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat py-32"
     style="background-image: url('<?= e(asset('heroimage.jpeg')); ?>');"
 >
-    <div class="absolute inset-0 bg-white/65"></div>
-    <div class="absolute inset-0 hero-gradient"></div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 text-center">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-yellow-600 sm:text-sm">
             <?= e($settings['hero_kicker'] ?? 'Estetik | Dekorasyon | Tasarım'); ?>
