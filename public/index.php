@@ -85,6 +85,7 @@ if ($responseStatus >= 400) {
 
 $data = $routeResult['data'] ?? [];
 $siteSettings = is_array($data['siteSettings'] ?? null) ? $data['siteSettings'] : [];
+$settings = $siteSettings;
 
 $brandName = (string) siteSetting($siteSettings, 'brand_name', t('brand.name', $data['brandName'] ?? 'NewYork Society Creation Club'));
 $brandShort = (string) siteSetting($siteSettings, 'brand_short', t('brand.short', $data['brandShort'] ?? 'NYSCC'));
