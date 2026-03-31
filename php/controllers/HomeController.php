@@ -108,7 +108,7 @@ final class HomeController
 
             $designTitle = trim((string) ($designRow['title'] ?? ''));
             if ($designTitle === '') {
-                $designTitle = t('gallery.default_title', 'İsimsiz Tasarım') . ' #' . $designId;
+                $designTitle = '#' . $designId;
             }
 
             $designDetails = trim((string) ($designRow['details'] ?? ''));
