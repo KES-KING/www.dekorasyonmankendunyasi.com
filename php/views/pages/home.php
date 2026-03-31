@@ -5,20 +5,20 @@
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 text-center">
         <div class="mx-auto max-w-5xl rounded-3xl border border-white/30 bg-black/45 px-6 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm">
-                <?= e($heroKicker ?? t('hero.kicker', 'Estetik | Dekorasyon | Tasarım')); ?>
+                <?= e(t('hero.kicker', 'Estetik | Dekorasyon | Tasarım')); ?>
             </p>
 
             <h1 class="mx-auto max-w-4xl font-display text-4xl leading-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)] sm:text-6xl md:text-7xl">
-                <?= e($settings['brand_name'] ?? 'Dekorasyon Manken Dünyası'); ?>
+                <?= e(t('hero.title', 'Dekorasyon Manken Dünyası')); ?>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-base text-zinc-100 sm:text-lg">
-                <?= e($heroDescription ?? t('hero.description', 'Mekanlarınızı canlandıran dekoratif mankenler ve estetik tasarımlar.')); ?>
+                <?= e(t('hero.description', 'Mekanlarınızı canlandıran dekoratif mankenler ve estetik tasarımlar.')); ?>
             </p>
 
             <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a href="<?= e($designsUrl); ?>" class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-amber-300 bg-amber-500 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-black transition hover:bg-amber-400 sm:flex-none">
-                    <?= e(t('hero.cta_catalog', 'Kataloğu İncele')); ?>
+                    <?= e(t('hero.cta_designs', 'Kataloğu İncele')); ?>
                 </a>
                 <a href="<?= e($contactUrl); ?>" class="inline-flex flex-1 flex-shrink-0 items-center justify-center whitespace-nowrap rounded-none border border-white/70 bg-white/10 px-8 py-4 text-xs uppercase tracking-[0.16em] text-white transition hover:bg-white/20 sm:flex-none">
                     <?= e(t('hero.cta_contact', 'İletişime Geç')); ?>

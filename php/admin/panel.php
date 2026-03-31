@@ -268,11 +268,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'brand_name',
                 'brand_short',
                 'brand_subline',
-                'hero_kicker',
-                'hero_description',
-                'hero_cta_shop',
-                'hero_cta_designs',
-                'hero_image',
                 'footer_tagline',
                 'footer_manifesto_title',
                 'footer_manifesto_text',
@@ -292,8 +287,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'bank_account_2',
                 'bank_account_3',
                 'bank_account_4',
-                'gallery_image',
-                'gallery_video',
             ];
 
             $stmt = $pdo->prepare('INSERT INTO site_settings (setting_key, setting_value) VALUES (:key, :value) ON DUPLICATE KEY UPDATE setting_value = VALUES(setting_value)');
@@ -1091,17 +1084,6 @@ $adminNav = [
                             'brand_short' => 'Kısa Ad',
                             'brand_subline' => 'Marka Alt Başlığı',
                         ],
-                        'Tasarım Galerisi (Tekil Seçim)' => [
-                            'gallery_image' => 'Galeri Görsel URL',
-                            'gallery_video' => 'Galeri Video URL',
-                        ],
-                        'Hero Bölümü' => [
-                            'hero_kicker'      => 'Hero Kicker',
-                            'hero_description' => 'Hero Açıklaması',
-                            'hero_cta_shop'    => 'CTA - İletişim',
-                            'hero_cta_designs' => 'CTA - Katalog',
-                            'hero_image'       => 'Hero Görsel URL',
-                        ],
                         'Footer' => [
                             'footer_tagline'          => 'Footer Slogan',
                             'footer_manifesto_title'  => 'Manifesto Başlığı',
@@ -1126,7 +1108,7 @@ $adminNav = [
                             'bank_account_4' => 'Banka 4',
                         ],
                     ];
-                    $textareaFields = ['hero_description', 'footer_manifesto_text', 'business_location'];
+                    $textareaFields = ['footer_manifesto_text', 'business_location'];
                     ?>
 
                     <?php foreach ($settingGroups as $groupLabel => $fields): ?>
