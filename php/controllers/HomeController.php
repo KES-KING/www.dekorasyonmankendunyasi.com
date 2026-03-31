@@ -47,7 +47,16 @@ final class HomeController
                 $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
                 $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
                 $stmt->execute();
-                $data['designs'] = $stmt->fetchAll();
+                $designRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $data['designs'] = array_map(
+                    static function (array $row): array {
+                        $row['img_url'] = mediaUrl($row['img_url'] ?? '');
+                        $row['video_url'] = mediaUrl($row['video_url'] ?? '');
+
+                        return $row;
+                    },
+                    $designRows
+                );
             } else {
                 $data['designs'] = [];
                 $data['totalPages'] = 1;

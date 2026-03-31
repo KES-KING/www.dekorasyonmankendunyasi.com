@@ -28,12 +28,12 @@
                 <?php foreach($designs as $design): ?>
                     <?php if(!empty($design['img_url'])): ?>
                     <div class="luxury-panel break-inside-avoid relative overflow-hidden flex items-center justify-center p-2 bg-zinc-50 rounded-lg shadow-sm group">
-                        <img src="<?= e(str_replace('/uploads/designs/', '/uploads/', $design['img_url'])); ?>" alt="Tasarım" loading="lazy" class="w-full h-auto object-cover rounded-md transition-transform duration-700 ease-out group-hover:scale-105" />
+                        <img src="<?= e((string) $design['img_url']); ?>" alt="Tasarım" loading="lazy" class="w-full h-auto object-cover rounded-md transition-transform duration-700 ease-out group-hover:scale-105" />
                     </div>
                     <?php endif; ?>
                     <?php if(!empty($design['video_url'])): ?>
                     <div class="luxury-panel break-inside-avoid relative overflow-hidden p-2 bg-zinc-50 rounded-lg shadow-sm">
-                        <video src="<?= e(str_replace('/uploads/designs/', '/uploads/', $design['video_url'])); ?>" controls playsinline preload="metadata" class="w-full h-auto object-cover rounded-md"></video>
+                        <video src="<?= e((string) $design['video_url']); ?>" controls playsinline preload="metadata" class="w-full h-auto object-cover rounded-md"></video>
                     </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

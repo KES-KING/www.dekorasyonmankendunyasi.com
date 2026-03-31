@@ -909,9 +909,9 @@ $adminNav = [
                                     <div style="height: 200px;
 ; overflow: hidden; background:#f4f4f5; display:flex; align-items:center; justify-content:center;">
                                         <?php if(!empty($design['img_url'])): ?>
-                                            <img src="<?= e(str_replace('/uploads/designs/', '/uploads/', $design['img_url'])); ?>" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
+                                            <img src="<?= e(mediaUrl($design['img_url'] ?? '')); ?>" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
                                         <?php elseif(!empty($design['video_url'])): ?>
-                                            <video src="<?= e(str_replace('/uploads/designs/', '/uploads/', $design['video_url'])); ?>" style="width:100%; height:100%; object-fit:cover;" controls></video>
+                                            <video src="<?= e(mediaUrl($design['video_url'] ?? '')); ?>" style="width:100%; height:100%; object-fit:cover;" controls></video>
                                         <?php endif; ?>
                                     </div>
                                     <div class="admin-item-card-header" style="padding: 12px; border-top: 1px solid #e4e4e7;">
