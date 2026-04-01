@@ -244,7 +244,7 @@ final class HomeController
         $data = [
             'brandName' => 'Dekorasyon Manken Dünyası',
             'brandShort' => 'DMD',
-            'brandLogo' => asset('DMD_logo_transparan.png'),
+            'brandLogo' => asset('logo.png'),
             'siteSettings' => [],
             'dbError' => null,
             'activePage' => 'home',

@@ -92,7 +92,7 @@ $brandShort = (string) siteSetting($siteSettings, 'brand_short', t('brand.short'
 $brandSubline = (string) siteSetting($siteSettings, 'brand_subline', t('brand.subline', 'Creation Club'));
 $pageTitle = (string) ($routeResult['title'] ?? t('meta.title', $brandName));
 
-$brandLogo = $data['brandLogo'] ?? asset('nyscc_logo_transparan.png');
+$brandLogo = $data['brandLogo'] ?? asset('logo.png');
 $designs = $data['designs'] ?? [];
 $totalPages = (int) ($data['totalPages'] ?? 1);
 $currentPage = (int) ($data['currentPage'] ?? 1);
@@ -179,10 +179,14 @@ foreach (supportedLocales() as $localeCode) {
     <meta name="theme-color" content="#000000" />
 
     <link rel="manifest" href="<?= e(asset('site.webmanifest')); ?>" />
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= e(asset('favicon-32x32.png')); ?>" />
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= e(asset('favicon-16x16.png')); ?>" />
-    <link rel="shortcut icon" href="<?= e(asset('favicon.ico')); ?>" />
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('apple-touch-icon.png')); ?>" />
+    <link rel="icon" type="image/png" href="<?= e(asset('logo.png')); ?>" />
+    <link rel="shortcut icon" href="<?= e(asset('logo.png')); ?>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('logo.png')); ?>" />
+
+    <meta property="og:title" content="<?= e($pageTitle); ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<?= e(asset('logo.png')); ?>" />
+    <meta property="og:description" content="<?= e(t('meta.description', 'Dekorasyon Manken Dünyası')); ?>" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
