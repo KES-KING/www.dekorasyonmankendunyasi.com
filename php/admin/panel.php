@@ -119,6 +119,8 @@ $storeMediaUpload = static function (array $file, string $bucket): array {
         'image/webp' => ['ext' => 'webp', 'type' => 'image'],
         'image/gif' => ['ext' => 'gif', 'type' => 'image'],
         'image/avif' => ['ext' => 'avif', 'type' => 'image'],
+        'image/heic' => ['ext' => 'heic', 'type' => 'image'],
+        'image/heif' => ['ext' => 'heif', 'type' => 'image'],
         'video/mp4' => ['ext' => 'mp4', 'type' => 'video'],
         'video/webm' => ['ext' => 'webm', 'type' => 'video'],
         'video/ogg' => ['ext' => 'ogg', 'type' => 'video'],
@@ -131,6 +133,8 @@ $storeMediaUpload = static function (array $file, string $bucket): array {
         'webp' => 'image',
         'gif' => 'image',
         'avif' => 'image',
+        'heic' => 'image',
+        'heif' => 'image',
         'mp4' => 'video',
         'webm' => 'video',
         'ogg' => 'video',
@@ -200,6 +204,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = trim((string) ($_POST['action'] ?? ''));
     $actionTabMap = [
         'save_settings' => 'settings',
+        'create_design' => 'designs',
+        'update_design' => 'designs',
+        'delete_design' => 'designs',
         'update_contact_status' => 'messages',
         'delete_contact_message' => 'messages',
     ];
@@ -307,35 +314,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $imgUrl = '';
             $videoUrl = '';
 
-            if (isset($_FILES['img_file']) && $_FILES['img_file']['error'] === 0) {
-                $ext = pathinfo($_FILES['img_file']['name'], PATHINFO_EXTENSION);
-                $filename = 'img_' . uniqid() . '.' . $ext;
-                $target = __DIR__ . '/../../public/uploads/' . $filename;
-                if (move_uploaded_file($_FILES['img_file']['tmp_name'], $target)) {
-                    $imgUrl = '/uploads/' . $filename;
+            $imgUploadError = (int) ($_FILES['img_file']['error'] ?? UPLOAD_ERR_NO_FILE);
+            if (isset($_FILES['img_file']) && $imgUploadError !== UPLOAD_ERR_NO_FILE) {
+                $uploadedImage = $storeMediaUpload($_FILES['img_file'], 'designs');
+                if (($uploadedImage['type'] ?? '') !== 'image') {
+                    throw new RuntimeException('Resim alanina yalnizca gorsel yukleyebilirsiniz.');
                 }
+
+                $imgUrl = (string) ($uploadedImage['url'] ?? '');
             }
 
-            if (isset($_FILES['video_file']) && $_FILES['video_file']['error'] === 0) {
-                $ext = pathinfo($_FILES['video_file']['name'], PATHINFO_EXTENSION);
-                $filename = 'vid_' . uniqid() . '.' . $ext;
-                $target = __DIR__ . '/../../public/uploads/' . $filename;
-                if (move_uploaded_file($_FILES['video_file']['tmp_name'], $target)) {
-                    $videoUrl = '/uploads/' . $filename;
+            $videoUploadError = (int) ($_FILES['video_file']['error'] ?? UPLOAD_ERR_NO_FILE);
+            if (isset($_FILES['video_file']) && $videoUploadError !== UPLOAD_ERR_NO_FILE) {
+                $uploadedVideo = $storeMediaUpload($_FILES['video_file'], 'designs');
+                if (($uploadedVideo['type'] ?? '') !== 'video') {
+                    throw new RuntimeException('Video alanina yalnizca video yukleyebilirsiniz.');
                 }
+
+                $videoUrl = (string) ($uploadedVideo['url'] ?? '');
             }
 
             if ($imgUrl === '' && $videoUrl === '') {
                 throw new RuntimeException('Lutfen gecerli bir resim veya video secin.');
             }
 
-            if ($columnExists($pdo, 'designs', 'details')) {
-                $stmt = $pdo->prepare('INSERT INTO designs (title, details, img_url, video_url) VALUES (\'\', \'\', :img_url, :video_url)');
-                $stmt->execute(['img_url' => $imgUrl, 'video_url' => $videoUrl]);
-            } else {
-                $stmt = $pdo->prepare('INSERT INTO designs (title, img_url, video_url) VALUES (\'\', :img_url, :video_url)');
-                $stmt->execute(['img_url' => $imgUrl, 'video_url' => $videoUrl]);
+            if (!$columnExists($pdo, 'designs', 'img_url') || !$columnExists($pdo, 'designs', 'video_url')) {
+                throw new RuntimeException('designs tablosunda img_url veya video_url kolonu eksik.');
             }
+
+            $insertColumns = [];
+            $insertPlaceholders = [];
+            $insertParams = [];
+
+            if ($columnExists($pdo, 'designs', 'title')) {
+                $insertColumns[] = 'title';
+                $insertPlaceholders[] = ':title';
+                $insertParams['title'] = '';
+            }
+
+            if ($columnExists($pdo, 'designs', 'details')) {
+                $insertColumns[] = 'details';
+                $insertPlaceholders[] = ':details';
+                $insertParams['details'] = '';
+            }
+
+            $insertColumns[] = 'img_url';
+            $insertPlaceholders[] = ':img_url';
+            $insertParams['img_url'] = $imgUrl;
+
+            $insertColumns[] = 'video_url';
+            $insertPlaceholders[] = ':video_url';
+            $insertParams['video_url'] = $videoUrl;
+
+            $stmt = $pdo->prepare(
+                'INSERT INTO designs (' . implode(', ', $insertColumns) . ') VALUES (' . implode(', ', $insertPlaceholders) . ')'
+            );
+            $stmt->execute($insertParams);
 
             $setFlash('success', 'Design eklendi.');
             $redirectTo('/site-admin/designs');
@@ -348,28 +382,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $imgUrl = trim((string) ($_POST['img_url'] ?? ''));
             $videoUrl = trim((string) ($_POST['video_url'] ?? ''));
 
-            if ($id <= 0 || $title === '' || $imgUrl === '' || $videoUrl === '') {
+            if ($id <= 0) {
                 throw new RuntimeException('Design guncelleme bilgileri gecersiz.');
             }
 
-            if ($columnExists($pdo, 'designs', 'details')) {
-                $stmt = $pdo->prepare('UPDATE designs SET title = :title, details = :details, img_url = :img_url, video_url = :video_url WHERE id = :id');
-                $stmt->execute([
-                    'id' => $id,
-                    'title' => $title,
-                    'details' => $details,
-                    'img_url' => $imgUrl,
-                    'video_url' => $videoUrl,
-                ]);
-            } else {
-                $stmt = $pdo->prepare('UPDATE designs SET title = :title, img_url = :img_url, video_url = :video_url WHERE id = :id');
-                $stmt->execute([
-                    'id' => $id,
-                    'title' => $title,
-                    'img_url' => $imgUrl,
-                    'video_url' => $videoUrl,
-                ]);
+            $updateParts = [];
+            $updateParams = ['id' => $id];
+
+            if ($columnExists($pdo, 'designs', 'title')) {
+                $updateParts[] = 'title = :title';
+                $updateParams['title'] = $title;
             }
+
+            if ($columnExists($pdo, 'designs', 'details')) {
+                $updateParts[] = 'details = :details';
+                $updateParams['details'] = $details;
+            }
+
+            if ($columnExists($pdo, 'designs', 'img_url')) {
+                $updateParts[] = 'img_url = :img_url';
+                $updateParams['img_url'] = $imgUrl;
+            }
+
+            if ($columnExists($pdo, 'designs', 'video_url')) {
+                $updateParts[] = 'video_url = :video_url';
+                $updateParams['video_url'] = $videoUrl;
+            }
+
+            if ($updateParts === []) {
+                throw new RuntimeException('designs tablosunda guncellenebilir kolon bulunamadi.');
+            }
+
+            $stmt = $pdo->prepare('UPDATE designs SET ' . implode(', ', $updateParts) . ' WHERE id = :id');
+            $stmt->execute($updateParams);
 
             $setFlash('success', 'Design guncellendi.');
             $redirectTo('/site-admin/designs');
@@ -432,7 +477,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $redirectTo('/site-admin/dashboard');
     } catch (Throwable $exception) {
         $targetTab = $actionTabMap[$action] ?? ($tabFromPath === 'login' ? 'dashboard' : $tabFromPath);
-        $setFlash('error', 'Islem basarisiz. Girilen bilgileri ve veritabani tablolarini kontrol edin.');
+        if ($exception instanceof RuntimeException && trim($exception->getMessage()) !== '') {
+            $setFlash('error', trim($exception->getMessage()));
+        } else {
+            $setFlash('error', 'Islem basarisiz. Girilen bilgileri ve veritabani tablolarini kontrol edin.');
+        }
         $redirectTo('/site-admin/' . $targetTab);
     }
 }
@@ -467,7 +516,7 @@ if (!$adminAuthenticated) {
                 </div>
                 <div>
                     <h1 class="admin-brand-name">DMD Admin</h1>
-                    <p class="admin-brand-sub">NewYork Society Creation Club</p>
+                    <p class="admin-brand-sub">Dekorasyon Manken Dünyası</p>
                 </div>
             </div>
 
