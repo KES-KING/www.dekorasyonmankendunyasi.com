@@ -4,6 +4,11 @@
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 text-center">
         <div
             class="mx-auto max-w-5xl rounded-3xl border border-white/30 bg-black/45 px-6 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:px-10 sm:py-12">
+            <img
+                src="<?= e($brandLogo); ?>"
+                alt="<?= e($brandName); ?>"
+                class="mx-auto mb-6 h-auto w-44 drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] sm:mb-8 sm:w-56 lg:w-64"
+            />
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm">
                 <?= e(t('hero.kicker', 'Estetik | Dekorasyon | Tasarım')); ?>
             </p>

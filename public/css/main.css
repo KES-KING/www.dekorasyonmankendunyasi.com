@@ -1,9 +1,70 @@
 html { scroll-behavior: smooth; }
 body { background: #faf9f6; color: #1a1a1a; font-family: 'Inter', sans-serif; }
 
-.site-header { background: rgba(250, 249, 246, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+.intro-loader { display: none; }
+.show-intro-loader body { overflow: hidden; }
+.show-intro-loader .intro-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.86);
+    backdrop-filter: blur(6px);
+    opacity: 1;
+}
+.intro-loader__inner {
+    width: min(92vw, 420px);
+    text-align: center;
+    color: #f8fafc;
+    padding: 1.5rem;
+}
+.intro-loader__logo {
+    width: clamp(88px, 14vw, 144px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.intro-loader__brand {
+    margin-top: 1rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(248, 250, 252, 0.86);
+}
+.intro-loader__line {
+    margin: 1rem auto 0;
+    width: min(75vw, 240px);
+    height: 2px;
+    background: rgba(248, 250, 252, 0.2);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.intro-loader__line > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f59e0b 0%, #facc15 100%);
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+.intro-loader-seen .intro-loader { display: none !important; }
 
-.language-pill { background: rgba(255, 255, 255, 0.8); border-color: rgba(0, 0, 0, 0.1); color: #4a4a4a; }
+.site-header {
+    background: rgba(2, 6, 23, 0.86);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+.language-pill {
+    background: rgba(15, 23, 42, 0.78);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: #f8fafc;
+}
+.language-pill option { color: #111827; }
 
 .gold-button {
     border: 1px solid rgba(212, 175, 55, 0.5);
